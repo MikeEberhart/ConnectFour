@@ -93,6 +93,9 @@
     <EmbeddedResource Include="TwoPlayerForm.resx">
       <DependentUpon>TwoPlayerForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -107,16 +110,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\YellowPiece.png" />
+    <None Include="Resources\board.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\RedPieceSmall.png" />
+    <None Include="Resources\RedPiece2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\YellowPieceSmall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\RedPiece.png" />
+    <None Include="Resources\YellowPiece2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

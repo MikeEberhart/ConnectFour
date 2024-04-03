@@ -18,21 +18,45 @@ namespace Connect4Testing
             InitializeComponent();
         }
 
-        private void Player_Click(object sender, EventArgs e)
+        // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
+        private void Piece_Placement(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            //Console.WriteLine(btn);
-            //string name = btn;
-            if(btn != null)
+            if(sender == btn_column_one)
             {
                 if (click == 0)
                 {
-                    btn.BackgroundImage = Connect4Testing.Properties.Resources.YellowPieceSmall;
+                    btn_zero_zero.BackgroundImage = Connect4Testing.Properties.Resources.YellowPiece2;
                     click++;
                 }
                 else
                 {
-                    btn.BackgroundImage = Connect4Testing.Properties.Resources.RedPieceSmall;
+                    btn_zero_zero.BackgroundImage = Connect4Testing.Properties.Resources.RedPiece2;
+                    click--;
+                }
+            }
+            if(sender == btn_column_two)
+            {
+                if (click == 0)
+                {
+                    btn_zero_one.BackgroundImage = Connect4Testing.Properties.Resources.YellowPiece2;
+                    click++;
+                }
+                else
+                {
+                    btn_zero_one.BackgroundImage = Connect4Testing.Properties.Resources.RedPiece2;
+                    click--;
+                }
+            }
+            if (sender == btn_column_three)
+            {
+                if (click == 0)
+                {
+                    btn_zero_one.BackgroundImage = Connect4Testing.Properties.Resources.YellowPiece2;
+                    click++;
+                }
+                else
+                {
+                    btn_zero_one.BackgroundImage = Connect4Testing.Properties.Resources.RedPiece2;
                     click--;
                 }
             }

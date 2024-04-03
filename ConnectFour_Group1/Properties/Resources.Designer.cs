@@ -63,9 +63,9 @@ namespace Connect4Testing.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RedPiece {
+        internal static System.Drawing.Bitmap board {
             get {
-                object obj = ResourceManager.GetObject("RedPiece", resourceCulture);
+                object obj = ResourceManager.GetObject("board", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Connect4Testing.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap RedPieceSmall {
+        internal static System.Drawing.Bitmap RedPiece2 {
             get {
-                object obj = ResourceManager.GetObject("RedPieceSmall", resourceCulture);
+                object obj = ResourceManager.GetObject("RedPiece2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,19 +83,9 @@ namespace Connect4Testing.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap YellowPiece {
+        internal static System.Drawing.Bitmap YellowPiece2 {
             get {
-                object obj = ResourceManager.GetObject("YellowPiece", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap YellowPieceSmall {
-            get {
-                object obj = ResourceManager.GetObject("YellowPieceSmall", resourceCulture);
+                object obj = ResourceManager.GetObject("YellowPiece2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

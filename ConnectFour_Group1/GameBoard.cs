@@ -8,5 +8,6 @@ namespace Connect4Testing
 {
     internal class GameBoard
     {
+
     }
 }
