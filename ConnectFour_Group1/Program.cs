@@ -16,7 +16,7 @@ namespace Connect4Testing
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SinglePlayerForm());
+            Application.Run(new WelcomeForm());
         }
     }
 }

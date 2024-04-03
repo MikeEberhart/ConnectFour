@@ -12,7 +12,7 @@ namespace Connect4Testing
 {
     public partial class TwoPlayerForm : Form
     {
-        public TwoPlayerForm()
+        public TwoPlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
         }

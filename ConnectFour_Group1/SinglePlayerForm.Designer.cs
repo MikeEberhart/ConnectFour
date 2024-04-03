@@ -28,690 +28,733 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_column_seven = new System.Windows.Forms.Button();
-            this.btn_column_six = new System.Windows.Forms.Button();
-            this.btn_column_five = new System.Windows.Forms.Button();
-            this.btn_column_four = new System.Windows.Forms.Button();
-            this.btn_column_three = new System.Windows.Forms.Button();
-            this.btn_column_two = new System.Windows.Forms.Button();
-            this.btn_column_one = new System.Windows.Forms.Button();
+            this.btn_ColumnSeven = new System.Windows.Forms.Button();
+            this.btn_ColumnSix = new System.Windows.Forms.Button();
+            this.btn_ColumnFive = new System.Windows.Forms.Button();
+            this.btn_ColumnFour = new System.Windows.Forms.Button();
+            this.btn_ColumnThree = new System.Windows.Forms.Button();
+            this.btn_ColumnTwo = new System.Windows.Forms.Button();
+            this.btn_ColumnOne = new System.Windows.Forms.Button();
             this.pnl_BoardPanel = new System.Windows.Forms.Panel();
-            this.btn_five_six = new System.Windows.Forms.Button();
-            this.btn_zero_zero = new System.Windows.Forms.Button();
-            this.btn_one_zero = new System.Windows.Forms.Button();
-            this.btn_five_five = new System.Windows.Forms.Button();
-            this.btn_zero_one = new System.Windows.Forms.Button();
-            this.btn_zero_two = new System.Windows.Forms.Button();
-            this.btn_five_four = new System.Windows.Forms.Button();
-            this.btn_zero_three = new System.Windows.Forms.Button();
-            this.btn_zero_four = new System.Windows.Forms.Button();
-            this.btn_five_three = new System.Windows.Forms.Button();
-            this.btn_zero_five = new System.Windows.Forms.Button();
-            this.btn_five_two = new System.Windows.Forms.Button();
-            this.btn_zero_six = new System.Windows.Forms.Button();
-            this.btn_one_one = new System.Windows.Forms.Button();
-            this.btn_five_one = new System.Windows.Forms.Button();
-            this.btn_one_two = new System.Windows.Forms.Button();
-            this.btn_one_three = new System.Windows.Forms.Button();
-            this.btn_five_zero = new System.Windows.Forms.Button();
-            this.btn_one_four = new System.Windows.Forms.Button();
-            this.btn_one_five = new System.Windows.Forms.Button();
-            this.btn_one_six = new System.Windows.Forms.Button();
-            this.btn_four_six = new System.Windows.Forms.Button();
-            this.btn_two_three = new System.Windows.Forms.Button();
-            this.btn_two_two = new System.Windows.Forms.Button();
-            this.btn_four_five = new System.Windows.Forms.Button();
-            this.btn_two_one = new System.Windows.Forms.Button();
-            this.btn_four_four = new System.Windows.Forms.Button();
-            this.btn_two_four = new System.Windows.Forms.Button();
-            this.btn_four_three = new System.Windows.Forms.Button();
-            this.btn_four_two = new System.Windows.Forms.Button();
-            this.btn_two_zero = new System.Windows.Forms.Button();
-            this.btn_four_one = new System.Windows.Forms.Button();
-            this.btn_two_five = new System.Windows.Forms.Button();
-            this.btn_four_zero = new System.Windows.Forms.Button();
-            this.btn_two_six = new System.Windows.Forms.Button();
-            this.btn_three_three = new System.Windows.Forms.Button();
-            this.btn_three_six = new System.Windows.Forms.Button();
-            this.btn_three_zero = new System.Windows.Forms.Button();
-            this.btn_three_five = new System.Windows.Forms.Button();
-            this.btn_three_one = new System.Windows.Forms.Button();
-            this.btn_three_four = new System.Windows.Forms.Button();
-            this.btn_three_two = new System.Windows.Forms.Button();
+            this.btn_ZeroZero = new System.Windows.Forms.Button();
+            this.btn_ZeroOne = new System.Windows.Forms.Button();
+            this.btn_ZeroTwo = new System.Windows.Forms.Button();
+            this.btn_ZeroThree = new System.Windows.Forms.Button();
+            this.btn_ZeroFour = new System.Windows.Forms.Button();
+            this.btn_ZeroFive = new System.Windows.Forms.Button();
+            this.btn_ZeroSix = new System.Windows.Forms.Button();
+            this.btn_OneZero = new System.Windows.Forms.Button();
+            this.btn_OneOne = new System.Windows.Forms.Button();
+            this.btn_OneTwo = new System.Windows.Forms.Button();
+            this.btn_OneThree = new System.Windows.Forms.Button();
+            this.btn_OneFour = new System.Windows.Forms.Button();
+            this.btn_OneFive = new System.Windows.Forms.Button();
+            this.btn_OneSix = new System.Windows.Forms.Button();
+            this.btn_TwoZero = new System.Windows.Forms.Button();
+            this.btn_TwoOne = new System.Windows.Forms.Button();
+            this.btn_TwoTwo = new System.Windows.Forms.Button();
+            this.btn_TwoThree = new System.Windows.Forms.Button();
+            this.btn_TwoFour = new System.Windows.Forms.Button();
+            this.btn_TwoFive = new System.Windows.Forms.Button();
+            this.btn_TwoSix = new System.Windows.Forms.Button();
+            this.btn_ThreeZero = new System.Windows.Forms.Button();
+            this.btn_ThreeOne = new System.Windows.Forms.Button();
+            this.btn_ThreeTwo = new System.Windows.Forms.Button();
+            this.btn_ThreeThree = new System.Windows.Forms.Button();
+            this.btn_ThreeFour = new System.Windows.Forms.Button();
+            this.btn_ThreeFive = new System.Windows.Forms.Button();
+            this.btn_ThreeSix = new System.Windows.Forms.Button();
+            this.btn_FourZero = new System.Windows.Forms.Button();
+            this.btn_FourOne = new System.Windows.Forms.Button();
+            this.btn_FourTwo = new System.Windows.Forms.Button();
+            this.btn_FourThree = new System.Windows.Forms.Button();
+            this.btn_FourFour = new System.Windows.Forms.Button();
+            this.btn_FourFive = new System.Windows.Forms.Button();
+            this.btn_FourSix = new System.Windows.Forms.Button();
+            this.btn_FiveZero = new System.Windows.Forms.Button();
+            this.btn_FiveOne = new System.Windows.Forms.Button();
+            this.btn_FiveTwo = new System.Windows.Forms.Button();
+            this.btn_FiveThree = new System.Windows.Forms.Button();
+            this.btn_FiveFour = new System.Windows.Forms.Button();
+            this.btn_FiveFive = new System.Windows.Forms.Button();
+            this.btn_FiveSix = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbl_TurnDisplay = new System.Windows.Forms.Label();
             this.pnl_BoardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_column_seven
+            // btn_ColumnSeven
             // 
-            this.btn_column_seven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_column_seven.Location = new System.Drawing.Point(587, 438);
-            this.btn_column_seven.Name = "btn_column_seven";
-            this.btn_column_seven.Size = new System.Drawing.Size(55, 52);
-            this.btn_column_seven.TabIndex = 64;
-            this.btn_column_seven.UseVisualStyleBackColor = true;
-            this.btn_column_seven.Click += new System.EventHandler(this.Piece_Placement);
+            this.btn_ColumnSeven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnSeven.Location = new System.Drawing.Point(587, 463);
+            this.btn_ColumnSeven.Name = "btn_ColumnSeven";
+            this.btn_ColumnSeven.Size = new System.Drawing.Size(55, 52);
+            this.btn_ColumnSeven.TabIndex = 64;
+            this.btn_ColumnSeven.UseVisualStyleBackColor = true;
+            this.btn_ColumnSeven.Click += new System.EventHandler(this.Piece_Placement);
             // 
-            // btn_column_six
+            // btn_ColumnSix
             // 
-            this.btn_column_six.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_column_six.Location = new System.Drawing.Point(495, 438);
-            this.btn_column_six.Name = "btn_column_six";
-            this.btn_column_six.Size = new System.Drawing.Size(55, 52);
-            this.btn_column_six.TabIndex = 63;
-            this.btn_column_six.UseVisualStyleBackColor = true;
-            this.btn_column_six.Click += new System.EventHandler(this.Piece_Placement);
+            this.btn_ColumnSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnSix.Location = new System.Drawing.Point(495, 463);
+            this.btn_ColumnSix.Name = "btn_ColumnSix";
+            this.btn_ColumnSix.Size = new System.Drawing.Size(55, 52);
+            this.btn_ColumnSix.TabIndex = 63;
+            this.btn_ColumnSix.UseVisualStyleBackColor = true;
+            this.btn_ColumnSix.Click += new System.EventHandler(this.Piece_Placement);
             // 
-            // btn_column_five
+            // btn_ColumnFive
             // 
-            this.btn_column_five.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_column_five.Location = new System.Drawing.Point(406, 438);
-            this.btn_column_five.Name = "btn_column_five";
-            this.btn_column_five.Size = new System.Drawing.Size(55, 52);
-            this.btn_column_five.TabIndex = 62;
-            this.btn_column_five.UseVisualStyleBackColor = true;
-            this.btn_column_five.Click += new System.EventHandler(this.Piece_Placement);
+            this.btn_ColumnFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnFive.Location = new System.Drawing.Point(406, 463);
+            this.btn_ColumnFive.Name = "btn_ColumnFive";
+            this.btn_ColumnFive.Size = new System.Drawing.Size(55, 52);
+            this.btn_ColumnFive.TabIndex = 62;
+            this.btn_ColumnFive.UseVisualStyleBackColor = true;
+            this.btn_ColumnFive.Click += new System.EventHandler(this.Piece_Placement);
             // 
-            // btn_column_four
+            // btn_ColumnFour
             // 
-            this.btn_column_four.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_column_four.Location = new System.Drawing.Point(316, 438);
-            this.btn_column_four.Name = "btn_column_four";
-            this.btn_column_four.Size = new System.Drawing.Size(55, 52);
-            this.btn_column_four.TabIndex = 61;
-            this.btn_column_four.UseVisualStyleBackColor = true;
-            this.btn_column_four.Click += new System.EventHandler(this.Piece_Placement);
+            this.btn_ColumnFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnFour.Location = new System.Drawing.Point(316, 463);
+            this.btn_ColumnFour.Name = "btn_ColumnFour";
+            this.btn_ColumnFour.Size = new System.Drawing.Size(55, 52);
+            this.btn_ColumnFour.TabIndex = 61;
+            this.btn_ColumnFour.UseVisualStyleBackColor = true;
+            this.btn_ColumnFour.Click += new System.EventHandler(this.Piece_Placement);
             // 
-            // btn_column_three
+            // btn_ColumnThree
             // 
-            this.btn_column_three.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_column_three.Location = new System.Drawing.Point(225, 438);
-            this.btn_column_three.Name = "btn_column_three";
-            this.btn_column_three.Size = new System.Drawing.Size(55, 52);
-            this.btn_column_three.TabIndex = 60;
-            this.btn_column_three.UseVisualStyleBackColor = true;
-            this.btn_column_three.Click += new System.EventHandler(this.Piece_Placement);
+            this.btn_ColumnThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnThree.Location = new System.Drawing.Point(225, 463);
+            this.btn_ColumnThree.Name = "btn_ColumnThree";
+            this.btn_ColumnThree.Size = new System.Drawing.Size(55, 52);
+            this.btn_ColumnThree.TabIndex = 60;
+            this.btn_ColumnThree.UseVisualStyleBackColor = true;
+            this.btn_ColumnThree.Click += new System.EventHandler(this.Piece_Placement);
             // 
-            // btn_column_two
+            // btn_ColumnTwo
             // 
-            this.btn_column_two.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_column_two.Location = new System.Drawing.Point(135, 438);
-            this.btn_column_two.Name = "btn_column_two";
-            this.btn_column_two.Size = new System.Drawing.Size(55, 52);
-            this.btn_column_two.TabIndex = 59;
-            this.btn_column_two.UseVisualStyleBackColor = true;
-            this.btn_column_two.Click += new System.EventHandler(this.Piece_Placement);
+            this.btn_ColumnTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnTwo.Location = new System.Drawing.Point(135, 463);
+            this.btn_ColumnTwo.Name = "btn_ColumnTwo";
+            this.btn_ColumnTwo.Size = new System.Drawing.Size(55, 52);
+            this.btn_ColumnTwo.TabIndex = 59;
+            this.btn_ColumnTwo.UseVisualStyleBackColor = true;
+            this.btn_ColumnTwo.Click += new System.EventHandler(this.Piece_Placement);
             // 
-            // btn_column_one
+            // btn_ColumnOne
             // 
-            this.btn_column_one.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_column_one.Location = new System.Drawing.Point(45, 438);
-            this.btn_column_one.Name = "btn_column_one";
-            this.btn_column_one.Size = new System.Drawing.Size(55, 52);
-            this.btn_column_one.TabIndex = 58;
-            this.btn_column_one.UseVisualStyleBackColor = true;
-            this.btn_column_one.Click += new System.EventHandler(this.Piece_Placement);
+            this.btn_ColumnOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnOne.Location = new System.Drawing.Point(45, 463);
+            this.btn_ColumnOne.Name = "btn_ColumnOne";
+            this.btn_ColumnOne.Size = new System.Drawing.Size(55, 52);
+            this.btn_ColumnOne.TabIndex = 58;
+            this.btn_ColumnOne.UseVisualStyleBackColor = true;
+            this.btn_ColumnOne.Click += new System.EventHandler(this.Piece_Placement);
             // 
             // pnl_BoardPanel
             // 
             this.pnl_BoardPanel.BackgroundImage = global::Connect4Testing.Properties.Resources.board;
             this.pnl_BoardPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pnl_BoardPanel.Controls.Add(this.btn_five_six);
-            this.pnl_BoardPanel.Controls.Add(this.btn_zero_zero);
-            this.pnl_BoardPanel.Controls.Add(this.btn_one_zero);
-            this.pnl_BoardPanel.Controls.Add(this.btn_five_five);
-            this.pnl_BoardPanel.Controls.Add(this.btn_zero_one);
-            this.pnl_BoardPanel.Controls.Add(this.btn_zero_two);
-            this.pnl_BoardPanel.Controls.Add(this.btn_five_four);
-            this.pnl_BoardPanel.Controls.Add(this.btn_zero_three);
-            this.pnl_BoardPanel.Controls.Add(this.btn_zero_four);
-            this.pnl_BoardPanel.Controls.Add(this.btn_five_three);
-            this.pnl_BoardPanel.Controls.Add(this.btn_zero_five);
-            this.pnl_BoardPanel.Controls.Add(this.btn_five_two);
-            this.pnl_BoardPanel.Controls.Add(this.btn_zero_six);
-            this.pnl_BoardPanel.Controls.Add(this.btn_one_one);
-            this.pnl_BoardPanel.Controls.Add(this.btn_five_one);
-            this.pnl_BoardPanel.Controls.Add(this.btn_one_two);
-            this.pnl_BoardPanel.Controls.Add(this.btn_one_three);
-            this.pnl_BoardPanel.Controls.Add(this.btn_five_zero);
-            this.pnl_BoardPanel.Controls.Add(this.btn_one_four);
-            this.pnl_BoardPanel.Controls.Add(this.btn_one_five);
-            this.pnl_BoardPanel.Controls.Add(this.btn_one_six);
-            this.pnl_BoardPanel.Controls.Add(this.btn_four_six);
-            this.pnl_BoardPanel.Controls.Add(this.btn_two_three);
-            this.pnl_BoardPanel.Controls.Add(this.btn_two_two);
-            this.pnl_BoardPanel.Controls.Add(this.btn_four_five);
-            this.pnl_BoardPanel.Controls.Add(this.btn_two_one);
-            this.pnl_BoardPanel.Controls.Add(this.btn_four_four);
-            this.pnl_BoardPanel.Controls.Add(this.btn_two_four);
-            this.pnl_BoardPanel.Controls.Add(this.btn_four_three);
-            this.pnl_BoardPanel.Controls.Add(this.btn_four_two);
-            this.pnl_BoardPanel.Controls.Add(this.btn_two_zero);
-            this.pnl_BoardPanel.Controls.Add(this.btn_four_one);
-            this.pnl_BoardPanel.Controls.Add(this.btn_two_five);
-            this.pnl_BoardPanel.Controls.Add(this.btn_four_zero);
-            this.pnl_BoardPanel.Controls.Add(this.btn_two_six);
-            this.pnl_BoardPanel.Controls.Add(this.btn_three_three);
-            this.pnl_BoardPanel.Controls.Add(this.btn_three_six);
-            this.pnl_BoardPanel.Controls.Add(this.btn_three_zero);
-            this.pnl_BoardPanel.Controls.Add(this.btn_three_five);
-            this.pnl_BoardPanel.Controls.Add(this.btn_three_one);
-            this.pnl_BoardPanel.Controls.Add(this.btn_three_four);
-            this.pnl_BoardPanel.Controls.Add(this.btn_three_two);
-            this.pnl_BoardPanel.Location = new System.Drawing.Point(12, 12);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ZeroZero);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ZeroOne);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ZeroTwo);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ZeroThree);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ZeroFour);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ZeroFive);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ZeroSix);
+            this.pnl_BoardPanel.Controls.Add(this.btn_OneZero);
+            this.pnl_BoardPanel.Controls.Add(this.btn_OneOne);
+            this.pnl_BoardPanel.Controls.Add(this.btn_OneTwo);
+            this.pnl_BoardPanel.Controls.Add(this.btn_OneThree);
+            this.pnl_BoardPanel.Controls.Add(this.btn_OneFour);
+            this.pnl_BoardPanel.Controls.Add(this.btn_OneFive);
+            this.pnl_BoardPanel.Controls.Add(this.btn_OneSix);
+            this.pnl_BoardPanel.Controls.Add(this.btn_TwoZero);
+            this.pnl_BoardPanel.Controls.Add(this.btn_TwoOne);
+            this.pnl_BoardPanel.Controls.Add(this.btn_TwoTwo);
+            this.pnl_BoardPanel.Controls.Add(this.btn_TwoThree);
+            this.pnl_BoardPanel.Controls.Add(this.btn_TwoFour);
+            this.pnl_BoardPanel.Controls.Add(this.btn_TwoFive);
+            this.pnl_BoardPanel.Controls.Add(this.btn_TwoSix);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ThreeZero);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ThreeOne);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ThreeTwo);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ThreeThree);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ThreeFour);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ThreeFive);
+            this.pnl_BoardPanel.Controls.Add(this.btn_ThreeSix);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FourZero);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FourOne);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FourTwo);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FourThree);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FourFour);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FourFive);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FourSix);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FiveZero);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FiveOne);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FiveTwo);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FiveThree);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FiveFour);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FiveFive);
+            this.pnl_BoardPanel.Controls.Add(this.btn_FiveSix);
+            this.pnl_BoardPanel.Location = new System.Drawing.Point(13, 37);
             this.pnl_BoardPanel.Name = "pnl_BoardPanel";
             this.pnl_BoardPanel.Size = new System.Drawing.Size(662, 420);
             this.pnl_BoardPanel.TabIndex = 0;
             // 
-            // btn_five_six
-            // 
-            this.btn_five_six.BackColor = System.Drawing.Color.Transparent;
-            this.btn_five_six.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_five_six.FlatAppearance.BorderSize = 0;
-            this.btn_five_six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_five_six.Location = new System.Drawing.Point(575, 20);
-            this.btn_five_six.Name = "btn_five_six";
-            this.btn_five_six.Size = new System.Drawing.Size(55, 52);
-            this.btn_five_six.TabIndex = 97;
-            this.btn_five_six.UseVisualStyleBackColor = false;
-            // 
-            // btn_zero_zero
-            // 
-            this.btn_zero_zero.BackColor = System.Drawing.Color.Transparent;
-            this.btn_zero_zero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_zero_zero.FlatAppearance.BorderSize = 0;
-            this.btn_zero_zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_zero_zero.Location = new System.Drawing.Point(33, 348);
-            this.btn_zero_zero.Name = "btn_zero_zero";
-            this.btn_zero_zero.Size = new System.Drawing.Size(55, 52);
-            this.btn_zero_zero.TabIndex = 51;
-            this.btn_zero_zero.UseVisualStyleBackColor = false;
-            // 
-            // btn_one_zero
-            // 
-            this.btn_one_zero.BackColor = System.Drawing.Color.Transparent;
-            this.btn_one_zero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_one_zero.FlatAppearance.BorderSize = 0;
-            this.btn_one_zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_one_zero.Location = new System.Drawing.Point(33, 281);
-            this.btn_one_zero.Name = "btn_one_zero";
-            this.btn_one_zero.Size = new System.Drawing.Size(55, 52);
-            this.btn_one_zero.TabIndex = 59;
-            this.btn_one_zero.UseVisualStyleBackColor = false;
-            // 
-            // btn_five_five
-            // 
-            this.btn_five_five.BackColor = System.Drawing.Color.Transparent;
-            this.btn_five_five.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_five_five.FlatAppearance.BorderSize = 0;
-            this.btn_five_five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_five_five.Location = new System.Drawing.Point(483, 20);
-            this.btn_five_five.Name = "btn_five_five";
-            this.btn_five_five.Size = new System.Drawing.Size(55, 52);
-            this.btn_five_five.TabIndex = 96;
-            this.btn_five_five.UseVisualStyleBackColor = false;
-            // 
-            // btn_zero_one
-            // 
-            this.btn_zero_one.BackColor = System.Drawing.Color.Transparent;
-            this.btn_zero_one.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_zero_one.FlatAppearance.BorderSize = 0;
-            this.btn_zero_one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_zero_one.Location = new System.Drawing.Point(123, 348);
-            this.btn_zero_one.Name = "btn_zero_one";
-            this.btn_zero_one.Size = new System.Drawing.Size(55, 52);
-            this.btn_zero_one.TabIndex = 52;
-            this.btn_zero_one.UseVisualStyleBackColor = false;
-            // 
-            // btn_zero_two
-            // 
-            this.btn_zero_two.BackColor = System.Drawing.Color.Transparent;
-            this.btn_zero_two.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_zero_two.FlatAppearance.BorderSize = 0;
-            this.btn_zero_two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_zero_two.Location = new System.Drawing.Point(213, 348);
-            this.btn_zero_two.Name = "btn_zero_two";
-            this.btn_zero_two.Size = new System.Drawing.Size(55, 52);
-            this.btn_zero_two.TabIndex = 53;
-            this.btn_zero_two.UseVisualStyleBackColor = false;
-            // 
-            // btn_five_four
-            // 
-            this.btn_five_four.BackColor = System.Drawing.Color.Transparent;
-            this.btn_five_four.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_five_four.FlatAppearance.BorderSize = 0;
-            this.btn_five_four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_five_four.Location = new System.Drawing.Point(394, 20);
-            this.btn_five_four.Name = "btn_five_four";
-            this.btn_five_four.Size = new System.Drawing.Size(55, 52);
-            this.btn_five_four.TabIndex = 95;
-            this.btn_five_four.UseVisualStyleBackColor = false;
-            // 
-            // btn_zero_three
-            // 
-            this.btn_zero_three.BackColor = System.Drawing.Color.Transparent;
-            this.btn_zero_three.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_zero_three.FlatAppearance.BorderSize = 0;
-            this.btn_zero_three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_zero_three.Location = new System.Drawing.Point(304, 348);
-            this.btn_zero_three.Name = "btn_zero_three";
-            this.btn_zero_three.Size = new System.Drawing.Size(55, 52);
-            this.btn_zero_three.TabIndex = 54;
-            this.btn_zero_three.UseVisualStyleBackColor = false;
-            // 
-            // btn_zero_four
-            // 
-            this.btn_zero_four.BackColor = System.Drawing.Color.Transparent;
-            this.btn_zero_four.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_zero_four.FlatAppearance.BorderSize = 0;
-            this.btn_zero_four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_zero_four.Location = new System.Drawing.Point(394, 348);
-            this.btn_zero_four.Name = "btn_zero_four";
-            this.btn_zero_four.Size = new System.Drawing.Size(55, 52);
-            this.btn_zero_four.TabIndex = 55;
-            this.btn_zero_four.UseVisualStyleBackColor = false;
-            // 
-            // btn_five_three
-            // 
-            this.btn_five_three.BackColor = System.Drawing.Color.Transparent;
-            this.btn_five_three.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_five_three.FlatAppearance.BorderSize = 0;
-            this.btn_five_three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_five_three.Location = new System.Drawing.Point(304, 20);
-            this.btn_five_three.Name = "btn_five_three";
-            this.btn_five_three.Size = new System.Drawing.Size(55, 52);
-            this.btn_five_three.TabIndex = 94;
-            this.btn_five_three.UseVisualStyleBackColor = false;
-            // 
-            // btn_zero_five
-            // 
-            this.btn_zero_five.BackColor = System.Drawing.Color.Transparent;
-            this.btn_zero_five.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_zero_five.FlatAppearance.BorderSize = 0;
-            this.btn_zero_five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_zero_five.Location = new System.Drawing.Point(483, 348);
-            this.btn_zero_five.Name = "btn_zero_five";
-            this.btn_zero_five.Size = new System.Drawing.Size(55, 52);
-            this.btn_zero_five.TabIndex = 56;
-            this.btn_zero_five.UseVisualStyleBackColor = false;
-            // 
-            // btn_five_two
-            // 
-            this.btn_five_two.BackColor = System.Drawing.Color.Transparent;
-            this.btn_five_two.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_five_two.FlatAppearance.BorderSize = 0;
-            this.btn_five_two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_five_two.Location = new System.Drawing.Point(213, 20);
-            this.btn_five_two.Name = "btn_five_two";
-            this.btn_five_two.Size = new System.Drawing.Size(55, 52);
-            this.btn_five_two.TabIndex = 93;
-            this.btn_five_two.UseVisualStyleBackColor = false;
-            // 
-            // btn_zero_six
-            // 
-            this.btn_zero_six.BackColor = System.Drawing.Color.Transparent;
-            this.btn_zero_six.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_zero_six.FlatAppearance.BorderSize = 0;
-            this.btn_zero_six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_zero_six.Location = new System.Drawing.Point(575, 348);
-            this.btn_zero_six.Name = "btn_zero_six";
-            this.btn_zero_six.Size = new System.Drawing.Size(55, 52);
-            this.btn_zero_six.TabIndex = 57;
-            this.btn_zero_six.UseVisualStyleBackColor = false;
-            // 
-            // btn_one_one
-            // 
-            this.btn_one_one.BackColor = System.Drawing.Color.Transparent;
-            this.btn_one_one.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_one_one.FlatAppearance.BorderSize = 0;
-            this.btn_one_one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_one_one.Location = new System.Drawing.Point(123, 281);
-            this.btn_one_one.Name = "btn_one_one";
-            this.btn_one_one.Size = new System.Drawing.Size(55, 52);
-            this.btn_one_one.TabIndex = 60;
-            this.btn_one_one.UseVisualStyleBackColor = false;
-            // 
-            // btn_five_one
-            // 
-            this.btn_five_one.BackColor = System.Drawing.Color.Transparent;
-            this.btn_five_one.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_five_one.FlatAppearance.BorderSize = 0;
-            this.btn_five_one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_five_one.Location = new System.Drawing.Point(123, 20);
-            this.btn_five_one.Name = "btn_five_one";
-            this.btn_five_one.Size = new System.Drawing.Size(55, 52);
-            this.btn_five_one.TabIndex = 92;
-            this.btn_five_one.UseVisualStyleBackColor = false;
-            // 
-            // btn_one_two
-            // 
-            this.btn_one_two.BackColor = System.Drawing.Color.Transparent;
-            this.btn_one_two.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_one_two.FlatAppearance.BorderSize = 0;
-            this.btn_one_two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_one_two.Location = new System.Drawing.Point(213, 281);
-            this.btn_one_two.Name = "btn_one_two";
-            this.btn_one_two.Size = new System.Drawing.Size(55, 52);
-            this.btn_one_two.TabIndex = 61;
-            this.btn_one_two.UseVisualStyleBackColor = false;
-            // 
-            // btn_one_three
-            // 
-            this.btn_one_three.BackColor = System.Drawing.Color.Transparent;
-            this.btn_one_three.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_one_three.FlatAppearance.BorderSize = 0;
-            this.btn_one_three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_one_three.Location = new System.Drawing.Point(304, 281);
-            this.btn_one_three.Name = "btn_one_three";
-            this.btn_one_three.Size = new System.Drawing.Size(55, 52);
-            this.btn_one_three.TabIndex = 62;
-            this.btn_one_three.UseVisualStyleBackColor = false;
-            // 
-            // btn_five_zero
-            // 
-            this.btn_five_zero.BackColor = System.Drawing.Color.Transparent;
-            this.btn_five_zero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_five_zero.FlatAppearance.BorderSize = 0;
-            this.btn_five_zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_five_zero.Location = new System.Drawing.Point(33, 20);
-            this.btn_five_zero.Name = "btn_five_zero";
-            this.btn_five_zero.Size = new System.Drawing.Size(55, 52);
-            this.btn_five_zero.TabIndex = 91;
-            this.btn_five_zero.UseVisualStyleBackColor = false;
-            // 
-            // btn_one_four
-            // 
-            this.btn_one_four.BackColor = System.Drawing.Color.Transparent;
-            this.btn_one_four.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_one_four.FlatAppearance.BorderSize = 0;
-            this.btn_one_four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_one_four.Location = new System.Drawing.Point(394, 281);
-            this.btn_one_four.Name = "btn_one_four";
-            this.btn_one_four.Size = new System.Drawing.Size(55, 52);
-            this.btn_one_four.TabIndex = 63;
-            this.btn_one_four.UseVisualStyleBackColor = false;
-            // 
-            // btn_one_five
-            // 
-            this.btn_one_five.BackColor = System.Drawing.Color.Transparent;
-            this.btn_one_five.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_one_five.FlatAppearance.BorderSize = 0;
-            this.btn_one_five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_one_five.Location = new System.Drawing.Point(483, 281);
-            this.btn_one_five.Name = "btn_one_five";
-            this.btn_one_five.Size = new System.Drawing.Size(55, 52);
-            this.btn_one_five.TabIndex = 64;
-            this.btn_one_five.UseVisualStyleBackColor = false;
-            // 
-            // btn_one_six
-            // 
-            this.btn_one_six.BackColor = System.Drawing.Color.Transparent;
-            this.btn_one_six.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_one_six.FlatAppearance.BorderSize = 0;
-            this.btn_one_six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_one_six.Location = new System.Drawing.Point(575, 281);
-            this.btn_one_six.Name = "btn_one_six";
-            this.btn_one_six.Size = new System.Drawing.Size(55, 52);
-            this.btn_one_six.TabIndex = 65;
-            this.btn_one_six.UseVisualStyleBackColor = false;
-            // 
-            // btn_four_six
-            // 
-            this.btn_four_six.BackColor = System.Drawing.Color.Transparent;
-            this.btn_four_six.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_four_six.FlatAppearance.BorderSize = 0;
-            this.btn_four_six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_four_six.Location = new System.Drawing.Point(575, 85);
-            this.btn_four_six.Name = "btn_four_six";
-            this.btn_four_six.Size = new System.Drawing.Size(55, 52);
-            this.btn_four_six.TabIndex = 89;
-            this.btn_four_six.UseVisualStyleBackColor = false;
-            // 
-            // btn_two_three
-            // 
-            this.btn_two_three.BackColor = System.Drawing.Color.Transparent;
-            this.btn_two_three.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_two_three.FlatAppearance.BorderSize = 0;
-            this.btn_two_three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_two_three.Location = new System.Drawing.Point(304, 216);
-            this.btn_two_three.Name = "btn_two_three";
-            this.btn_two_three.Size = new System.Drawing.Size(55, 52);
-            this.btn_two_three.TabIndex = 70;
-            this.btn_two_three.UseVisualStyleBackColor = false;
-            // 
-            // btn_two_two
-            // 
-            this.btn_two_two.BackColor = System.Drawing.Color.Transparent;
-            this.btn_two_two.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_two_two.FlatAppearance.BorderSize = 0;
-            this.btn_two_two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_two_two.Location = new System.Drawing.Point(213, 216);
-            this.btn_two_two.Name = "btn_two_two";
-            this.btn_two_two.Size = new System.Drawing.Size(55, 52);
-            this.btn_two_two.TabIndex = 69;
-            this.btn_two_two.UseVisualStyleBackColor = false;
-            // 
-            // btn_four_five
-            // 
-            this.btn_four_five.BackColor = System.Drawing.Color.Transparent;
-            this.btn_four_five.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_four_five.FlatAppearance.BorderSize = 0;
-            this.btn_four_five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_four_five.Location = new System.Drawing.Point(483, 85);
-            this.btn_four_five.Name = "btn_four_five";
-            this.btn_four_five.Size = new System.Drawing.Size(55, 52);
-            this.btn_four_five.TabIndex = 88;
-            this.btn_four_five.UseVisualStyleBackColor = false;
-            // 
-            // btn_two_one
-            // 
-            this.btn_two_one.BackColor = System.Drawing.Color.Transparent;
-            this.btn_two_one.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_two_one.FlatAppearance.BorderSize = 0;
-            this.btn_two_one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_two_one.Location = new System.Drawing.Point(123, 216);
-            this.btn_two_one.Name = "btn_two_one";
-            this.btn_two_one.Size = new System.Drawing.Size(55, 52);
-            this.btn_two_one.TabIndex = 68;
-            this.btn_two_one.UseVisualStyleBackColor = false;
-            // 
-            // btn_four_four
-            // 
-            this.btn_four_four.BackColor = System.Drawing.Color.Transparent;
-            this.btn_four_four.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_four_four.FlatAppearance.BorderSize = 0;
-            this.btn_four_four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_four_four.Location = new System.Drawing.Point(394, 85);
-            this.btn_four_four.Name = "btn_four_four";
-            this.btn_four_four.Size = new System.Drawing.Size(55, 52);
-            this.btn_four_four.TabIndex = 87;
-            this.btn_four_four.UseVisualStyleBackColor = false;
-            // 
-            // btn_two_four
-            // 
-            this.btn_two_four.BackColor = System.Drawing.Color.Transparent;
-            this.btn_two_four.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_two_four.FlatAppearance.BorderSize = 0;
-            this.btn_two_four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_two_four.Location = new System.Drawing.Point(394, 216);
-            this.btn_two_four.Name = "btn_two_four";
-            this.btn_two_four.Size = new System.Drawing.Size(55, 52);
-            this.btn_two_four.TabIndex = 71;
-            this.btn_two_four.UseVisualStyleBackColor = false;
-            // 
-            // btn_four_three
-            // 
-            this.btn_four_three.BackColor = System.Drawing.Color.Transparent;
-            this.btn_four_three.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_four_three.FlatAppearance.BorderSize = 0;
-            this.btn_four_three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_four_three.Location = new System.Drawing.Point(304, 85);
-            this.btn_four_three.Name = "btn_four_three";
-            this.btn_four_three.Size = new System.Drawing.Size(55, 52);
-            this.btn_four_three.TabIndex = 86;
-            this.btn_four_three.UseVisualStyleBackColor = false;
-            // 
-            // btn_four_two
-            // 
-            this.btn_four_two.BackColor = System.Drawing.Color.Transparent;
-            this.btn_four_two.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_four_two.FlatAppearance.BorderSize = 0;
-            this.btn_four_two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_four_two.Location = new System.Drawing.Point(213, 85);
-            this.btn_four_two.Name = "btn_four_two";
-            this.btn_four_two.Size = new System.Drawing.Size(55, 52);
-            this.btn_four_two.TabIndex = 85;
-            this.btn_four_two.UseVisualStyleBackColor = false;
-            // 
-            // btn_two_zero
-            // 
-            this.btn_two_zero.BackColor = System.Drawing.Color.Transparent;
-            this.btn_two_zero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_two_zero.FlatAppearance.BorderSize = 0;
-            this.btn_two_zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_two_zero.Location = new System.Drawing.Point(33, 216);
-            this.btn_two_zero.Name = "btn_two_zero";
-            this.btn_two_zero.Size = new System.Drawing.Size(55, 52);
-            this.btn_two_zero.TabIndex = 67;
-            this.btn_two_zero.UseVisualStyleBackColor = false;
-            // 
-            // btn_four_one
-            // 
-            this.btn_four_one.BackColor = System.Drawing.Color.Transparent;
-            this.btn_four_one.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_four_one.FlatAppearance.BorderSize = 0;
-            this.btn_four_one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_four_one.Location = new System.Drawing.Point(123, 85);
-            this.btn_four_one.Name = "btn_four_one";
-            this.btn_four_one.Size = new System.Drawing.Size(55, 52);
-            this.btn_four_one.TabIndex = 84;
-            this.btn_four_one.UseVisualStyleBackColor = false;
-            // 
-            // btn_two_five
-            // 
-            this.btn_two_five.BackColor = System.Drawing.Color.Transparent;
-            this.btn_two_five.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_two_five.FlatAppearance.BorderSize = 0;
-            this.btn_two_five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_two_five.Location = new System.Drawing.Point(483, 216);
-            this.btn_two_five.Name = "btn_two_five";
-            this.btn_two_five.Size = new System.Drawing.Size(55, 52);
-            this.btn_two_five.TabIndex = 72;
-            this.btn_two_five.UseVisualStyleBackColor = false;
-            // 
-            // btn_four_zero
-            // 
-            this.btn_four_zero.BackColor = System.Drawing.Color.Transparent;
-            this.btn_four_zero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_four_zero.FlatAppearance.BorderSize = 0;
-            this.btn_four_zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_four_zero.Location = new System.Drawing.Point(33, 85);
-            this.btn_four_zero.Name = "btn_four_zero";
-            this.btn_four_zero.Size = new System.Drawing.Size(55, 52);
-            this.btn_four_zero.TabIndex = 83;
-            this.btn_four_zero.UseVisualStyleBackColor = false;
-            // 
-            // btn_two_six
-            // 
-            this.btn_two_six.BackColor = System.Drawing.Color.Transparent;
-            this.btn_two_six.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_two_six.FlatAppearance.BorderSize = 0;
-            this.btn_two_six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_two_six.Location = new System.Drawing.Point(575, 216);
-            this.btn_two_six.Name = "btn_two_six";
-            this.btn_two_six.Size = new System.Drawing.Size(55, 52);
-            this.btn_two_six.TabIndex = 73;
-            this.btn_two_six.UseVisualStyleBackColor = false;
-            // 
-            // btn_three_three
-            // 
-            this.btn_three_three.BackColor = System.Drawing.Color.Transparent;
-            this.btn_three_three.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_three_three.FlatAppearance.BorderSize = 0;
-            this.btn_three_three.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_three_three.Location = new System.Drawing.Point(304, 150);
-            this.btn_three_three.Name = "btn_three_three";
-            this.btn_three_three.Size = new System.Drawing.Size(55, 52);
-            this.btn_three_three.TabIndex = 78;
-            this.btn_three_three.UseVisualStyleBackColor = false;
-            // 
-            // btn_three_six
-            // 
-            this.btn_three_six.BackColor = System.Drawing.Color.Transparent;
-            this.btn_three_six.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_three_six.FlatAppearance.BorderSize = 0;
-            this.btn_three_six.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_three_six.Location = new System.Drawing.Point(575, 150);
-            this.btn_three_six.Name = "btn_three_six";
-            this.btn_three_six.Size = new System.Drawing.Size(55, 52);
-            this.btn_three_six.TabIndex = 81;
-            this.btn_three_six.UseVisualStyleBackColor = false;
-            // 
-            // btn_three_zero
-            // 
-            this.btn_three_zero.BackColor = System.Drawing.Color.Transparent;
-            this.btn_three_zero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_three_zero.FlatAppearance.BorderSize = 0;
-            this.btn_three_zero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_three_zero.Location = new System.Drawing.Point(33, 150);
-            this.btn_three_zero.Name = "btn_three_zero";
-            this.btn_three_zero.Size = new System.Drawing.Size(55, 52);
-            this.btn_three_zero.TabIndex = 75;
-            this.btn_three_zero.UseVisualStyleBackColor = false;
-            // 
-            // btn_three_five
-            // 
-            this.btn_three_five.BackColor = System.Drawing.Color.Transparent;
-            this.btn_three_five.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_three_five.FlatAppearance.BorderSize = 0;
-            this.btn_three_five.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_three_five.Location = new System.Drawing.Point(483, 150);
-            this.btn_three_five.Name = "btn_three_five";
-            this.btn_three_five.Size = new System.Drawing.Size(55, 52);
-            this.btn_three_five.TabIndex = 80;
-            this.btn_three_five.UseVisualStyleBackColor = false;
-            // 
-            // btn_three_one
-            // 
-            this.btn_three_one.BackColor = System.Drawing.Color.Transparent;
-            this.btn_three_one.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_three_one.FlatAppearance.BorderSize = 0;
-            this.btn_three_one.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_three_one.Location = new System.Drawing.Point(123, 150);
-            this.btn_three_one.Name = "btn_three_one";
-            this.btn_three_one.Size = new System.Drawing.Size(55, 52);
-            this.btn_three_one.TabIndex = 76;
-            this.btn_three_one.UseVisualStyleBackColor = false;
-            // 
-            // btn_three_four
-            // 
-            this.btn_three_four.BackColor = System.Drawing.Color.Transparent;
-            this.btn_three_four.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_three_four.FlatAppearance.BorderSize = 0;
-            this.btn_three_four.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_three_four.Location = new System.Drawing.Point(394, 150);
-            this.btn_three_four.Name = "btn_three_four";
-            this.btn_three_four.Size = new System.Drawing.Size(55, 52);
-            this.btn_three_four.TabIndex = 79;
-            this.btn_three_four.UseVisualStyleBackColor = false;
-            // 
-            // btn_three_two
-            // 
-            this.btn_three_two.BackColor = System.Drawing.Color.Transparent;
-            this.btn_three_two.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_three_two.FlatAppearance.BorderSize = 0;
-            this.btn_three_two.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_three_two.Location = new System.Drawing.Point(213, 150);
-            this.btn_three_two.Name = "btn_three_two";
-            this.btn_three_two.Size = new System.Drawing.Size(55, 52);
-            this.btn_three_two.TabIndex = 77;
-            this.btn_three_two.UseVisualStyleBackColor = false;
+            // btn_ZeroZero
+            // 
+            this.btn_ZeroZero.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ZeroZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ZeroZero.Enabled = false;
+            this.btn_ZeroZero.FlatAppearance.BorderSize = 0;
+            this.btn_ZeroZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ZeroZero.Location = new System.Drawing.Point(32, 344);
+            this.btn_ZeroZero.Name = "btn_ZeroZero";
+            this.btn_ZeroZero.Size = new System.Drawing.Size(55, 55);
+            this.btn_ZeroZero.TabIndex = 119;
+            this.btn_ZeroZero.UseVisualStyleBackColor = false;
+            // 
+            // btn_ZeroOne
+            // 
+            this.btn_ZeroOne.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ZeroOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ZeroOne.Enabled = false;
+            this.btn_ZeroOne.FlatAppearance.BorderSize = 0;
+            this.btn_ZeroOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ZeroOne.Location = new System.Drawing.Point(122, 344);
+            this.btn_ZeroOne.Name = "btn_ZeroOne";
+            this.btn_ZeroOne.Size = new System.Drawing.Size(55, 55);
+            this.btn_ZeroOne.TabIndex = 118;
+            this.btn_ZeroOne.UseVisualStyleBackColor = false;
+            // 
+            // btn_ZeroTwo
+            // 
+            this.btn_ZeroTwo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ZeroTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ZeroTwo.Enabled = false;
+            this.btn_ZeroTwo.FlatAppearance.BorderSize = 0;
+            this.btn_ZeroTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ZeroTwo.Location = new System.Drawing.Point(212, 344);
+            this.btn_ZeroTwo.Name = "btn_ZeroTwo";
+            this.btn_ZeroTwo.Size = new System.Drawing.Size(55, 55);
+            this.btn_ZeroTwo.TabIndex = 117;
+            this.btn_ZeroTwo.UseVisualStyleBackColor = false;
+            // 
+            // btn_ZeroThree
+            // 
+            this.btn_ZeroThree.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ZeroThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ZeroThree.Enabled = false;
+            this.btn_ZeroThree.FlatAppearance.BorderSize = 0;
+            this.btn_ZeroThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ZeroThree.Location = new System.Drawing.Point(303, 344);
+            this.btn_ZeroThree.Name = "btn_ZeroThree";
+            this.btn_ZeroThree.Size = new System.Drawing.Size(55, 55);
+            this.btn_ZeroThree.TabIndex = 116;
+            this.btn_ZeroThree.UseVisualStyleBackColor = false;
+            // 
+            // btn_ZeroFour
+            // 
+            this.btn_ZeroFour.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ZeroFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ZeroFour.Enabled = false;
+            this.btn_ZeroFour.FlatAppearance.BorderSize = 0;
+            this.btn_ZeroFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ZeroFour.Location = new System.Drawing.Point(393, 344);
+            this.btn_ZeroFour.Name = "btn_ZeroFour";
+            this.btn_ZeroFour.Size = new System.Drawing.Size(55, 55);
+            this.btn_ZeroFour.TabIndex = 115;
+            this.btn_ZeroFour.UseVisualStyleBackColor = false;
+            // 
+            // btn_ZeroFive
+            // 
+            this.btn_ZeroFive.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ZeroFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ZeroFive.Enabled = false;
+            this.btn_ZeroFive.FlatAppearance.BorderSize = 0;
+            this.btn_ZeroFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ZeroFive.Location = new System.Drawing.Point(482, 344);
+            this.btn_ZeroFive.Name = "btn_ZeroFive";
+            this.btn_ZeroFive.Size = new System.Drawing.Size(55, 55);
+            this.btn_ZeroFive.TabIndex = 114;
+            this.btn_ZeroFive.UseVisualStyleBackColor = false;
+            // 
+            // btn_ZeroSix
+            // 
+            this.btn_ZeroSix.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ZeroSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ZeroSix.Enabled = false;
+            this.btn_ZeroSix.FlatAppearance.BorderSize = 0;
+            this.btn_ZeroSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ZeroSix.Location = new System.Drawing.Point(574, 344);
+            this.btn_ZeroSix.Name = "btn_ZeroSix";
+            this.btn_ZeroSix.Size = new System.Drawing.Size(55, 55);
+            this.btn_ZeroSix.TabIndex = 113;
+            this.btn_ZeroSix.UseVisualStyleBackColor = false;
+            // 
+            // btn_OneZero
+            // 
+            this.btn_OneZero.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OneZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_OneZero.Enabled = false;
+            this.btn_OneZero.FlatAppearance.BorderSize = 0;
+            this.btn_OneZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OneZero.Location = new System.Drawing.Point(32, 279);
+            this.btn_OneZero.Name = "btn_OneZero";
+            this.btn_OneZero.Size = new System.Drawing.Size(55, 55);
+            this.btn_OneZero.TabIndex = 112;
+            this.btn_OneZero.UseVisualStyleBackColor = false;
+            // 
+            // btn_OneOne
+            // 
+            this.btn_OneOne.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OneOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_OneOne.Enabled = false;
+            this.btn_OneOne.FlatAppearance.BorderSize = 0;
+            this.btn_OneOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OneOne.Location = new System.Drawing.Point(122, 279);
+            this.btn_OneOne.Name = "btn_OneOne";
+            this.btn_OneOne.Size = new System.Drawing.Size(55, 55);
+            this.btn_OneOne.TabIndex = 111;
+            this.btn_OneOne.UseVisualStyleBackColor = false;
+            // 
+            // btn_OneTwo
+            // 
+            this.btn_OneTwo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OneTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_OneTwo.Enabled = false;
+            this.btn_OneTwo.FlatAppearance.BorderSize = 0;
+            this.btn_OneTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OneTwo.Location = new System.Drawing.Point(212, 279);
+            this.btn_OneTwo.Name = "btn_OneTwo";
+            this.btn_OneTwo.Size = new System.Drawing.Size(55, 55);
+            this.btn_OneTwo.TabIndex = 110;
+            this.btn_OneTwo.UseVisualStyleBackColor = false;
+            // 
+            // btn_OneThree
+            // 
+            this.btn_OneThree.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OneThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_OneThree.Enabled = false;
+            this.btn_OneThree.FlatAppearance.BorderSize = 0;
+            this.btn_OneThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OneThree.Location = new System.Drawing.Point(303, 279);
+            this.btn_OneThree.Name = "btn_OneThree";
+            this.btn_OneThree.Size = new System.Drawing.Size(55, 55);
+            this.btn_OneThree.TabIndex = 109;
+            this.btn_OneThree.UseVisualStyleBackColor = false;
+            // 
+            // btn_OneFour
+            // 
+            this.btn_OneFour.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OneFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_OneFour.Enabled = false;
+            this.btn_OneFour.FlatAppearance.BorderSize = 0;
+            this.btn_OneFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OneFour.Location = new System.Drawing.Point(393, 279);
+            this.btn_OneFour.Name = "btn_OneFour";
+            this.btn_OneFour.Size = new System.Drawing.Size(55, 55);
+            this.btn_OneFour.TabIndex = 108;
+            this.btn_OneFour.UseVisualStyleBackColor = false;
+            // 
+            // btn_OneFive
+            // 
+            this.btn_OneFive.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OneFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_OneFive.Enabled = false;
+            this.btn_OneFive.FlatAppearance.BorderSize = 0;
+            this.btn_OneFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OneFive.Location = new System.Drawing.Point(482, 279);
+            this.btn_OneFive.Name = "btn_OneFive";
+            this.btn_OneFive.Size = new System.Drawing.Size(55, 55);
+            this.btn_OneFive.TabIndex = 107;
+            this.btn_OneFive.UseVisualStyleBackColor = false;
+            // 
+            // btn_OneSix
+            // 
+            this.btn_OneSix.BackColor = System.Drawing.Color.Transparent;
+            this.btn_OneSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_OneSix.Enabled = false;
+            this.btn_OneSix.FlatAppearance.BorderSize = 0;
+            this.btn_OneSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_OneSix.Location = new System.Drawing.Point(574, 279);
+            this.btn_OneSix.Name = "btn_OneSix";
+            this.btn_OneSix.Size = new System.Drawing.Size(55, 55);
+            this.btn_OneSix.TabIndex = 106;
+            this.btn_OneSix.UseVisualStyleBackColor = false;
+            // 
+            // btn_TwoZero
+            // 
+            this.btn_TwoZero.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TwoZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_TwoZero.Enabled = false;
+            this.btn_TwoZero.FlatAppearance.BorderSize = 0;
+            this.btn_TwoZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TwoZero.Location = new System.Drawing.Point(32, 213);
+            this.btn_TwoZero.Name = "btn_TwoZero";
+            this.btn_TwoZero.Size = new System.Drawing.Size(55, 55);
+            this.btn_TwoZero.TabIndex = 105;
+            this.btn_TwoZero.UseVisualStyleBackColor = false;
+            // 
+            // btn_TwoOne
+            // 
+            this.btn_TwoOne.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TwoOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_TwoOne.Enabled = false;
+            this.btn_TwoOne.FlatAppearance.BorderSize = 0;
+            this.btn_TwoOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TwoOne.Location = new System.Drawing.Point(122, 213);
+            this.btn_TwoOne.Name = "btn_TwoOne";
+            this.btn_TwoOne.Size = new System.Drawing.Size(55, 55);
+            this.btn_TwoOne.TabIndex = 104;
+            this.btn_TwoOne.UseVisualStyleBackColor = false;
+            // 
+            // btn_TwoTwo
+            // 
+            this.btn_TwoTwo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TwoTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_TwoTwo.Enabled = false;
+            this.btn_TwoTwo.FlatAppearance.BorderSize = 0;
+            this.btn_TwoTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TwoTwo.Location = new System.Drawing.Point(212, 213);
+            this.btn_TwoTwo.Name = "btn_TwoTwo";
+            this.btn_TwoTwo.Size = new System.Drawing.Size(55, 55);
+            this.btn_TwoTwo.TabIndex = 103;
+            this.btn_TwoTwo.UseVisualStyleBackColor = false;
+            // 
+            // btn_TwoThree
+            // 
+            this.btn_TwoThree.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TwoThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_TwoThree.Enabled = false;
+            this.btn_TwoThree.FlatAppearance.BorderSize = 0;
+            this.btn_TwoThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TwoThree.Location = new System.Drawing.Point(303, 213);
+            this.btn_TwoThree.Name = "btn_TwoThree";
+            this.btn_TwoThree.Size = new System.Drawing.Size(55, 55);
+            this.btn_TwoThree.TabIndex = 102;
+            this.btn_TwoThree.UseVisualStyleBackColor = false;
+            // 
+            // btn_TwoFour
+            // 
+            this.btn_TwoFour.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TwoFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_TwoFour.Enabled = false;
+            this.btn_TwoFour.FlatAppearance.BorderSize = 0;
+            this.btn_TwoFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TwoFour.Location = new System.Drawing.Point(393, 213);
+            this.btn_TwoFour.Name = "btn_TwoFour";
+            this.btn_TwoFour.Size = new System.Drawing.Size(55, 55);
+            this.btn_TwoFour.TabIndex = 101;
+            this.btn_TwoFour.UseVisualStyleBackColor = false;
+            // 
+            // btn_TwoFive
+            // 
+            this.btn_TwoFive.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TwoFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_TwoFive.Enabled = false;
+            this.btn_TwoFive.FlatAppearance.BorderSize = 0;
+            this.btn_TwoFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TwoFive.Location = new System.Drawing.Point(482, 213);
+            this.btn_TwoFive.Name = "btn_TwoFive";
+            this.btn_TwoFive.Size = new System.Drawing.Size(55, 55);
+            this.btn_TwoFive.TabIndex = 100;
+            this.btn_TwoFive.UseVisualStyleBackColor = false;
+            // 
+            // btn_TwoSix
+            // 
+            this.btn_TwoSix.BackColor = System.Drawing.Color.Transparent;
+            this.btn_TwoSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_TwoSix.Enabled = false;
+            this.btn_TwoSix.FlatAppearance.BorderSize = 0;
+            this.btn_TwoSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_TwoSix.Location = new System.Drawing.Point(574, 213);
+            this.btn_TwoSix.Name = "btn_TwoSix";
+            this.btn_TwoSix.Size = new System.Drawing.Size(55, 55);
+            this.btn_TwoSix.TabIndex = 99;
+            this.btn_TwoSix.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThreeZero
+            // 
+            this.btn_ThreeZero.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThreeZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ThreeZero.Enabled = false;
+            this.btn_ThreeZero.FlatAppearance.BorderSize = 0;
+            this.btn_ThreeZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThreeZero.Location = new System.Drawing.Point(32, 147);
+            this.btn_ThreeZero.Name = "btn_ThreeZero";
+            this.btn_ThreeZero.Size = new System.Drawing.Size(55, 55);
+            this.btn_ThreeZero.TabIndex = 98;
+            this.btn_ThreeZero.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThreeOne
+            // 
+            this.btn_ThreeOne.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThreeOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ThreeOne.Enabled = false;
+            this.btn_ThreeOne.FlatAppearance.BorderSize = 0;
+            this.btn_ThreeOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThreeOne.Location = new System.Drawing.Point(122, 147);
+            this.btn_ThreeOne.Name = "btn_ThreeOne";
+            this.btn_ThreeOne.Size = new System.Drawing.Size(55, 55);
+            this.btn_ThreeOne.TabIndex = 97;
+            this.btn_ThreeOne.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThreeTwo
+            // 
+            this.btn_ThreeTwo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThreeTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ThreeTwo.Enabled = false;
+            this.btn_ThreeTwo.FlatAppearance.BorderSize = 0;
+            this.btn_ThreeTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThreeTwo.Location = new System.Drawing.Point(212, 147);
+            this.btn_ThreeTwo.Name = "btn_ThreeTwo";
+            this.btn_ThreeTwo.Size = new System.Drawing.Size(55, 55);
+            this.btn_ThreeTwo.TabIndex = 96;
+            this.btn_ThreeTwo.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThreeThree
+            // 
+            this.btn_ThreeThree.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThreeThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ThreeThree.Enabled = false;
+            this.btn_ThreeThree.FlatAppearance.BorderSize = 0;
+            this.btn_ThreeThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThreeThree.Location = new System.Drawing.Point(303, 147);
+            this.btn_ThreeThree.Name = "btn_ThreeThree";
+            this.btn_ThreeThree.Size = new System.Drawing.Size(55, 55);
+            this.btn_ThreeThree.TabIndex = 95;
+            this.btn_ThreeThree.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThreeFour
+            // 
+            this.btn_ThreeFour.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThreeFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ThreeFour.Enabled = false;
+            this.btn_ThreeFour.FlatAppearance.BorderSize = 0;
+            this.btn_ThreeFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThreeFour.Location = new System.Drawing.Point(393, 147);
+            this.btn_ThreeFour.Name = "btn_ThreeFour";
+            this.btn_ThreeFour.Size = new System.Drawing.Size(55, 55);
+            this.btn_ThreeFour.TabIndex = 94;
+            this.btn_ThreeFour.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThreeFive
+            // 
+            this.btn_ThreeFive.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThreeFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ThreeFive.Enabled = false;
+            this.btn_ThreeFive.FlatAppearance.BorderSize = 0;
+            this.btn_ThreeFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThreeFive.Location = new System.Drawing.Point(482, 147);
+            this.btn_ThreeFive.Name = "btn_ThreeFive";
+            this.btn_ThreeFive.Size = new System.Drawing.Size(55, 55);
+            this.btn_ThreeFive.TabIndex = 93;
+            this.btn_ThreeFive.UseVisualStyleBackColor = false;
+            // 
+            // btn_ThreeSix
+            // 
+            this.btn_ThreeSix.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThreeSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ThreeSix.Enabled = false;
+            this.btn_ThreeSix.FlatAppearance.BorderSize = 0;
+            this.btn_ThreeSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThreeSix.Location = new System.Drawing.Point(574, 147);
+            this.btn_ThreeSix.Name = "btn_ThreeSix";
+            this.btn_ThreeSix.Size = new System.Drawing.Size(55, 55);
+            this.btn_ThreeSix.TabIndex = 92;
+            this.btn_ThreeSix.UseVisualStyleBackColor = false;
+            // 
+            // btn_FourZero
+            // 
+            this.btn_FourZero.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FourZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FourZero.Enabled = false;
+            this.btn_FourZero.FlatAppearance.BorderSize = 0;
+            this.btn_FourZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FourZero.Location = new System.Drawing.Point(32, 82);
+            this.btn_FourZero.Name = "btn_FourZero";
+            this.btn_FourZero.Size = new System.Drawing.Size(55, 55);
+            this.btn_FourZero.TabIndex = 91;
+            this.btn_FourZero.UseVisualStyleBackColor = false;
+            // 
+            // btn_FourOne
+            // 
+            this.btn_FourOne.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FourOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FourOne.Enabled = false;
+            this.btn_FourOne.FlatAppearance.BorderSize = 0;
+            this.btn_FourOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FourOne.Location = new System.Drawing.Point(122, 82);
+            this.btn_FourOne.Name = "btn_FourOne";
+            this.btn_FourOne.Size = new System.Drawing.Size(55, 55);
+            this.btn_FourOne.TabIndex = 90;
+            this.btn_FourOne.UseVisualStyleBackColor = false;
+            // 
+            // btn_FourTwo
+            // 
+            this.btn_FourTwo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FourTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FourTwo.Enabled = false;
+            this.btn_FourTwo.FlatAppearance.BorderSize = 0;
+            this.btn_FourTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FourTwo.Location = new System.Drawing.Point(212, 82);
+            this.btn_FourTwo.Name = "btn_FourTwo";
+            this.btn_FourTwo.Size = new System.Drawing.Size(55, 55);
+            this.btn_FourTwo.TabIndex = 89;
+            this.btn_FourTwo.UseVisualStyleBackColor = false;
+            // 
+            // btn_FourThree
+            // 
+            this.btn_FourThree.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FourThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FourThree.Enabled = false;
+            this.btn_FourThree.FlatAppearance.BorderSize = 0;
+            this.btn_FourThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FourThree.Location = new System.Drawing.Point(303, 82);
+            this.btn_FourThree.Name = "btn_FourThree";
+            this.btn_FourThree.Size = new System.Drawing.Size(55, 55);
+            this.btn_FourThree.TabIndex = 88;
+            this.btn_FourThree.UseVisualStyleBackColor = false;
+            // 
+            // btn_FourFour
+            // 
+            this.btn_FourFour.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FourFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FourFour.Enabled = false;
+            this.btn_FourFour.FlatAppearance.BorderSize = 0;
+            this.btn_FourFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FourFour.Location = new System.Drawing.Point(393, 82);
+            this.btn_FourFour.Name = "btn_FourFour";
+            this.btn_FourFour.Size = new System.Drawing.Size(55, 55);
+            this.btn_FourFour.TabIndex = 87;
+            this.btn_FourFour.UseVisualStyleBackColor = false;
+            // 
+            // btn_FourFive
+            // 
+            this.btn_FourFive.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FourFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FourFive.Enabled = false;
+            this.btn_FourFive.FlatAppearance.BorderSize = 0;
+            this.btn_FourFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FourFive.Location = new System.Drawing.Point(482, 82);
+            this.btn_FourFive.Name = "btn_FourFive";
+            this.btn_FourFive.Size = new System.Drawing.Size(55, 55);
+            this.btn_FourFive.TabIndex = 80;
+            this.btn_FourFive.UseVisualStyleBackColor = false;
+            // 
+            // btn_FourSix
+            // 
+            this.btn_FourSix.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FourSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FourSix.Enabled = false;
+            this.btn_FourSix.FlatAppearance.BorderSize = 0;
+            this.btn_FourSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FourSix.Location = new System.Drawing.Point(574, 82);
+            this.btn_FourSix.Name = "btn_FourSix";
+            this.btn_FourSix.Size = new System.Drawing.Size(55, 55);
+            this.btn_FourSix.TabIndex = 86;
+            this.btn_FourSix.UseVisualStyleBackColor = false;
+            // 
+            // btn_FiveZero
+            // 
+            this.btn_FiveZero.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FiveZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FiveZero.Enabled = false;
+            this.btn_FiveZero.FlatAppearance.BorderSize = 0;
+            this.btn_FiveZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FiveZero.Location = new System.Drawing.Point(32, 17);
+            this.btn_FiveZero.Name = "btn_FiveZero";
+            this.btn_FiveZero.Size = new System.Drawing.Size(55, 55);
+            this.btn_FiveZero.TabIndex = 85;
+            this.btn_FiveZero.UseVisualStyleBackColor = false;
+            // 
+            // btn_FiveOne
+            // 
+            this.btn_FiveOne.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FiveOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FiveOne.Enabled = false;
+            this.btn_FiveOne.FlatAppearance.BorderSize = 0;
+            this.btn_FiveOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FiveOne.Location = new System.Drawing.Point(122, 17);
+            this.btn_FiveOne.Name = "btn_FiveOne";
+            this.btn_FiveOne.Size = new System.Drawing.Size(55, 55);
+            this.btn_FiveOne.TabIndex = 84;
+            this.btn_FiveOne.UseVisualStyleBackColor = false;
+            // 
+            // btn_FiveTwo
+            // 
+            this.btn_FiveTwo.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FiveTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FiveTwo.Enabled = false;
+            this.btn_FiveTwo.FlatAppearance.BorderSize = 0;
+            this.btn_FiveTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FiveTwo.Location = new System.Drawing.Point(212, 17);
+            this.btn_FiveTwo.Name = "btn_FiveTwo";
+            this.btn_FiveTwo.Size = new System.Drawing.Size(55, 55);
+            this.btn_FiveTwo.TabIndex = 83;
+            this.btn_FiveTwo.UseVisualStyleBackColor = false;
+            // 
+            // btn_FiveThree
+            // 
+            this.btn_FiveThree.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FiveThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FiveThree.Enabled = false;
+            this.btn_FiveThree.FlatAppearance.BorderSize = 0;
+            this.btn_FiveThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FiveThree.Location = new System.Drawing.Point(303, 17);
+            this.btn_FiveThree.Name = "btn_FiveThree";
+            this.btn_FiveThree.Size = new System.Drawing.Size(55, 55);
+            this.btn_FiveThree.TabIndex = 82;
+            this.btn_FiveThree.UseVisualStyleBackColor = false;
+            // 
+            // btn_FiveFour
+            // 
+            this.btn_FiveFour.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FiveFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FiveFour.Enabled = false;
+            this.btn_FiveFour.FlatAppearance.BorderSize = 0;
+            this.btn_FiveFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FiveFour.Location = new System.Drawing.Point(393, 17);
+            this.btn_FiveFour.Name = "btn_FiveFour";
+            this.btn_FiveFour.Size = new System.Drawing.Size(55, 55);
+            this.btn_FiveFour.TabIndex = 81;
+            this.btn_FiveFour.UseVisualStyleBackColor = false;
+            // 
+            // btn_FiveFive
+            // 
+            this.btn_FiveFive.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FiveFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FiveFive.Enabled = false;
+            this.btn_FiveFive.FlatAppearance.BorderSize = 0;
+            this.btn_FiveFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FiveFive.Location = new System.Drawing.Point(482, 17);
+            this.btn_FiveFive.Name = "btn_FiveFive";
+            this.btn_FiveFive.Size = new System.Drawing.Size(55, 55);
+            this.btn_FiveFive.TabIndex = 80;
+            this.btn_FiveFive.UseVisualStyleBackColor = false;
+            // 
+            // btn_FiveSix
+            // 
+            this.btn_FiveSix.BackColor = System.Drawing.Color.Transparent;
+            this.btn_FiveSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_FiveSix.Enabled = false;
+            this.btn_FiveSix.FlatAppearance.BorderSize = 0;
+            this.btn_FiveSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_FiveSix.Location = new System.Drawing.Point(574, 17);
+            this.btn_FiveSix.Name = "btn_FiveSix";
+            this.btn_FiveSix.Size = new System.Drawing.Size(55, 55);
+            this.btn_FiveSix.TabIndex = 79;
+            this.btn_FiveSix.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(451, 508);
+            this.button3.Location = new System.Drawing.Point(452, 533);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(145, 48);
             this.button3.TabIndex = 78;
@@ -720,7 +763,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(272, 508);
+            this.button2.Location = new System.Drawing.Point(273, 533);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(145, 48);
             this.button2.TabIndex = 77;
@@ -729,90 +772,103 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(91, 508);
+            this.button1.Location = new System.Drawing.Point(92, 533);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(145, 48);
             this.button1.TabIndex = 76;
             this.button1.Text = "Play Again";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // lbl_TurnDisplay
+            // 
+            this.lbl_TurnDisplay.AutoSize = true;
+            this.lbl_TurnDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TurnDisplay.Location = new System.Drawing.Point(249, 9);
+            this.lbl_TurnDisplay.Name = "lbl_TurnDisplay";
+            this.lbl_TurnDisplay.Size = new System.Drawing.Size(184, 25);
+            this.lbl_TurnDisplay.TabIndex = 79;
+            this.lbl_TurnDisplay.Text = "Player One\'s Turn";
+            // 
             // SinglePlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(689, 577);
+            this.ClientSize = new System.Drawing.Size(704, 607);
+            this.Controls.Add(this.lbl_TurnDisplay);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btn_column_seven);
-            this.Controls.Add(this.btn_column_six);
-            this.Controls.Add(this.btn_column_five);
-            this.Controls.Add(this.btn_column_four);
-            this.Controls.Add(this.btn_column_three);
-            this.Controls.Add(this.btn_column_two);
-            this.Controls.Add(this.btn_column_one);
+            this.Controls.Add(this.btn_ColumnSeven);
+            this.Controls.Add(this.btn_ColumnSix);
+            this.Controls.Add(this.btn_ColumnFive);
+            this.Controls.Add(this.btn_ColumnFour);
+            this.Controls.Add(this.btn_ColumnThree);
+            this.Controls.Add(this.btn_ColumnTwo);
+            this.Controls.Add(this.btn_ColumnOne);
             this.Controls.Add(this.pnl_BoardPanel);
             this.Name = "SinglePlayerForm";
             this.Text = "SinglePlayer";
             this.pnl_BoardPanel.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel pnl_BoardPanel;
-        private System.Windows.Forms.Button btn_five_six;
-        private System.Windows.Forms.Button btn_five_five;
-        private System.Windows.Forms.Button btn_five_four;
-        private System.Windows.Forms.Button btn_five_three;
-        private System.Windows.Forms.Button btn_five_two;
-        private System.Windows.Forms.Button btn_five_one;
-        private System.Windows.Forms.Button btn_five_zero;
-        private System.Windows.Forms.Button btn_four_six;
-        private System.Windows.Forms.Button btn_four_five;
-        private System.Windows.Forms.Button btn_four_four;
-        private System.Windows.Forms.Button btn_four_three;
-        private System.Windows.Forms.Button btn_four_two;
-        private System.Windows.Forms.Button btn_four_one;
-        private System.Windows.Forms.Button btn_four_zero;
-        private System.Windows.Forms.Button btn_three_six;
-        private System.Windows.Forms.Button btn_three_five;
-        private System.Windows.Forms.Button btn_three_four;
-        private System.Windows.Forms.Button btn_three_three;
-        private System.Windows.Forms.Button btn_three_two;
-        private System.Windows.Forms.Button btn_three_one;
-        private System.Windows.Forms.Button btn_three_zero;
-        private System.Windows.Forms.Button btn_two_six;
-        private System.Windows.Forms.Button btn_two_five;
-        private System.Windows.Forms.Button btn_two_four;
-        private System.Windows.Forms.Button btn_two_three;
-        private System.Windows.Forms.Button btn_two_two;
-        private System.Windows.Forms.Button btn_two_one;
-        private System.Windows.Forms.Button btn_two_zero;
-        private System.Windows.Forms.Button btn_one_six;
-        private System.Windows.Forms.Button btn_one_five;
-        private System.Windows.Forms.Button btn_one_four;
-        private System.Windows.Forms.Button btn_one_three;
-        private System.Windows.Forms.Button btn_one_two;
-        private System.Windows.Forms.Button btn_one_one;
-        private System.Windows.Forms.Button btn_one_zero;
-        private System.Windows.Forms.Button btn_zero_six;
-        private System.Windows.Forms.Button btn_zero_five;
-        private System.Windows.Forms.Button btn_zero_four;
-        private System.Windows.Forms.Button btn_zero_three;
-        private System.Windows.Forms.Button btn_zero_two;
-        private System.Windows.Forms.Button btn_zero_one;
-        private System.Windows.Forms.Button btn_zero_zero;
-        private System.Windows.Forms.Button btn_column_seven;
-        private System.Windows.Forms.Button btn_column_six;
-        private System.Windows.Forms.Button btn_column_five;
-        private System.Windows.Forms.Button btn_column_four;
-        private System.Windows.Forms.Button btn_column_three;
-        private System.Windows.Forms.Button btn_column_two;
-        private System.Windows.Forms.Button btn_column_one;
+        private System.Windows.Forms.Button btn_ColumnSeven;
+        private System.Windows.Forms.Button btn_ColumnSix;
+        private System.Windows.Forms.Button btn_ColumnFive;
+        private System.Windows.Forms.Button btn_ColumnFour;
+        private System.Windows.Forms.Button btn_ColumnThree;
+        private System.Windows.Forms.Button btn_ColumnTwo;
+        private System.Windows.Forms.Button btn_ColumnOne;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_FiveSix;
+        private System.Windows.Forms.Button btn_FourSix;
+        private System.Windows.Forms.Button btn_FiveZero;
+        private System.Windows.Forms.Button btn_FiveOne;
+        private System.Windows.Forms.Button btn_FiveTwo;
+        private System.Windows.Forms.Button btn_FiveThree;
+        private System.Windows.Forms.Button btn_FiveFour;
+        private System.Windows.Forms.Button btn_FiveFive;
+        private System.Windows.Forms.Button btn_TwoFive;
+        private System.Windows.Forms.Button btn_TwoSix;
+        private System.Windows.Forms.Button btn_ThreeZero;
+        private System.Windows.Forms.Button btn_ThreeOne;
+        private System.Windows.Forms.Button btn_ThreeTwo;
+        private System.Windows.Forms.Button btn_ThreeThree;
+        private System.Windows.Forms.Button btn_ThreeFour;
+        private System.Windows.Forms.Button btn_ThreeFive;
+        private System.Windows.Forms.Button btn_ThreeSix;
+        private System.Windows.Forms.Button btn_FourZero;
+        private System.Windows.Forms.Button btn_FourOne;
+        private System.Windows.Forms.Button btn_FourTwo;
+        private System.Windows.Forms.Button btn_FourThree;
+        private System.Windows.Forms.Button btn_FourFour;
+        private System.Windows.Forms.Button btn_FourFive;
+        private System.Windows.Forms.Button btn_ZeroZero;
+        private System.Windows.Forms.Button btn_ZeroOne;
+        private System.Windows.Forms.Button btn_ZeroTwo;
+        private System.Windows.Forms.Button btn_ZeroThree;
+        private System.Windows.Forms.Button btn_ZeroFour;
+        private System.Windows.Forms.Button btn_ZeroFive;
+        private System.Windows.Forms.Button btn_ZeroSix;
+        private System.Windows.Forms.Button btn_OneZero;
+        private System.Windows.Forms.Button btn_OneOne;
+        private System.Windows.Forms.Button btn_OneTwo;
+        private System.Windows.Forms.Button btn_OneThree;
+        private System.Windows.Forms.Button btn_OneFour;
+        private System.Windows.Forms.Button btn_OneFive;
+        private System.Windows.Forms.Button btn_OneSix;
+        private System.Windows.Forms.Button btn_TwoZero;
+        private System.Windows.Forms.Button btn_TwoOne;
+        private System.Windows.Forms.Button btn_TwoTwo;
+        private System.Windows.Forms.Button btn_TwoThree;
+        private System.Windows.Forms.Button btn_TwoFour;
+        private System.Windows.Forms.Label lbl_TurnDisplay;
     }
 }

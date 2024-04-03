@@ -12,7 +12,7 @@ namespace Connect4Testing
 {
     public partial class StatsForm : Form
     {
-        public StatsForm()
+        public StatsForm(WelcomeForm wf)
         {
             InitializeComponent();
         }

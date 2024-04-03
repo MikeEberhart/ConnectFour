@@ -15,6 +15,28 @@ namespace Connect4Testing
         public WelcomeForm()
         {
             InitializeComponent();
+            CenterToScreen();
+        }
+
+        private void btn_SinglePlayer_Click(object sender, EventArgs e)
+        {
+            SinglePlayerForm singlePlayer = new SinglePlayerForm(this);
+            singlePlayer.Show();
+            this.Hide();
+        }
+
+        private void btn_TwoPlayer_Click(object sender, EventArgs e)
+        {
+            TwoPlayerForm twoPlayer = new TwoPlayerForm(this);
+            twoPlayer.Show();
+            this.Hide();
+        }
+
+        private void btn_Statistics_Click(object sender, EventArgs e)
+        {
+            StatsForm stats = new StatsForm(this);
+            stats.Show();
+            this.Hide();
         }
     }
 }
