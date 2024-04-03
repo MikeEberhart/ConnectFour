@@ -1,0 +1,12 @@
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\bin\Debug\Connect4Testing.exe.config
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\bin\Debug\Connect4Testing.exe
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\bin\Debug\Connect4Testing.pdb
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.csproj.AssemblyReference.cache
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.Properties.Resources.resources
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.SinglePlayerForm.resources
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.StatsForm.resources
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.csproj.GenerateResource.cache
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.csproj.CoreCompileInputs.cache
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.exe
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.pdb
+D:\.SchoolStuff\.GitHub\TestingGrounds\Connect4Testing\obj\Debug\Connect4Testing.TwoPlayerForm.resources
