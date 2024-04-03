@@ -16,6 +16,32 @@ namespace Connect4Testing
         public SinglePlayerForm()
         {
             InitializeComponent();
+            addPieces();
+            foreach (Button btn in boardArray)
+            {
+                Console.WriteLine(btn.Name);
+            }
+        }
+
+        //make 2d array with 6 rows and 7 columns
+        public Button[,] boardArray = new Button[6, 7];
+
+        private void addPieces()
+        {
+            //clear out array to avoid repetition or breakage
+            Array.Clear(boardArray, 0, boardArray.Length);
+            int rows = 0;
+            int columns = 0;
+            foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
+            {
+                boardArray[rows, columns] = piece;
+                columns++;
+                if (columns == 7)
+                {
+                    columns = 0;
+                    rows++;
+                }
+            }
         }
 
         // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
