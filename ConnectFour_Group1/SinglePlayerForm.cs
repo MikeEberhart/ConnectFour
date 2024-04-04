@@ -129,12 +129,10 @@ namespace Connect4Testing
                 if (click == 0)
                 {
                     btn_ZeroZero.BackgroundImage = Properties.Resources.YellowPiece2;
-                    click++;
                 }
                 else
                 {
                     btn_ZeroZero.BackgroundImage = Properties.Resources.RedPiece2;
-                    click--;
                 }
             }
         }
