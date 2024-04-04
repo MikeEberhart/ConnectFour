@@ -25,10 +25,23 @@ namespace Connect4Testing
             foreach (Button btn in boardArray)
             {
                 num++;
-                btn.Text = num.ToString(); // used to see the order of the buttons in the panel
+                btn.Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
                 Console.WriteLine(btn.Name);
 
             }
+        }
+        private void btn_PlayAgain_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_MainMenu_Click(object sender, EventArgs e)
+        {
+            wForm.Show();
+            this.Hide();
+        }
+        private void btn_Quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         //make 2d array with 6 rows and 7 columns
@@ -102,5 +115,39 @@ namespace Connect4Testing
             }
 
         }
+        // uses the public function in WelcomeForm to exit the program when the red 'X' is click
+        private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            wForm.ExitProgram();
+        }
+
+        // used when hovering over column selection to show next possible move...work in progress
+        private void ShowPossibleMoves(object sender, EventArgs e)
+        {
+            if (sender == btn_ColumnOne)
+            {
+                if (click == 0)
+                {
+                    btn_ZeroZero.BackgroundImage = Properties.Resources.YellowPiece2;
+                    click++;
+                }
+                else
+                {
+                    btn_ZeroZero.BackgroundImage = Properties.Resources.RedPiece2;
+                    click--;
+                }
+            }
+        }
+
+        // used to set the background pic back to null when the mouse is no longer over over column selection...work in progress
+        private void RemovePossibleMoves(object sender, EventArgs e)
+        {
+            if(sender == btn_ColumnOne)
+            {
+                btn_ZeroZero.BackgroundImage = null;
+            }
+        }
+
+
     }
 }

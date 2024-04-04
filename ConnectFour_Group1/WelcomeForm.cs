@@ -38,5 +38,15 @@ namespace Connect4Testing
             stats.Show();
             this.Hide();
         }
+
+        private void btn_Quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        // public function used all forms to exit the program when the red 'X' is clicked 
+        public void ExitProgram()
+        {
+            Application.Exit();
+        }
     }
 }

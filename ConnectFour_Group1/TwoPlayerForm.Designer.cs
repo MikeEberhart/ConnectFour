@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lbl_TurnDisplay = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Quit = new System.Windows.Forms.Button();
+            this.btn_MainMenu = new System.Windows.Forms.Button();
+            this.btn_PlayAgain = new System.Windows.Forms.Button();
             this.btn_ColumnSeven = new System.Windows.Forms.Button();
             this.btn_ColumnSix = new System.Windows.Forms.Button();
             this.btn_ColumnFive = new System.Windows.Forms.Button();
@@ -82,108 +81,120 @@
             this.btn_FiveFour = new System.Windows.Forms.Button();
             this.btn_FiveFive = new System.Windows.Forms.Button();
             this.btn_FiveSix = new System.Windows.Forms.Button();
+            this.lbl_TurnDisplay = new System.Windows.Forms.Label();
             this.pnl_BoardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbl_TurnDisplay
+            // btn_Quit
             // 
-            this.lbl_TurnDisplay.AutoSize = true;
-            this.lbl_TurnDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TurnDisplay.Location = new System.Drawing.Point(248, 9);
-            this.lbl_TurnDisplay.Name = "lbl_TurnDisplay";
-            this.lbl_TurnDisplay.Size = new System.Drawing.Size(184, 25);
-            this.lbl_TurnDisplay.TabIndex = 91;
-            this.lbl_TurnDisplay.Text = "Player One\'s Turn";
+            this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Quit.Location = new System.Drawing.Point(450, 531);
+            this.btn_Quit.Name = "btn_Quit";
+            this.btn_Quit.Size = new System.Drawing.Size(145, 48);
+            this.btn_Quit.TabIndex = 90;
+            this.btn_Quit.Text = "Quit";
+            this.btn_Quit.UseVisualStyleBackColor = false;
+            this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
             // 
-            // button3
+            // btn_MainMenu
             // 
-            this.button3.Location = new System.Drawing.Point(451, 533);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 48);
-            this.button3.TabIndex = 90;
-            this.button3.Text = "Quit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_MainMenu.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_MainMenu.Location = new System.Drawing.Point(271, 531);
+            this.btn_MainMenu.Name = "btn_MainMenu";
+            this.btn_MainMenu.Size = new System.Drawing.Size(145, 48);
+            this.btn_MainMenu.TabIndex = 89;
+            this.btn_MainMenu.Text = "Main Menu";
+            this.btn_MainMenu.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btn_PlayAgain
             // 
-            this.button2.Location = new System.Drawing.Point(272, 533);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 48);
-            this.button2.TabIndex = 89;
-            this.button2.Text = "Main Menu";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(91, 533);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 48);
-            this.button1.TabIndex = 88;
-            this.button1.Text = "Play Again";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_PlayAgain.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PlayAgain.Location = new System.Drawing.Point(90, 531);
+            this.btn_PlayAgain.Name = "btn_PlayAgain";
+            this.btn_PlayAgain.Size = new System.Drawing.Size(145, 48);
+            this.btn_PlayAgain.TabIndex = 88;
+            this.btn_PlayAgain.Text = "Play Again";
+            this.btn_PlayAgain.UseVisualStyleBackColor = false;
             // 
             // btn_ColumnSeven
             // 
+            this.btn_ColumnSeven.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnSeven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnSeven.Location = new System.Drawing.Point(586, 463);
+            this.btn_ColumnSeven.Location = new System.Drawing.Point(586, 438);
             this.btn_ColumnSeven.Name = "btn_ColumnSeven";
             this.btn_ColumnSeven.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnSeven.TabIndex = 87;
-            this.btn_ColumnSeven.UseVisualStyleBackColor = true;
+            this.btn_ColumnSeven.Text = "Select Column";
+            this.btn_ColumnSeven.UseVisualStyleBackColor = false;
             // 
             // btn_ColumnSix
             // 
+            this.btn_ColumnSix.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnSix.Location = new System.Drawing.Point(494, 463);
+            this.btn_ColumnSix.Location = new System.Drawing.Point(494, 438);
             this.btn_ColumnSix.Name = "btn_ColumnSix";
             this.btn_ColumnSix.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnSix.TabIndex = 86;
-            this.btn_ColumnSix.UseVisualStyleBackColor = true;
+            this.btn_ColumnSix.Text = "Select Column";
+            this.btn_ColumnSix.UseVisualStyleBackColor = false;
             // 
             // btn_ColumnFive
             // 
+            this.btn_ColumnFive.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnFive.Location = new System.Drawing.Point(405, 463);
+            this.btn_ColumnFive.Location = new System.Drawing.Point(405, 438);
             this.btn_ColumnFive.Name = "btn_ColumnFive";
             this.btn_ColumnFive.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnFive.TabIndex = 85;
-            this.btn_ColumnFive.UseVisualStyleBackColor = true;
+            this.btn_ColumnFive.Text = "Select Column";
+            this.btn_ColumnFive.UseVisualStyleBackColor = false;
             // 
             // btn_ColumnFour
             // 
+            this.btn_ColumnFour.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnFour.Location = new System.Drawing.Point(315, 463);
+            this.btn_ColumnFour.Location = new System.Drawing.Point(315, 438);
             this.btn_ColumnFour.Name = "btn_ColumnFour";
             this.btn_ColumnFour.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnFour.TabIndex = 84;
-            this.btn_ColumnFour.UseVisualStyleBackColor = true;
+            this.btn_ColumnFour.Text = "Select Column";
+            this.btn_ColumnFour.UseVisualStyleBackColor = false;
             // 
             // btn_ColumnThree
             // 
+            this.btn_ColumnThree.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnThree.Location = new System.Drawing.Point(224, 463);
+            this.btn_ColumnThree.Location = new System.Drawing.Point(224, 438);
             this.btn_ColumnThree.Name = "btn_ColumnThree";
             this.btn_ColumnThree.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnThree.TabIndex = 83;
-            this.btn_ColumnThree.UseVisualStyleBackColor = true;
+            this.btn_ColumnThree.Text = "Select Column";
+            this.btn_ColumnThree.UseVisualStyleBackColor = false;
             // 
             // btn_ColumnTwo
             // 
+            this.btn_ColumnTwo.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnTwo.Location = new System.Drawing.Point(134, 463);
+            this.btn_ColumnTwo.Location = new System.Drawing.Point(134, 438);
             this.btn_ColumnTwo.Name = "btn_ColumnTwo";
             this.btn_ColumnTwo.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnTwo.TabIndex = 82;
-            this.btn_ColumnTwo.UseVisualStyleBackColor = true;
+            this.btn_ColumnTwo.Text = "Select Column";
+            this.btn_ColumnTwo.UseVisualStyleBackColor = false;
             // 
             // btn_ColumnOne
             // 
+            this.btn_ColumnOne.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnOne.Location = new System.Drawing.Point(44, 463);
+            this.btn_ColumnOne.Location = new System.Drawing.Point(44, 438);
             this.btn_ColumnOne.Name = "btn_ColumnOne";
             this.btn_ColumnOne.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnOne.TabIndex = 81;
-            this.btn_ColumnOne.UseVisualStyleBackColor = true;
+            this.btn_ColumnOne.Text = "Select Column";
+            this.btn_ColumnOne.UseVisualStyleBackColor = false;
             // 
             // pnl_BoardPanel
             // 
@@ -231,7 +242,7 @@
             this.pnl_BoardPanel.Controls.Add(this.btn_FiveFour);
             this.pnl_BoardPanel.Controls.Add(this.btn_FiveFive);
             this.pnl_BoardPanel.Controls.Add(this.btn_FiveSix);
-            this.pnl_BoardPanel.Location = new System.Drawing.Point(12, 37);
+            this.pnl_BoardPanel.Location = new System.Drawing.Point(12, 12);
             this.pnl_BoardPanel.Name = "pnl_BoardPanel";
             this.pnl_BoardPanel.Size = new System.Drawing.Size(662, 420);
             this.pnl_BoardPanel.TabIndex = 80;
@@ -243,7 +254,7 @@
             this.btn_ZeroZero.Enabled = false;
             this.btn_ZeroZero.FlatAppearance.BorderSize = 0;
             this.btn_ZeroZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ZeroZero.Location = new System.Drawing.Point(32, 344);
+            this.btn_ZeroZero.Location = new System.Drawing.Point(32, 345);
             this.btn_ZeroZero.Name = "btn_ZeroZero";
             this.btn_ZeroZero.Size = new System.Drawing.Size(55, 55);
             this.btn_ZeroZero.TabIndex = 119;
@@ -256,7 +267,7 @@
             this.btn_ZeroOne.Enabled = false;
             this.btn_ZeroOne.FlatAppearance.BorderSize = 0;
             this.btn_ZeroOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ZeroOne.Location = new System.Drawing.Point(122, 344);
+            this.btn_ZeroOne.Location = new System.Drawing.Point(122, 345);
             this.btn_ZeroOne.Name = "btn_ZeroOne";
             this.btn_ZeroOne.Size = new System.Drawing.Size(55, 55);
             this.btn_ZeroOne.TabIndex = 118;
@@ -269,7 +280,7 @@
             this.btn_ZeroTwo.Enabled = false;
             this.btn_ZeroTwo.FlatAppearance.BorderSize = 0;
             this.btn_ZeroTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ZeroTwo.Location = new System.Drawing.Point(212, 344);
+            this.btn_ZeroTwo.Location = new System.Drawing.Point(212, 345);
             this.btn_ZeroTwo.Name = "btn_ZeroTwo";
             this.btn_ZeroTwo.Size = new System.Drawing.Size(55, 55);
             this.btn_ZeroTwo.TabIndex = 117;
@@ -282,7 +293,7 @@
             this.btn_ZeroThree.Enabled = false;
             this.btn_ZeroThree.FlatAppearance.BorderSize = 0;
             this.btn_ZeroThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ZeroThree.Location = new System.Drawing.Point(303, 344);
+            this.btn_ZeroThree.Location = new System.Drawing.Point(303, 345);
             this.btn_ZeroThree.Name = "btn_ZeroThree";
             this.btn_ZeroThree.Size = new System.Drawing.Size(55, 55);
             this.btn_ZeroThree.TabIndex = 116;
@@ -295,7 +306,7 @@
             this.btn_ZeroFour.Enabled = false;
             this.btn_ZeroFour.FlatAppearance.BorderSize = 0;
             this.btn_ZeroFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ZeroFour.Location = new System.Drawing.Point(393, 344);
+            this.btn_ZeroFour.Location = new System.Drawing.Point(393, 345);
             this.btn_ZeroFour.Name = "btn_ZeroFour";
             this.btn_ZeroFour.Size = new System.Drawing.Size(55, 55);
             this.btn_ZeroFour.TabIndex = 115;
@@ -308,7 +319,7 @@
             this.btn_ZeroFive.Enabled = false;
             this.btn_ZeroFive.FlatAppearance.BorderSize = 0;
             this.btn_ZeroFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ZeroFive.Location = new System.Drawing.Point(482, 344);
+            this.btn_ZeroFive.Location = new System.Drawing.Point(482, 345);
             this.btn_ZeroFive.Name = "btn_ZeroFive";
             this.btn_ZeroFive.Size = new System.Drawing.Size(55, 55);
             this.btn_ZeroFive.TabIndex = 114;
@@ -321,7 +332,7 @@
             this.btn_ZeroSix.Enabled = false;
             this.btn_ZeroSix.FlatAppearance.BorderSize = 0;
             this.btn_ZeroSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ZeroSix.Location = new System.Drawing.Point(574, 344);
+            this.btn_ZeroSix.Location = new System.Drawing.Point(574, 345);
             this.btn_ZeroSix.Name = "btn_ZeroSix";
             this.btn_ZeroSix.Size = new System.Drawing.Size(55, 55);
             this.btn_ZeroSix.TabIndex = 113;
@@ -782,15 +793,26 @@
             this.btn_FiveSix.TabIndex = 79;
             this.btn_FiveSix.UseVisualStyleBackColor = false;
             // 
+            // lbl_TurnDisplay
+            // 
+            this.lbl_TurnDisplay.AutoSize = true;
+            this.lbl_TurnDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TurnDisplay.Location = new System.Drawing.Point(252, 497);
+            this.lbl_TurnDisplay.Name = "lbl_TurnDisplay";
+            this.lbl_TurnDisplay.Size = new System.Drawing.Size(184, 25);
+            this.lbl_TurnDisplay.TabIndex = 92;
+            this.lbl_TurnDisplay.Text = "Player One\'s Turn";
+            // 
             // TwoPlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 624);
+            this.BackColor = System.Drawing.Color.MistyRose;
+            this.ClientSize = new System.Drawing.Size(704, 591);
             this.Controls.Add(this.lbl_TurnDisplay);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_Quit);
+            this.Controls.Add(this.btn_MainMenu);
+            this.Controls.Add(this.btn_PlayAgain);
             this.Controls.Add(this.btn_ColumnSeven);
             this.Controls.Add(this.btn_ColumnSix);
             this.Controls.Add(this.btn_ColumnFive);
@@ -801,6 +823,7 @@
             this.Controls.Add(this.pnl_BoardPanel);
             this.Name = "TwoPlayerForm";
             this.Text = "Two Player";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TwoPlayerForm_FormClosed);
             this.pnl_BoardPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -808,11 +831,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_TurnDisplay;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Quit;
+        private System.Windows.Forms.Button btn_MainMenu;
+        private System.Windows.Forms.Button btn_PlayAgain;
         private System.Windows.Forms.Button btn_ColumnSeven;
         private System.Windows.Forms.Button btn_ColumnSix;
         private System.Windows.Forms.Button btn_ColumnFive;
@@ -863,5 +884,6 @@
         private System.Windows.Forms.Button btn_FiveFour;
         private System.Windows.Forms.Button btn_FiveFive;
         private System.Windows.Forms.Button btn_FiveSix;
+        private System.Windows.Forms.Label lbl_TurnDisplay;
     }
 }

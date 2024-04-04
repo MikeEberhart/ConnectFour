@@ -32,56 +32,77 @@
             this.btn_TwoPlayer = new System.Windows.Forms.Button();
             this.btn_Statistics = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btn_Quit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_SinglePlayer
             // 
-            this.btn_SinglePlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SinglePlayer.Location = new System.Drawing.Point(83, 111);
+            this.btn_SinglePlayer.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_SinglePlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_SinglePlayer.Location = new System.Drawing.Point(79, 73);
             this.btn_SinglePlayer.Name = "btn_SinglePlayer";
             this.btn_SinglePlayer.Size = new System.Drawing.Size(134, 46);
             this.btn_SinglePlayer.TabIndex = 0;
             this.btn_SinglePlayer.Text = "Single Player";
-            this.btn_SinglePlayer.UseVisualStyleBackColor = true;
+            this.btn_SinglePlayer.UseVisualStyleBackColor = false;
             this.btn_SinglePlayer.Click += new System.EventHandler(this.btn_SinglePlayer_Click);
             // 
             // btn_TwoPlayer
             // 
-            this.btn_TwoPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_TwoPlayer.Location = new System.Drawing.Point(83, 164);
+            this.btn_TwoPlayer.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_TwoPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_TwoPlayer.Location = new System.Drawing.Point(79, 126);
             this.btn_TwoPlayer.Name = "btn_TwoPlayer";
             this.btn_TwoPlayer.Size = new System.Drawing.Size(134, 46);
             this.btn_TwoPlayer.TabIndex = 1;
             this.btn_TwoPlayer.Text = "Two Player";
-            this.btn_TwoPlayer.UseVisualStyleBackColor = true;
+            this.btn_TwoPlayer.UseVisualStyleBackColor = false;
             this.btn_TwoPlayer.Click += new System.EventHandler(this.btn_TwoPlayer_Click);
             // 
             // btn_Statistics
             // 
-            this.btn_Statistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Statistics.Location = new System.Drawing.Point(83, 216);
+            this.btn_Statistics.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Statistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Statistics.Location = new System.Drawing.Point(79, 178);
             this.btn_Statistics.Name = "btn_Statistics";
             this.btn_Statistics.Size = new System.Drawing.Size(134, 46);
             this.btn_Statistics.TabIndex = 2;
             this.btn_Statistics.Text = "Statistics";
-            this.btn_Statistics.UseVisualStyleBackColor = true;
+            this.btn_Statistics.UseVisualStyleBackColor = false;
             this.btn_Statistics.Click += new System.EventHandler(this.btn_Statistics_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 38);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(15, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 25);
+            this.label1.Size = new System.Drawing.Size(284, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Welcome to Connect Four";
+            // 
+            // btn_Quit
+            // 
+            this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Quit.Location = new System.Drawing.Point(79, 230);
+            this.btn_Quit.Name = "btn_Quit";
+            this.btn_Quit.Size = new System.Drawing.Size(134, 46);
+            this.btn_Quit.TabIndex = 5;
+            this.btn_Quit.Text = "Quit";
+            this.btn_Quit.UseVisualStyleBackColor = false;
+            this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
             // 
             // WelcomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(311, 332);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(311, 316);
+            this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_Statistics);
             this.Controls.Add(this.btn_TwoPlayer);
@@ -99,6 +120,7 @@
         private System.Windows.Forms.Button btn_TwoPlayer;
         private System.Windows.Forms.Button btn_Statistics;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_Quit;
     }
 }
 
