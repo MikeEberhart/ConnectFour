@@ -19,7 +19,7 @@ namespace Connect4Testing
         {
             InitializeComponent();
             CenterToScreen();
-            addPieces();
+            AddPieces();
             wForm = wf;
             int num = 0;
             foreach (Button btn in boardArray)
@@ -47,7 +47,7 @@ namespace Connect4Testing
         //make 2d array with 6 rows and 7 columns
         public Button[,] boardArray = new Button[6, 7];
 
-        private void addPieces()
+        private void AddPieces()
         {
             //clear out array to avoid repetition or breakage
             Array.Clear(boardArray, 0, boardArray.Length);
@@ -64,15 +64,34 @@ namespace Connect4Testing
                 }
             }
         }
+        private void DropPieces(object sender,int click, int colindex)
+        {
 
+        }
+        
+        private int GetRow(int colindex)
+        {
+            Button currentButton;
+            for (int row = boardArray.GetLength(0) -1; row >= 0; row--) 
+            { 
+                currentButton = boardArray[row, colindex];
+                if (currentButton.BackgroundImage != Connect4Testing.Properties.Resources.YellowPiece2 && currentButton.BackgroundImage != Connect4Testing.Properties.Resources.RedPiece2)
+                {
+                    return row;
+                }    
+            }
+            return -1;
+        }
         // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
         private void Piece_Placement(object sender, EventArgs e)
         {
             if (sender == btn_ColumnOne)
             {
+                DropPieces(sender, click, 0);
                 if (click == 0)
                 {
                     lbl_TurnDisplay.Text = "Player Two's Turn";
+
                     btn_ZeroZero.BackgroundImage = Connect4Testing.Properties.Resources.YellowPiece2;
                     click++;
                 }
