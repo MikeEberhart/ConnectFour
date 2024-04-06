@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -64,12 +65,22 @@ namespace Connect4Testing
                 }
             }
         }
-        private void DropPieces(object sender,int turn, int colindex)
+        private void DropPieces(int turn, int colindex)
         {
-            // was using this to test the 'CellData' Class
-            int selectedRow = GetRow(colindex);
-            CellData cell = new CellData(selectedRow, colindex);
-            Console.WriteLine(cell.GetRow() + " " + cell.GetColumn());
+            GetRow(colindex);
+
+            if (playerTurn == 0)
+            {
+                lbl_TurnDisplay.Text = "Player Two's Turn";
+                //.BackgroundImage = Properties.Resources.YellowPiece2;
+                playerTurn++;
+            }
+            else
+            {
+                lbl_TurnDisplay.Text = "Player One's Turn";
+                //.BackgroundImage = Properties.Resources.RedPiece2;
+                playerTurn--;
+            }
         }
         
         private int GetRow(int colindex)
@@ -88,120 +99,21 @@ namespace Connect4Testing
         // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
         private void Piece_Placement(object sender, EventArgs e)
         {
-            if (sender == btn_ColumnZero)
-            {
-                DropPieces(sender, playerTurn, 0);
-                if (playerTurn == 0)
-                {
-                    lbl_TurnDisplay.Text = "Player Two's Turn";
+            Button clickedButton = (Button)sender;
+            int colIndex = -1;
+            if (clickedButton == btn_ColumnZero) colIndex = 0;
+            else if (clickedButton == btn_ColumnOne) colIndex = 1;
+            else if (clickedButton == btn_ColumnTwo) colIndex = 2;
+            else if (clickedButton == btn_ColumnThree) colIndex = 3;
+            else if (clickedButton == btn_ColumnFour) colIndex = 4;
+            else if (clickedButton == btn_ColumnFive) colIndex = 5;
+            else if (clickedButton == btn_ColumnSix) colIndex = 6;
 
-                    btn_ZeroZero.BackgroundImage = Properties.Resources.YellowPiece2;
-                    playerTurn++;
-                }
-                else
-                {
-                    lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroZero.BackgroundImage = Properties.Resources.RedPiece2;
-                    playerTurn--;
-                }
-            }
-            if (sender == btn_ColumnOne)
+            if (colIndex != -1)
             {
-                DropPieces(sender, playerTurn, 1);
-                if (playerTurn == 0)
-                {
-                    lbl_TurnDisplay.Text = "Player Two's Turn";
-                    btn_ZeroOne.BackgroundImage = Properties.Resources.YellowPiece2;
-                    playerTurn++;
-                }
-                else
-                {
-                    lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroOne.BackgroundImage = Properties.Resources.RedPiece2;
-                    playerTurn--;
-                }
+                DropPieces(playerTurn, colIndex);
+                Console.WriteLine(colIndex);
             }
-            if (sender == btn_ColumnTwo)
-            {
-                DropPieces(sender, playerTurn, 2);
-                if (playerTurn == 0)
-                {
-                    lbl_TurnDisplay.Text = "Player Two's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
-                    playerTurn++;
-                }
-                else
-                {
-                    lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
-                    playerTurn--;
-                }
-            }
-            if (sender == btn_ColumnThree)
-            {
-                DropPieces(sender, playerTurn, 3);
-                if (playerTurn == 0)
-                {
-                    lbl_TurnDisplay.Text = "Player Two's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
-                    playerTurn++;
-                }
-                else
-                {
-                    lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
-                    playerTurn--;
-                }
-            }
-            if (sender == btn_ColumnFour)
-            {
-                DropPieces(sender, playerTurn, 4);
-                if (playerTurn == 0)
-                {
-                    lbl_TurnDisplay.Text = "Player Two's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
-                    playerTurn++;
-                }
-                else
-                {
-                    lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
-                    playerTurn--;
-                }
-            }
-            if (sender == btn_ColumnFive)
-            {
-                DropPieces(sender, playerTurn, 5);
-                if (playerTurn == 0)
-                {
-                    lbl_TurnDisplay.Text = "Player Two's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
-                    playerTurn++;
-                }
-                else
-                {
-                    lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
-                    playerTurn--;
-                }
-            }
-            if (sender == btn_ColumnSix)
-            {
-                DropPieces(sender, playerTurn, 6);
-                if (playerTurn == 0)
-                {
-                    lbl_TurnDisplay.Text = "Player Two's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
-                    playerTurn++;
-                }
-                else
-                {
-                    lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
-                    playerTurn--;
-                }
-            }
-
         }
         // uses the public function in WelcomeForm to exit the program when the red 'X' is playerTurn
         private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
