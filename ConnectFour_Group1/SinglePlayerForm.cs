@@ -67,8 +67,8 @@ namespace Connect4Testing
         }
         private void DropPieces(int turn, int colindex)
         {
-            GetRow(colindex);
-
+            Button freeSpace;
+           // for (int row = GetRow(colindex) - 1; row >= 0;)
             if (playerTurn == 0)
             {
                 lbl_TurnDisplay.Text = "Player Two's Turn";
@@ -78,7 +78,7 @@ namespace Connect4Testing
             else
             {
                 lbl_TurnDisplay.Text = "Player One's Turn";
-                //.BackgroundImage = Properties.Resources.RedPiece2;
+               // .BackgroundImage = Properties.Resources.RedPiece2;
                 playerTurn--;
             }
         }
