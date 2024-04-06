@@ -67,18 +67,17 @@ namespace Connect4Testing
         }
         private void DropPieces(int turn, int colindex)
         {
-            Button freeSpace;
-           // for (int row = GetRow(colindex) - 1; row >= 0;)
+
             if (playerTurn == 0)
             {
                 lbl_TurnDisplay.Text = "Player Two's Turn";
-                //.BackgroundImage = Properties.Resources.YellowPiece2;
+                boardArray[(GetRow(colindex)), colindex].BackgroundImage = Properties.Resources.YellowPiece2;
                 playerTurn++;
             }
             else
             {
                 lbl_TurnDisplay.Text = "Player One's Turn";
-               // .BackgroundImage = Properties.Resources.RedPiece2;
+                boardArray[(GetRow(colindex)), colindex].BackgroundImage = Properties.Resources.RedPiece2;
                 playerTurn--;
             }
         }
