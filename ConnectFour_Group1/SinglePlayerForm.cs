@@ -65,20 +65,22 @@ namespace Connect4Testing
                 }
             }
         }
-        private void DropPieces(int turn, int colindex)
+        private void DropPieces(int colindex)
         {
-            if (GetRow(colindex) != -1)
+            int rowindex = GetRow(colindex);
+
+            if (rowindex != -1)
             {
                 if (playerTurn == 0)
                 {
                     lbl_TurnDisplay.Text = "Player Two's Turn";
-                    boardArray[(GetRow(colindex)), colindex].BackgroundImage = Properties.Resources.YellowPiece2;
+                    boardArray[rowindex, colindex].BackgroundImage = Properties.Resources.YellowPiece2;
                     playerTurn++;
                 }
                 else
                 {
                     lbl_TurnDisplay.Text = "Player One's Turn";
-                    boardArray[(GetRow(colindex)), colindex].BackgroundImage = Properties.Resources.RedPiece2;
+                    boardArray[rowindex, colindex].BackgroundImage = Properties.Resources.RedPiece2;
                     playerTurn--;
                 }
             }
@@ -90,7 +92,7 @@ namespace Connect4Testing
             for (int row = 0; row <= boardArray.GetLength(0) - 1; row++) 
             { 
                 currentButton = boardArray[row, colindex];
-                if (currentButton.BackgroundImage != Properties.Resources.YellowPiece2 && currentButton.BackgroundImage != Properties.Resources.RedPiece2)
+                if (currentButton.BackgroundImage == null)
                 {
                     return row;
                 }
@@ -112,7 +114,7 @@ namespace Connect4Testing
 
             if (colIndex != -1)
             {
-                DropPieces(playerTurn, colIndex);
+                DropPieces(colIndex);
             }
         }
         // uses the public function in WelcomeForm to exit the program when the red 'X' is playerTurn
