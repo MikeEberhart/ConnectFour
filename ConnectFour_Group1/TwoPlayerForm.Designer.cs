@@ -163,34 +163,34 @@
             this.btn_ColumnFour.Text = "Select Column";
             this.btn_ColumnFour.UseVisualStyleBackColor = false;
             // 
-            // btn_ColumnThree
+            // btn_ColumnTwo
             // 
             this.btn_ColumnThree.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ColumnThree.Location = new System.Drawing.Point(224, 438);
-            this.btn_ColumnThree.Name = "btn_ColumnThree";
+            this.btn_ColumnThree.Name = "btn_ColumnTwo";
             this.btn_ColumnThree.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnThree.TabIndex = 83;
             this.btn_ColumnThree.Text = "Select Column";
             this.btn_ColumnThree.UseVisualStyleBackColor = false;
             // 
-            // btn_ColumnTwo
+            // btn_ColumnOne
             // 
             this.btn_ColumnTwo.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ColumnTwo.Location = new System.Drawing.Point(134, 438);
-            this.btn_ColumnTwo.Name = "btn_ColumnTwo";
+            this.btn_ColumnTwo.Name = "btn_ColumnOne";
             this.btn_ColumnTwo.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnTwo.TabIndex = 82;
             this.btn_ColumnTwo.Text = "Select Column";
             this.btn_ColumnTwo.UseVisualStyleBackColor = false;
             // 
-            // btn_ColumnOne
+            // btn_ColumnZero
             // 
             this.btn_ColumnOne.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ColumnOne.Location = new System.Drawing.Point(44, 438);
-            this.btn_ColumnOne.Name = "btn_ColumnOne";
+            this.btn_ColumnOne.Name = "btn_ColumnZero";
             this.btn_ColumnOne.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnOne.TabIndex = 81;
             this.btn_ColumnOne.Text = "Select Column";

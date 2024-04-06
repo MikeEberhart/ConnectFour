@@ -12,7 +12,7 @@ namespace Connect4Testing
 {
     public partial class SinglePlayerForm : Form
     {
-        int click = 0;
+        int playerTurn = 0;
         private WelcomeForm wForm;
 
         public SinglePlayerForm(WelcomeForm wf)
@@ -64,9 +64,12 @@ namespace Connect4Testing
                 }
             }
         }
-        private void DropPieces(object sender,int click, int colindex)
+        private void DropPieces(object sender,int turn, int colindex)
         {
-
+            // was using this to test the 'CellData' Class
+            int selectedRow = GetRow(colindex);
+            CellData cell = new CellData(selectedRow, colindex);
+            Console.WriteLine(cell.GetRow() + " " + cell.GetColumn());
         }
         
         private int GetRow(int colindex)
@@ -75,7 +78,7 @@ namespace Connect4Testing
             for (int row = boardArray.GetLength(0) -1; row >= 0; row--) 
             { 
                 currentButton = boardArray[row, colindex];
-                if (currentButton.BackgroundImage != Connect4Testing.Properties.Resources.YellowPiece2 && currentButton.BackgroundImage != Connect4Testing.Properties.Resources.RedPiece2)
+                if (currentButton.BackgroundImage != Properties.Resources.YellowPiece2 && currentButton.BackgroundImage != Properties.Resources.RedPiece2)
                 {
                     return row;
                 }    
@@ -85,56 +88,122 @@ namespace Connect4Testing
         // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
         private void Piece_Placement(object sender, EventArgs e)
         {
-            if (sender == btn_ColumnOne)
+            if (sender == btn_ColumnZero)
             {
-                DropPieces(sender, click, 0);
-                if (click == 0)
+                DropPieces(sender, playerTurn, 0);
+                if (playerTurn == 0)
                 {
                     lbl_TurnDisplay.Text = "Player Two's Turn";
 
-                    btn_ZeroZero.BackgroundImage = Connect4Testing.Properties.Resources.YellowPiece2;
-                    click++;
+                    btn_ZeroZero.BackgroundImage = Properties.Resources.YellowPiece2;
+                    playerTurn++;
                 }
                 else
                 {
                     lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroZero.BackgroundImage = Connect4Testing.Properties.Resources.RedPiece2;
-                    click--;
+                    btn_ZeroZero.BackgroundImage = Properties.Resources.RedPiece2;
+                    playerTurn--;
+                }
+            }
+            if (sender == btn_ColumnOne)
+            {
+                DropPieces(sender, playerTurn, 1);
+                if (playerTurn == 0)
+                {
+                    lbl_TurnDisplay.Text = "Player Two's Turn";
+                    btn_ZeroOne.BackgroundImage = Properties.Resources.YellowPiece2;
+                    playerTurn++;
+                }
+                else
+                {
+                    lbl_TurnDisplay.Text = "Player One's Turn";
+                    btn_ZeroOne.BackgroundImage = Properties.Resources.RedPiece2;
+                    playerTurn--;
                 }
             }
             if (sender == btn_ColumnTwo)
             {
-                if (click == 0)
+                DropPieces(sender, playerTurn, 2);
+                if (playerTurn == 0)
                 {
                     lbl_TurnDisplay.Text = "Player Two's Turn";
-                    btn_ZeroOne.BackgroundImage = Connect4Testing.Properties.Resources.YellowPiece2;
-                    click++;
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
+                    playerTurn++;
                 }
                 else
                 {
                     lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroOne.BackgroundImage = Connect4Testing.Properties.Resources.RedPiece2;
-                    click--;
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
+                    playerTurn--;
                 }
             }
             if (sender == btn_ColumnThree)
             {
-                if (click == 0)
+                DropPieces(sender, playerTurn, 3);
+                if (playerTurn == 0)
                 {
                     lbl_TurnDisplay.Text = "Player Two's Turn";
-                    btn_ZeroTwo.BackgroundImage = Connect4Testing.Properties.Resources.YellowPiece2;
-                    click++;
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
+                    playerTurn++;
                 }
                 else
                 {
                     lbl_TurnDisplay.Text = "Player One's Turn";
-                    btn_ZeroTwo.BackgroundImage = Connect4Testing.Properties.Resources.RedPiece2;
-                    click--;
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
+                    playerTurn--;
+                }
+            }
+            if (sender == btn_ColumnFour)
+            {
+                DropPieces(sender, playerTurn, 4);
+                if (playerTurn == 0)
+                {
+                    lbl_TurnDisplay.Text = "Player Two's Turn";
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
+                    playerTurn++;
+                }
+                else
+                {
+                    lbl_TurnDisplay.Text = "Player One's Turn";
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
+                    playerTurn--;
+                }
+            }
+            if (sender == btn_ColumnFive)
+            {
+                DropPieces(sender, playerTurn, 5);
+                if (playerTurn == 0)
+                {
+                    lbl_TurnDisplay.Text = "Player Two's Turn";
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
+                    playerTurn++;
+                }
+                else
+                {
+                    lbl_TurnDisplay.Text = "Player One's Turn";
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
+                    playerTurn--;
+                }
+            }
+            if (sender == btn_ColumnSix)
+            {
+                DropPieces(sender, playerTurn, 6);
+                if (playerTurn == 0)
+                {
+                    lbl_TurnDisplay.Text = "Player Two's Turn";
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.YellowPiece2;
+                    playerTurn++;
+                }
+                else
+                {
+                    lbl_TurnDisplay.Text = "Player One's Turn";
+                    btn_ZeroTwo.BackgroundImage = Properties.Resources.RedPiece2;
+                    playerTurn--;
                 }
             }
 
         }
-        // uses the public function in WelcomeForm to exit the program when the red 'X' is click
+        // uses the public function in WelcomeForm to exit the program when the red 'X' is playerTurn
         private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             wForm.ExitProgram();
@@ -143,9 +212,9 @@ namespace Connect4Testing
         // used when hovering over column selection to show next possible move...work in progress
         private void ShowPossibleMoves(object sender, EventArgs e)
         {
-            if (sender == btn_ColumnOne)
+            if (sender == btn_ColumnZero)
             {
-                if (click == 0)
+                if (playerTurn == 0)
                 {
                     btn_ZeroZero.BackgroundImage = Properties.Resources.YellowPiece2;
                 }
@@ -159,7 +228,7 @@ namespace Connect4Testing
         // used to set the background pic back to null when the mouse is no longer over over column selection...work in progress
         private void RemovePossibleMoves(object sender, EventArgs e)
         {
-            if(sender == btn_ColumnOne)
+            if(sender == btn_ColumnZero)
             {
                 btn_ZeroZero.BackgroundImage = null;
             }

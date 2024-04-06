@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_ColumnSeven = new System.Windows.Forms.Button();
             this.btn_ColumnSix = new System.Windows.Forms.Button();
             this.btn_ColumnFive = new System.Windows.Forms.Button();
             this.btn_ColumnFour = new System.Windows.Forms.Button();
             this.btn_ColumnThree = new System.Windows.Forms.Button();
             this.btn_ColumnTwo = new System.Windows.Forms.Button();
             this.btn_ColumnOne = new System.Windows.Forms.Button();
+            this.btn_ColumnZero = new System.Windows.Forms.Button();
             this.btn_Quit = new System.Windows.Forms.Button();
             this.btn_MainMenu = new System.Windows.Forms.Button();
             this.btn_PlayAgain = new System.Windows.Forms.Button();
@@ -85,21 +85,6 @@
             this.pnl_BoardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btn_ColumnSeven
-            // 
-            this.btn_ColumnSeven.BackColor = System.Drawing.Color.LightSalmon;
-            this.btn_ColumnSeven.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnSeven.FlatAppearance.BorderSize = 0;
-            this.btn_ColumnSeven.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ColumnSeven.ForeColor = System.Drawing.Color.Black;
-            this.btn_ColumnSeven.Location = new System.Drawing.Point(586, 438);
-            this.btn_ColumnSeven.Name = "btn_ColumnSeven";
-            this.btn_ColumnSeven.Size = new System.Drawing.Size(55, 52);
-            this.btn_ColumnSeven.TabIndex = 64;
-            this.btn_ColumnSeven.Text = "Select Column";
-            this.btn_ColumnSeven.UseVisualStyleBackColor = false;
-            this.btn_ColumnSeven.Click += new System.EventHandler(this.Piece_Placement);
-            // 
             // btn_ColumnSix
             // 
             this.btn_ColumnSix.BackColor = System.Drawing.Color.LightSalmon;
@@ -107,10 +92,10 @@
             this.btn_ColumnSix.FlatAppearance.BorderSize = 0;
             this.btn_ColumnSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnSix.ForeColor = System.Drawing.Color.Black;
-            this.btn_ColumnSix.Location = new System.Drawing.Point(494, 438);
+            this.btn_ColumnSix.Location = new System.Drawing.Point(586, 438);
             this.btn_ColumnSix.Name = "btn_ColumnSix";
             this.btn_ColumnSix.Size = new System.Drawing.Size(55, 52);
-            this.btn_ColumnSix.TabIndex = 63;
+            this.btn_ColumnSix.TabIndex = 64;
             this.btn_ColumnSix.Text = "Select Column";
             this.btn_ColumnSix.UseVisualStyleBackColor = false;
             this.btn_ColumnSix.Click += new System.EventHandler(this.Piece_Placement);
@@ -122,10 +107,10 @@
             this.btn_ColumnFive.FlatAppearance.BorderSize = 0;
             this.btn_ColumnFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnFive.ForeColor = System.Drawing.Color.Black;
-            this.btn_ColumnFive.Location = new System.Drawing.Point(405, 438);
+            this.btn_ColumnFive.Location = new System.Drawing.Point(494, 438);
             this.btn_ColumnFive.Name = "btn_ColumnFive";
             this.btn_ColumnFive.Size = new System.Drawing.Size(55, 52);
-            this.btn_ColumnFive.TabIndex = 62;
+            this.btn_ColumnFive.TabIndex = 63;
             this.btn_ColumnFive.Text = "Select Column";
             this.btn_ColumnFive.UseVisualStyleBackColor = false;
             this.btn_ColumnFive.Click += new System.EventHandler(this.Piece_Placement);
@@ -137,10 +122,10 @@
             this.btn_ColumnFour.FlatAppearance.BorderSize = 0;
             this.btn_ColumnFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnFour.ForeColor = System.Drawing.Color.Black;
-            this.btn_ColumnFour.Location = new System.Drawing.Point(315, 438);
+            this.btn_ColumnFour.Location = new System.Drawing.Point(405, 438);
             this.btn_ColumnFour.Name = "btn_ColumnFour";
             this.btn_ColumnFour.Size = new System.Drawing.Size(55, 52);
-            this.btn_ColumnFour.TabIndex = 61;
+            this.btn_ColumnFour.TabIndex = 62;
             this.btn_ColumnFour.Text = "Select Column";
             this.btn_ColumnFour.UseVisualStyleBackColor = false;
             this.btn_ColumnFour.Click += new System.EventHandler(this.Piece_Placement);
@@ -152,10 +137,10 @@
             this.btn_ColumnThree.FlatAppearance.BorderSize = 0;
             this.btn_ColumnThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnThree.ForeColor = System.Drawing.Color.Black;
-            this.btn_ColumnThree.Location = new System.Drawing.Point(224, 438);
+            this.btn_ColumnThree.Location = new System.Drawing.Point(315, 438);
             this.btn_ColumnThree.Name = "btn_ColumnThree";
             this.btn_ColumnThree.Size = new System.Drawing.Size(55, 52);
-            this.btn_ColumnThree.TabIndex = 60;
+            this.btn_ColumnThree.TabIndex = 61;
             this.btn_ColumnThree.Text = "Select Column";
             this.btn_ColumnThree.UseVisualStyleBackColor = false;
             this.btn_ColumnThree.Click += new System.EventHandler(this.Piece_Placement);
@@ -167,10 +152,10 @@
             this.btn_ColumnTwo.FlatAppearance.BorderSize = 0;
             this.btn_ColumnTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnTwo.ForeColor = System.Drawing.Color.Black;
-            this.btn_ColumnTwo.Location = new System.Drawing.Point(134, 438);
+            this.btn_ColumnTwo.Location = new System.Drawing.Point(224, 438);
             this.btn_ColumnTwo.Name = "btn_ColumnTwo";
             this.btn_ColumnTwo.Size = new System.Drawing.Size(55, 52);
-            this.btn_ColumnTwo.TabIndex = 59;
+            this.btn_ColumnTwo.TabIndex = 60;
             this.btn_ColumnTwo.Text = "Select Column";
             this.btn_ColumnTwo.UseVisualStyleBackColor = false;
             this.btn_ColumnTwo.Click += new System.EventHandler(this.Piece_Placement);
@@ -182,15 +167,30 @@
             this.btn_ColumnOne.FlatAppearance.BorderSize = 0;
             this.btn_ColumnOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnOne.ForeColor = System.Drawing.Color.Black;
-            this.btn_ColumnOne.Location = new System.Drawing.Point(44, 438);
+            this.btn_ColumnOne.Location = new System.Drawing.Point(134, 438);
             this.btn_ColumnOne.Name = "btn_ColumnOne";
             this.btn_ColumnOne.Size = new System.Drawing.Size(55, 52);
-            this.btn_ColumnOne.TabIndex = 58;
+            this.btn_ColumnOne.TabIndex = 59;
             this.btn_ColumnOne.Text = "Select Column";
             this.btn_ColumnOne.UseVisualStyleBackColor = false;
             this.btn_ColumnOne.Click += new System.EventHandler(this.Piece_Placement);
-            this.btn_ColumnOne.MouseLeave += new System.EventHandler(this.RemovePossibleMoves);
-            this.btn_ColumnOne.MouseHover += new System.EventHandler(this.ShowPossibleMoves);
+            // 
+            // btn_ColumnZero
+            // 
+            this.btn_ColumnZero.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_ColumnZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnZero.FlatAppearance.BorderSize = 0;
+            this.btn_ColumnZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ColumnZero.ForeColor = System.Drawing.Color.Black;
+            this.btn_ColumnZero.Location = new System.Drawing.Point(44, 438);
+            this.btn_ColumnZero.Name = "btn_ColumnZero";
+            this.btn_ColumnZero.Size = new System.Drawing.Size(55, 52);
+            this.btn_ColumnZero.TabIndex = 58;
+            this.btn_ColumnZero.Text = "Select Column";
+            this.btn_ColumnZero.UseVisualStyleBackColor = false;
+            this.btn_ColumnZero.Click += new System.EventHandler(this.Piece_Placement);
+            this.btn_ColumnZero.MouseLeave += new System.EventHandler(this.RemovePossibleMoves);
+            this.btn_ColumnZero.MouseHover += new System.EventHandler(this.ShowPossibleMoves);
             // 
             // btn_Quit
             // 
@@ -845,13 +845,13 @@
             this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.btn_MainMenu);
             this.Controls.Add(this.btn_PlayAgain);
-            this.Controls.Add(this.btn_ColumnSeven);
             this.Controls.Add(this.btn_ColumnSix);
             this.Controls.Add(this.btn_ColumnFive);
             this.Controls.Add(this.btn_ColumnFour);
             this.Controls.Add(this.btn_ColumnThree);
             this.Controls.Add(this.btn_ColumnTwo);
             this.Controls.Add(this.btn_ColumnOne);
+            this.Controls.Add(this.btn_ColumnZero);
             this.Controls.Add(this.pnl_BoardPanel);
             this.Name = "SinglePlayerForm";
             this.Text = "SinglePlayer";
@@ -865,13 +865,13 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl_BoardPanel;
-        private System.Windows.Forms.Button btn_ColumnSeven;
         private System.Windows.Forms.Button btn_ColumnSix;
         private System.Windows.Forms.Button btn_ColumnFive;
         private System.Windows.Forms.Button btn_ColumnFour;
         private System.Windows.Forms.Button btn_ColumnThree;
         private System.Windows.Forms.Button btn_ColumnTwo;
         private System.Windows.Forms.Button btn_ColumnOne;
+        private System.Windows.Forms.Button btn_ColumnZero;
         private System.Windows.Forms.Button btn_Quit;
         private System.Windows.Forms.Button btn_MainMenu;
         private System.Windows.Forms.Button btn_PlayAgain;
