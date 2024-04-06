@@ -189,8 +189,6 @@
             this.btn_ColumnZero.Text = "Select Column";
             this.btn_ColumnZero.UseVisualStyleBackColor = false;
             this.btn_ColumnZero.Click += new System.EventHandler(this.Piece_Placement);
-            this.btn_ColumnZero.MouseLeave += new System.EventHandler(this.RemovePossibleMoves);
-            this.btn_ColumnZero.MouseHover += new System.EventHandler(this.ShowPossibleMoves);
             // 
             // btn_Quit
             // 

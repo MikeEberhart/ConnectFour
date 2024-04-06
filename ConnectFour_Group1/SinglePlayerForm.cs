@@ -67,31 +67,33 @@ namespace Connect4Testing
         }
         private void DropPieces(int turn, int colindex)
         {
-
-            if (playerTurn == 0)
+            if (GetRow(colindex) != -1)
             {
-                lbl_TurnDisplay.Text = "Player Two's Turn";
-                boardArray[(GetRow(colindex)), colindex].BackgroundImage = Properties.Resources.YellowPiece2;
-                playerTurn++;
-            }
-            else
-            {
-                lbl_TurnDisplay.Text = "Player One's Turn";
-                boardArray[(GetRow(colindex)), colindex].BackgroundImage = Properties.Resources.RedPiece2;
-                playerTurn--;
+                if (playerTurn == 0)
+                {
+                    lbl_TurnDisplay.Text = "Player Two's Turn";
+                    boardArray[(GetRow(colindex)), colindex].BackgroundImage = Properties.Resources.YellowPiece2;
+                    playerTurn++;
+                }
+                else
+                {
+                    lbl_TurnDisplay.Text = "Player One's Turn";
+                    boardArray[(GetRow(colindex)), colindex].BackgroundImage = Properties.Resources.RedPiece2;
+                    playerTurn--;
+                }
             }
         }
         
         private int GetRow(int colindex)
         {
             Button currentButton;
-            for (int row = boardArray.GetLength(0) -1; row >= 0; row--) 
+            for (int row = 0; row <= boardArray.GetLength(0) - 1; row++) 
             { 
                 currentButton = boardArray[row, colindex];
                 if (currentButton.BackgroundImage != Properties.Resources.YellowPiece2 && currentButton.BackgroundImage != Properties.Resources.RedPiece2)
                 {
                     return row;
-                }    
+                }
             }
             return -1;
         }
@@ -111,7 +113,6 @@ namespace Connect4Testing
             if (colIndex != -1)
             {
                 DropPieces(playerTurn, colIndex);
-                Console.WriteLine(colIndex);
             }
         }
         // uses the public function in WelcomeForm to exit the program when the red 'X' is playerTurn
@@ -121,30 +122,6 @@ namespace Connect4Testing
         }
 
         // used when hovering over column selection to show next possible move...work in progress
-        private void ShowPossibleMoves(object sender, EventArgs e)
-        {
-            if (sender == btn_ColumnZero)
-            {
-                if (playerTurn == 0)
-                {
-                    btn_ZeroZero.BackgroundImage = Properties.Resources.YellowPiece2;
-                }
-                else
-                {
-                    btn_ZeroZero.BackgroundImage = Properties.Resources.RedPiece2;
-                }
-            }
-        }
-
-        // used to set the background pic back to null when the mouse is no longer over over column selection...work in progress
-        private void RemovePossibleMoves(object sender, EventArgs e)
-        {
-            if(sender == btn_ColumnZero)
-            {
-                btn_ZeroZero.BackgroundImage = null;
-            }
-        }
-
 
     }
 }
