@@ -35,31 +35,37 @@
             // 
             // btn_Quit
             // 
-            this.btn_Quit.Location = new System.Drawing.Point(459, 347);
+            this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Quit.Location = new System.Drawing.Point(465, 353);
             this.btn_Quit.Name = "btn_Quit";
-            this.btn_Quit.Size = new System.Drawing.Size(101, 41);
+            this.btn_Quit.Size = new System.Drawing.Size(139, 48);
             this.btn_Quit.TabIndex = 5;
             this.btn_Quit.Text = "Quit";
-            this.btn_Quit.UseVisualStyleBackColor = true;
+            this.btn_Quit.UseVisualStyleBackColor = false;
             this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
             // 
             // btn_Review
             // 
-            this.btn_Review.Location = new System.Drawing.Point(352, 347);
+            this.btn_Review.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Review.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Review.Location = new System.Drawing.Point(320, 353);
             this.btn_Review.Name = "btn_Review";
-            this.btn_Review.Size = new System.Drawing.Size(101, 41);
+            this.btn_Review.Size = new System.Drawing.Size(139, 48);
             this.btn_Review.TabIndex = 4;
             this.btn_Review.Text = "Review Game";
-            this.btn_Review.UseVisualStyleBackColor = true;
+            this.btn_Review.UseVisualStyleBackColor = false;
             // 
             // btn_PlayAgain
             // 
-            this.btn_PlayAgain.Location = new System.Drawing.Point(245, 347);
+            this.btn_PlayAgain.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PlayAgain.Location = new System.Drawing.Point(175, 353);
             this.btn_PlayAgain.Name = "btn_PlayAgain";
-            this.btn_PlayAgain.Size = new System.Drawing.Size(101, 41);
+            this.btn_PlayAgain.Size = new System.Drawing.Size(139, 48);
             this.btn_PlayAgain.TabIndex = 3;
             this.btn_PlayAgain.Text = "Play Again";
-            this.btn_PlayAgain.UseVisualStyleBackColor = true;
+            this.btn_PlayAgain.UseVisualStyleBackColor = false;
             // 
             // GameOverForm
             // 

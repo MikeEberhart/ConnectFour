@@ -15,7 +15,7 @@ namespace Connect4Testing
     {
         //make 2d array with 6 rows and 7 columns
         public static Button[,] boardArray = new Button[6, 7];
-        public static int playerTurn = 0;
+        private static int playerTurn = 0;
         private static Label turnDisplay;
         public static void AddPieces(Panel pnl)
         {
@@ -33,6 +33,11 @@ namespace Connect4Testing
                     rows++;
                 }
             }
+        }
+        public static void ResetTurn()
+        {
+            playerTurn = 0;
+            turnDisplay.Text = "Player One's Turn";
         }
 
         public static void SetLabel(Label lbl)

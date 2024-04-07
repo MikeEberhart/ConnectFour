@@ -17,7 +17,20 @@ namespace Connect4Testing
         {
             InitializeComponent();
             CenterToScreen();
+            GameBoard.AddPieces(pnl_BoardPanel);
+            GameBoard.SetLabel(lbl_TurnDisplay);
             wForm = wf;
+            int num = 0;
+            foreach (Button btn in GameBoard.boardArray)
+            {
+                num++;
+                btn.Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
+            }
+        }
+
+        private void Placing_Pieces(object sender, EventArgs e)
+        {
+            GameBoard.Piece_Placement(sender, e);
         }
 
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -32,8 +45,8 @@ namespace Connect4Testing
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            //AddPieces(); //maybe add this whole function to this form
-                           //or make it a public function in the other and call it here
+            GameBoard.AddPieces(pnl_BoardPanel);
+            GameBoard.ResetTurn();
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
                 piece.BackgroundImage = null;
