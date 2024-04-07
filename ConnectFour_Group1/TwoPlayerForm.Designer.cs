@@ -131,7 +131,7 @@
             this.btn_ColumnSix.TabIndex = 87;
             this.btn_ColumnSix.Text = "Select Column";
             this.btn_ColumnSix.UseVisualStyleBackColor = false;
-            this.btn_ColumnSix.Click += new System.EventHandler(this.Placing_Pieces);
+            this.btn_ColumnSix.Click += new System.EventHandler(this.PlacingPieces);
             // 
             // btn_ColumnFive
             // 
@@ -143,7 +143,7 @@
             this.btn_ColumnFive.TabIndex = 86;
             this.btn_ColumnFive.Text = "Select Column";
             this.btn_ColumnFive.UseVisualStyleBackColor = false;
-            this.btn_ColumnFive.Click += new System.EventHandler(this.Placing_Pieces);
+            this.btn_ColumnFive.Click += new System.EventHandler(this.PlacingPieces);
             // 
             // btn_ColumnFour
             // 
@@ -155,7 +155,7 @@
             this.btn_ColumnFour.TabIndex = 85;
             this.btn_ColumnFour.Text = "Select Column";
             this.btn_ColumnFour.UseVisualStyleBackColor = false;
-            this.btn_ColumnFour.Click += new System.EventHandler(this.Placing_Pieces);
+            this.btn_ColumnFour.Click += new System.EventHandler(this.PlacingPieces);
             // 
             // btn_ColumnThree
             // 
@@ -167,7 +167,7 @@
             this.btn_ColumnThree.TabIndex = 84;
             this.btn_ColumnThree.Text = "Select Column";
             this.btn_ColumnThree.UseVisualStyleBackColor = false;
-            this.btn_ColumnThree.Click += new System.EventHandler(this.Placing_Pieces);
+            this.btn_ColumnThree.Click += new System.EventHandler(this.PlacingPieces);
             // 
             // btn_ColumnTwo
             // 
@@ -179,7 +179,7 @@
             this.btn_ColumnTwo.TabIndex = 83;
             this.btn_ColumnTwo.Text = "Select Column";
             this.btn_ColumnTwo.UseVisualStyleBackColor = false;
-            this.btn_ColumnTwo.Click += new System.EventHandler(this.Placing_Pieces);
+            this.btn_ColumnTwo.Click += new System.EventHandler(this.PlacingPieces);
             // 
             // btn_ColumnOne
             // 
@@ -191,7 +191,7 @@
             this.btn_ColumnOne.TabIndex = 82;
             this.btn_ColumnOne.Text = "Select Column";
             this.btn_ColumnOne.UseVisualStyleBackColor = false;
-            this.btn_ColumnOne.Click += new System.EventHandler(this.Placing_Pieces);
+            this.btn_ColumnOne.Click += new System.EventHandler(this.PlacingPieces);
             // 
             // btn_ColumnZero
             // 
@@ -203,7 +203,7 @@
             this.btn_ColumnZero.TabIndex = 81;
             this.btn_ColumnZero.Text = "Select Column";
             this.btn_ColumnZero.UseVisualStyleBackColor = false;
-            this.btn_ColumnZero.Click += new System.EventHandler(this.Placing_Pieces);
+            this.btn_ColumnZero.Click += new System.EventHandler(this.PlacingPieces);
             // 
             // pnl_BoardPanel
             // 

@@ -47,7 +47,7 @@ namespace Connect4Testing
         {
             Application.Exit();
         }
-        private void Placing_Pieces(object sender, EventArgs e)
+        private void PlacingPieces(object sender, EventArgs e)
         {
             GameBoard.Piece_Placement(sender, e);
         }

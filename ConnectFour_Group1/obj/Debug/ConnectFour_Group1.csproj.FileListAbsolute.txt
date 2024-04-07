@@ -51,3 +51,4 @@ D:\.SchoolStuff\.GitHub\CopyOfMain\ConnectFour_Group1\obj\Debug\ConnectFour_Grou
 D:\.SchoolStuff\.GitHub\CopyOfMain\ConnectFour_Group1\obj\Debug\ConnectFour_Group1.csproj.CoreCompileInputs.cache
 D:\.SchoolStuff\.GitHub\CopyOfMain\ConnectFour_Group1\obj\Debug\Connect4Testing.exe
 D:\.SchoolStuff\.GitHub\CopyOfMain\ConnectFour_Group1\obj\Debug\Connect4Testing.pdb
+D:\.SchoolStuff\.GitHub\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.GameOverForm.resources
