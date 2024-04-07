@@ -107,6 +107,7 @@
             this.btn_MainMenu.TabIndex = 89;
             this.btn_MainMenu.Text = "Main Menu";
             this.btn_MainMenu.UseVisualStyleBackColor = false;
+            this.btn_MainMenu.Click += new System.EventHandler(this.btn_MainMenu_Click);
             // 
             // btn_PlayAgain
             // 
@@ -118,6 +119,7 @@
             this.btn_PlayAgain.TabIndex = 88;
             this.btn_PlayAgain.Text = "Play Again";
             this.btn_PlayAgain.UseVisualStyleBackColor = false;
+            this.btn_PlayAgain.Click += new System.EventHandler(this.btn_PlayAgain_Click);
             // 
             // btn_ColumnSeven
             // 
@@ -163,34 +165,34 @@
             this.btn_ColumnFour.Text = "Select Column";
             this.btn_ColumnFour.UseVisualStyleBackColor = false;
             // 
-            // btn_ColumnTwo
+            // btn_ColumnThree
             // 
             this.btn_ColumnThree.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ColumnThree.Location = new System.Drawing.Point(224, 438);
-            this.btn_ColumnThree.Name = "btn_ColumnTwo";
+            this.btn_ColumnThree.Name = "btn_ColumnThree";
             this.btn_ColumnThree.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnThree.TabIndex = 83;
             this.btn_ColumnThree.Text = "Select Column";
             this.btn_ColumnThree.UseVisualStyleBackColor = false;
             // 
-            // btn_ColumnOne
+            // btn_ColumnTwo
             // 
             this.btn_ColumnTwo.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ColumnTwo.Location = new System.Drawing.Point(134, 438);
-            this.btn_ColumnTwo.Name = "btn_ColumnOne";
+            this.btn_ColumnTwo.Name = "btn_ColumnTwo";
             this.btn_ColumnTwo.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnTwo.TabIndex = 82;
             this.btn_ColumnTwo.Text = "Select Column";
             this.btn_ColumnTwo.UseVisualStyleBackColor = false;
             // 
-            // btn_ColumnZero
+            // btn_ColumnOne
             // 
             this.btn_ColumnOne.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_ColumnOne.Location = new System.Drawing.Point(44, 438);
-            this.btn_ColumnOne.Name = "btn_ColumnZero";
+            this.btn_ColumnOne.Name = "btn_ColumnOne";
             this.btn_ColumnOne.Size = new System.Drawing.Size(55, 52);
             this.btn_ColumnOne.TabIndex = 81;
             this.btn_ColumnOne.Text = "Select Column";

@@ -29,5 +29,21 @@ namespace Connect4Testing
         {
             Application.Exit();
         }
+
+        private void btn_PlayAgain_Click(object sender, EventArgs e)
+        {
+            //AddPieces(); //maybe add this whole function to this form
+                           //or make it a public function in the other and call it here
+            foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
+            {
+                piece.BackgroundImage = null;
+            }
+        }
+
+        private void btn_MainMenu_Click(object sender, EventArgs e)
+        {
+            wForm.Show();
+            this.Hide();
+        }
     }
 }

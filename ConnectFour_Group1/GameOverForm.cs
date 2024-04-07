@@ -10,19 +10,12 @@ using System.Windows.Forms;
 
 namespace Connect4Testing
 {
-    public partial class StatsForm : Form
+    public partial class GameOverForm : Form
     {
-        private WelcomeForm wForm;
-        public StatsForm(WelcomeForm wf)
+        public GameOverForm()
         {
             InitializeComponent();
             CenterToScreen();
-            wForm = wf;
-        }
-
-        private void StatsForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            wForm.ExitProgram();
         }
 
         private void btn_Quit_Click(object sender, EventArgs e)
@@ -30,10 +23,9 @@ namespace Connect4Testing
             Application.Exit();
         }
 
-        private void btn_MainMenu_Click(object sender, EventArgs e)
+        private void GameOverForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            wForm.Show();
-            this.Hide();
+            Application.Exit();
         }
     }
 }

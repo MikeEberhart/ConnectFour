@@ -33,7 +33,11 @@ namespace Connect4Testing
         }
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-
+            AddPieces();
+            foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
+            {
+                piece.BackgroundImage = null;
+            }
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {

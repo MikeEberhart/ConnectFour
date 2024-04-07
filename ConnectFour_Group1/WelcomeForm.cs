@@ -44,7 +44,7 @@ namespace Connect4Testing
             Application.Exit();
         }
         // public function used all forms to exit the program when the red 'X' is clicked 
-        public void ExitProgram()
+        public void ExitProgram() // could use this but just as much code if it was in each form anyways.
         {
             Application.Exit();
         }
