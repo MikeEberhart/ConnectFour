@@ -20,10 +20,10 @@ namespace Connect4Testing
         {
             InitializeComponent();
             CenterToScreen();
-            AddPieces();
+            GameBoard.AddPieces(pnl_BoardPanel);
             wForm = wf;
             int num = 0;
-            foreach (Button btn in boardArray)
+            foreach (Button btn in GameBoard.boardArray)
             {
                 num++;
                 btn.Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
@@ -33,7 +33,7 @@ namespace Connect4Testing
         }
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            AddPieces();
+            GameBoard.AddPieces(pnl_BoardPanel);
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
                 piece.BackgroundImage = null;
@@ -49,26 +49,6 @@ namespace Connect4Testing
             Application.Exit();
         }
 
-        //make 2d array with 6 rows and 7 columns
-        public Button[,] boardArray = new Button[6, 7];
-
-        private void AddPieces()
-        {
-            //clear out array to avoid repetition or breakage
-            Array.Clear(boardArray, 0, boardArray.Length);
-            int rows = 0;
-            int columns = 0;
-            foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
-            {
-                boardArray[rows, columns] = piece;
-                columns++;
-                if (columns == 7)
-                {
-                    columns = 0;
-                    rows++;
-                }
-            }
-        }
         private void DropPieces(int colindex)
         {
             int rowindex = GetRow(colindex);
@@ -78,13 +58,13 @@ namespace Connect4Testing
                 if (playerTurn == 0)
                 {
                     lbl_TurnDisplay.Text = "Player Two's Turn";
-                    boardArray[rowindex, colindex].BackgroundImage = Properties.Resources.YellowPiece2;
+                    GameBoard.boardArray[rowindex, colindex].BackgroundImage = Properties.Resources.YellowPiece2;
                     playerTurn++;
                 }
                 else
                 {
                     lbl_TurnDisplay.Text = "Player One's Turn";
-                    boardArray[rowindex, colindex].BackgroundImage = Properties.Resources.RedPiece2;
+                    GameBoard.boardArray[rowindex, colindex].BackgroundImage = Properties.Resources.RedPiece2;
                     playerTurn--;
                 }
             }
@@ -93,9 +73,9 @@ namespace Connect4Testing
         private int GetRow(int colindex)
         {
             Button currentButton;
-            for (int row = 0; row <= boardArray.GetLength(0) - 1; row++) 
+            for (int row = 0; row <= GameBoard.boardArray.GetLength(0) - 1; row++) 
             { 
-                currentButton = boardArray[row, colindex];
+                currentButton = GameBoard.boardArray[row, colindex];
                 if (currentButton.BackgroundImage == null)
                 {
                     return row;
