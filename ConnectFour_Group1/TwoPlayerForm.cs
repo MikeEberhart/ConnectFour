@@ -13,8 +13,8 @@ namespace Connect4Testing
     public partial class TwoPlayerForm : Form
     {
         private WelcomeForm wForm;
-        private GameBoard gameBoardHere = new GameBoard();
-        //private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
+        private static GameBoard gameBoardHere = new GameBoard(); // any way to do this without being static? 
+        private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
         public TwoPlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
