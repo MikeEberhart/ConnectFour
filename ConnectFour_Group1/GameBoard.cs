@@ -15,27 +15,28 @@ namespace Connect4Testing
     {
         // moved private static Button[,] boardArray = new Button[6, 7]; to each form
         // used Overloaded Construct to pass the Array to passedBtnArray
-        private Button[,] passedBtnArray;
+        private  CellData[,] gameBoard = new CellData[6,7];
         private int playerTurn = 0;
         private Label turnDisplay;
         // used to pass the Array
-        public GameBoard(Button[,] btnArray) 
-        {
-            passedBtnArray = btnArray;
-        }
         public int GetPlayerTurn()
         {
             return playerTurn;
         }
+        public CellData[,] GetGameBoard()
+        {
+            return gameBoard;
+        }
         public void AddPieces(Panel pnl)
         {
             //clear out array to avoid repetition or breakage
-            Array.Clear(passedBtnArray, 0, passedBtnArray.Length);
+            Array.Clear(gameBoard, 0, gameBoard.Length);
             int rows = 0;
             int columns = 0;
+            int buttons = 0;
             foreach (Button piece in pnl.Controls.OfType<Button>())
             {
-                passedBtnArray[rows, columns] = piece;
+                gameBoard[rows, columns] = new CellData(rows, columns, piece) ;
                 columns++;
                 if (columns == 7)
                 {
@@ -63,13 +64,13 @@ namespace Connect4Testing
                 if (playerTurn == 0)
                 {
                     turnDisplay.Text = "Player Two's Turn";
-                    passedBtnArray[rowindex, colindex].BackgroundImage = Properties.Resources.YellowPiece2;
+                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
                     playerTurn++;
                 }
                 else
                 {
                     turnDisplay.Text = "Player One's Turn";
-                    passedBtnArray[rowindex, colindex].BackgroundImage = Properties.Resources.RedPiece2;
+                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
                     playerTurn--;
                 }
             }
@@ -78,9 +79,9 @@ namespace Connect4Testing
         public int GetRow(int colindex)
         {
             Button currentButton;
-            for (int row = 0; row <= passedBtnArray.GetLength(0) - 1; row++)
+            for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
             {
-                currentButton = passedBtnArray[row, colindex];
+                currentButton = gameBoard[row, colindex].GetButton();
                 if (currentButton.BackgroundImage == null)
                 {
                     return row;

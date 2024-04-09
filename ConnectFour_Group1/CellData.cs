@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace Connect4Testing
 {
-    internal class CellData
+    public class CellData
     {
-        private int row;
-        private int column;
-        private Button btn;
+        private int row {  get; set; }
+        private int column {  get; set; }
+        private Button btn  {  get; set; }
 
         public CellData(int r, int c, Button b)
         {
@@ -19,15 +19,7 @@ namespace Connect4Testing
             column = c;
             btn = b;
         }
-        public int GetRow()
-        {
-            return row;
-        }
-        public int GetColumn()
-        {
-            return column;
-        }
-        public Button GetButton()
+        public Button GetButton() 
         {
             return btn;
         }

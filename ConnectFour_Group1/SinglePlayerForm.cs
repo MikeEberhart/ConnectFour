@@ -15,29 +15,28 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         //made this static since the size of the array shouldn't be changed
-        private static Button[,] boardArray = new Button[6, 7];
         //used to pass the boardArray to the GameBoard Class
         //and used to call the public function from the GameBoard Class to be used in this form
-        private GameBoard gameBoard = new GameBoard(boardArray);
-
+        private static GameBoard gameBoardHere = new GameBoard();
+        private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
         public SinglePlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
             CenterToScreen();
-            gameBoard.AddPieces(pnl_BoardPanel);
-            gameBoard.SetLabel(lbl_TurnDisplay);
+            gameBoardHere.AddPieces(pnl_BoardPanel);
+            gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
             int num = 0;
-            foreach (Button btn in boardArray)
+            foreach (CellData cldta in cellDataArray)
             {
                 num++;
-                btn.Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
+                cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
             }
         }
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            gameBoard.AddPieces(pnl_BoardPanel);
-            gameBoard.ResetTurn();
+            gameBoardHere.AddPieces(pnl_BoardPanel);
+            gameBoardHere.ResetTurn();
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
                 piece.BackgroundImage = null;
@@ -54,7 +53,7 @@ namespace Connect4Testing
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
-            gameBoard.Piece_Placement(sender, e);
+            gameBoardHere.Piece_Placement(sender, e);
         }
         // uses the public function in WelcomeForm to exit the program when the red 'X' is playerTurn
         private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)

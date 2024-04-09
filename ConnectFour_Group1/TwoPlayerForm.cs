@@ -14,14 +14,14 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private static Button[,] boardArray = new Button[6, 7];
-        private GameBoard passingArray = new GameBoard(boardArray);
-
+        private static GameBoard gameBoardHere = new GameBoard();
+        private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
         public TwoPlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
             CenterToScreen();
-            passingArray.AddPieces(pnl_BoardPanel);
-            passingArray.SetLabel(lbl_TurnDisplay);
+            gameBoardHere.AddPieces(pnl_BoardPanel);
+            gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
             int num = 0;
             foreach (Button btn in boardArray)
@@ -33,7 +33,7 @@ namespace Connect4Testing
 
         private void PlacingPieces(object sender, EventArgs e)
         {
-            passingArray.Piece_Placement(sender, e);
+            gameBoardHere.Piece_Placement(sender, e);
         }
 
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -48,8 +48,8 @@ namespace Connect4Testing
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            passingArray.AddPieces(pnl_BoardPanel);
-            passingArray.ResetTurn();
+            gameBoardHere.AddPieces(pnl_BoardPanel);
+            gameBoardHere.ResetTurn();
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
                 piece.BackgroundImage = null;
