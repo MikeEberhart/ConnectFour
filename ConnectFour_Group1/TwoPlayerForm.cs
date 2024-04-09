@@ -13,15 +13,18 @@ namespace Connect4Testing
     public partial class TwoPlayerForm : Form
     {
         private WelcomeForm wForm;
+        private static Button[,] boardArray = new Button[6, 7];
+        private GameBoard passingArray = new GameBoard(boardArray);
+
         public TwoPlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
             CenterToScreen();
-            GameBoard.AddPieces(pnl_BoardPanel);
-            GameBoard.SetLabel(lbl_TurnDisplay);
+            passingArray.AddPieces(pnl_BoardPanel);
+            passingArray.SetLabel(lbl_TurnDisplay);
             wForm = wf;
             int num = 0;
-            foreach (Button btn in GameBoard.boardArray)
+            foreach (Button btn in boardArray)
             {
                 num++;
                 btn.Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
@@ -30,7 +33,7 @@ namespace Connect4Testing
 
         private void PlacingPieces(object sender, EventArgs e)
         {
-            GameBoard.Piece_Placement(sender, e);
+            passingArray.Piece_Placement(sender, e);
         }
 
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -45,8 +48,8 @@ namespace Connect4Testing
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            GameBoard.AddPieces(pnl_BoardPanel);
-            GameBoard.ResetTurn();
+            passingArray.AddPieces(pnl_BoardPanel);
+            passingArray.ResetTurn();
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
                 piece.BackgroundImage = null;

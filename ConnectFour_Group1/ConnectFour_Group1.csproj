@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CellData.cs" />
     <Compile Include="GameBoard.cs" />
+    <Compile Include="GameLogic.cs" />
     <Compile Include="GameOverForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +127,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\YellowPiece2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\StatData.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
