@@ -66,6 +66,7 @@
             this.btn_PlayAgain.TabIndex = 3;
             this.btn_PlayAgain.Text = "Play Again";
             this.btn_PlayAgain.UseVisualStyleBackColor = false;
+            this.btn_PlayAgain.Click += new System.EventHandler(this.btn_PlayAgain_Click);
             // 
             // GameOverForm
             // 

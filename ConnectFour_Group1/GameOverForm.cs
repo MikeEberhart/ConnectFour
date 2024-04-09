@@ -12,10 +12,12 @@ namespace Connect4Testing
 {
     public partial class GameOverForm : Form
     {
-        public GameOverForm()
+        private WelcomeForm wForm;
+        public GameOverForm(WelcomeForm wf)
         {
             InitializeComponent();
             CenterToScreen();
+            wForm = wf;
         }
 
         private void btn_Quit_Click(object sender, EventArgs e)
@@ -26,6 +28,17 @@ namespace Connect4Testing
         private void GameOverForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btn_PlayAgain_Click(object sender, EventArgs e)
+        {
+            playAgain();
+        }
+
+        private void playAgain()
+        {
+            wForm.Show();
+            this.Hide();
         }
     }
 }

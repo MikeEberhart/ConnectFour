@@ -66,3 +66,17 @@ D:\.SchoolStuff\.GitHub\CopyOfMain2\ConnectFour_Group1\obj\Debug\Connect4Testing
 D:\.SchoolStuff\.GitHub\CopyOfMain2\ConnectFour_Group1\bin\Debug\Connect4Testing.exe.config
 D:\.SchoolStuff\.GitHub\CopyOfMain2\ConnectFour_Group1\bin\Debug\Connect4Testing.exe
 D:\.SchoolStuff\.GitHub\CopyOfMain2\ConnectFour_Group1\bin\Debug\Connect4Testing.pdb
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\bin\Debug\Connect4Testing.exe.config
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\bin\Debug\Connect4Testing.exe
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\bin\Debug\Connect4Testing.pdb
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\ConnectFour_Group1.csproj.AssemblyReference.cache
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.GameOverForm.resources
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.Properties.Resources.resources
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.SinglePlayerForm.resources
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.StatsForm.resources
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.TwoPlayerForm.resources
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.WelcomeForm.resources
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\ConnectFour_Group1.csproj.GenerateResource.cache
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\ConnectFour_Group1.csproj.CoreCompileInputs.cache
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.exe
+G:\CIS153\CIS153_Final\ConnectFour\ConnectFour_Group1\obj\Debug\Connect4Testing.pdb

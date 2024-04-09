@@ -60,6 +60,15 @@ namespace Connect4Testing
         {
             wForm.ExitProgram();
         }
+        private void gameOver()
+        {
+            //when the game is determined to be over can call this to send player to the game over form 
+            GameOverForm formLoaded = new GameOverForm(wForm);
+            formLoaded.Show();
+            this.Hide();
+            //also need to add a way to pass the game board so the review button can work 
+
+        }
         // used when hovering over column selection to show next possible move...very rough draft/work in progress
         //private void ShowPossibleMove(object sender, EventArgs e)
         //{

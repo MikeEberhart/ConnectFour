@@ -67,7 +67,8 @@ namespace Connect4Testing
                     tempCompWin = double.Parse(totalCompWins) / totalGames;
                     playerWinPercentage = Math.Round(tempPlayerWin * 100, 2);
                     compWinPercentage = Math.Round(tempCompWin * 100, 2);
-                    DataToTextBoxes();
+                    //DataToTextBoxes();
+                    //I think we might have to move this 
                     // delete later // used for testing //
                     Console.WriteLine(Math.Round(playerWinPercentage, 2));
                     Console.WriteLine(Math.Round(compWinPercentage,2 ));
@@ -89,7 +90,10 @@ namespace Connect4Testing
                     readFile.Dispose();
                 }
             }
-            
+            //added this cause I think it wopuld cause problems with reading and writing at same time
+            readFile.Close();
+            DataToTextBoxes();
+
         }
         public void DataToTextBoxes()
         {
@@ -98,8 +102,24 @@ namespace Connect4Testing
             txt_TotalCompWins.Text = fileText[1];
             txt_CompWinPercentage.Text = compWinPercentage.ToString() + "%";
             txt_TotalTies.Text = fileText[2];
-            txt_TotalNumOfGames.Text = totalGames.ToString();
+            txt_TotalTies.Text = totalGames.ToString();
+
+
+            if (txt_TotalPlayerWins.Text != null && 
+                txt_PlayerWinPercentage.Text != null &&
+                txt_TotalCompWins.Text != null &&
+                txt_CompWinPercentage.Text != null &&
+                txt_TotalTies.Text != null &&
+                txt_TotalTies.Text != null)
+            {
+                File.AppendAllText(statFile, fileText[0]
+                    + "," + playerWinPercentage.ToString() + "%"
+                    + "," + fileText[1]
+                    + "," + compWinPercentage.ToString() + "%"
+                    + "," + fileText[2]
+                    + "," + totalGames.ToString());
+            }
             
-        }
+        }  
     }
 }
