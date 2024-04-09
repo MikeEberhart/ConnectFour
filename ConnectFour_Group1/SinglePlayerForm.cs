@@ -14,11 +14,11 @@ namespace Connect4Testing
     public partial class SinglePlayerForm : Form
     {
         private WelcomeForm wForm;
-        //made this static since the size of the array shouldn't be changed
-        //used to pass the boardArray to the GameBoard Class
-        //and used to call the public function from the GameBoard Class to be used in this form
-        private static GameBoard gameBoardHere = new GameBoard();
-        private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
+        private GameBoard gameBoardHere = new GameBoard();
+        private GameOverForm loadedForm; //added this here since it was being used more than once
+        //might not need this anymore. was only being use to number the buttons with the foreach loop
+        //private CellData[,] cellDataArray = gameBoardHere.GetGameBoard(); 
+
         public SinglePlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
@@ -26,21 +26,18 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
-            int num = 0;
-            foreach (CellData cldta in cellDataArray)
-            {
-                num++;
-                cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
-            }
+            //int num = 0;
+            //foreach (CellData cldta in cellDataArray)
+            //{
+            //    num++;
+            //    cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
+            //}
         }
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            gameBoardHere.AddPieces(pnl_BoardPanel);
-            gameBoardHere.ResetTurn();
-            foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
-            {
-                piece.BackgroundImage = null;
-            }
+            ClearBoard();
+            ShowFormButtons();
+            loadedForm.Hide();
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
@@ -55,20 +52,55 @@ namespace Connect4Testing
         {
             gameBoardHere.Piece_Placement(sender, e);
         }
-        // uses the public function in WelcomeForm to exit the program when the red 'X' is playerTurn
         private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            wForm.ExitProgram();
+            Application.Exit();
         }
         private void gameOver()
         {
             //when the game is determined to be over can call this to send player to the game over form 
-            GameOverForm formLoaded = new GameOverForm(wForm);
-            formLoaded.Show();
+            loadedForm = new GameOverForm(this); //renamed this outside of the function to be used again
+            loadedForm.Show();
             this.Hide();
-            //also need to add a way to pass the game board so the review button can work 
+            //also need to add a way to pass the game board so the review button can work
 
         }
+        public void ClearBoard() //used in GameOver to clear the board for a new game
+        {
+            gameBoardHere.AddPieces(pnl_BoardPanel);
+            gameBoardHere.ResetTurn();
+            foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
+            {
+                piece.BackgroundImage = null;
+            }
+        }
+        public void HideFormButtons() //added this to hide the buttons when reviewing the board
+        {
+            btn_ColumnZero.Visible = false;
+            btn_ColumnOne.Visible = false;
+            btn_ColumnTwo.Visible = false;
+            btn_ColumnThree.Visible = false;
+            btn_ColumnFour.Visible = false;
+            btn_ColumnFive.Visible = false;
+            btn_ColumnSix.Visible = false;
+        }
+        public void ShowFormButtons() //added to show the buttons again when playing again
+        {
+            btn_ColumnZero.Visible = true;
+            btn_ColumnOne.Visible = true;
+            btn_ColumnTwo.Visible = true;
+            btn_ColumnThree.Visible = true;
+            btn_ColumnFour.Visible = true;
+            btn_ColumnFive.Visible = true;
+            btn_ColumnSix.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e) //used for testing gameOver
+        {
+            gameOver();
+        }
+
+
         // used when hovering over column selection to show next possible move...very rough draft/work in progress
         //private void ShowPossibleMove(object sender, EventArgs e)
         //{
@@ -81,7 +113,7 @@ namespace Connect4Testing
         //        }
         //    }
         //}
-        
+
 
     }
 }

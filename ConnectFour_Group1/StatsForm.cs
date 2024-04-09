@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -31,12 +32,13 @@ namespace Connect4Testing
             InitializeComponent();
             CenterToScreen();
             ReadTxtFile();
+            WriteDataToFile();
             wForm = wf;
         }
 
         private void StatsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            wForm.ExitProgram();
+            Application.Exit();
         }
 
         private void btn_Quit_Click(object sender, EventArgs e)
@@ -60,18 +62,16 @@ namespace Connect4Testing
                 {
                     fileText = stats.Split(',');
                     totalPlayerWins = fileText[0];
-                    totalCompWins = fileText[1];
-                    totalTies = fileText[2];
+                    totalCompWins = fileText[2];
+                    totalTies = fileText[4];
                     totalGames = int.Parse(totalPlayerWins) + int.Parse(totalCompWins) + int.Parse(totalTies);
                     tempPlayerWin = double.Parse(totalPlayerWins) / totalGames;
                     tempCompWin = double.Parse(totalCompWins) / totalGames;
                     playerWinPercentage = Math.Round(tempPlayerWin * 100, 2);
                     compWinPercentage = Math.Round(tempCompWin * 100, 2);
-                    //DataToTextBoxes();
-                    //I think we might have to move this 
-                    // delete later // used for testing //
-                    Console.WriteLine(Math.Round(playerWinPercentage, 2));
-                    Console.WriteLine(Math.Round(compWinPercentage,2 ));
+                    //delete later // used for testing //
+                    //Console.WriteLine(Math.Round(playerWinPercentage, 2));
+                    //Console.WriteLine(Math.Round(compWinPercentage,2 ));
                 }
 
             }
@@ -99,27 +99,58 @@ namespace Connect4Testing
         {
             txt_TotalPlayerWins.Text = fileText[0];
             txt_PlayerWinPercentage.Text = playerWinPercentage.ToString() + "%";
-            txt_TotalCompWins.Text = fileText[1];
+            txt_TotalCompWins.Text = fileText[2];
             txt_CompWinPercentage.Text = compWinPercentage.ToString() + "%";
-            txt_TotalTies.Text = fileText[2];
-            txt_TotalTies.Text = totalGames.ToString();
-
-
-            if (txt_TotalPlayerWins.Text != null && 
+            txt_TotalTies.Text = fileText[4];
+            txt_TotalNumOfGames.Text = totalGames.ToString();
+        }  
+        public void WriteDataToFile()
+        {
+            if (txt_TotalPlayerWins.Text != null &&
                 txt_PlayerWinPercentage.Text != null &&
                 txt_TotalCompWins.Text != null &&
                 txt_CompWinPercentage.Text != null &&
                 txt_TotalTies.Text != null &&
                 txt_TotalTies.Text != null)
             {
-                File.AppendAllText(statFile, fileText[0]
+                File.WriteAllText(statFile, fileText[0]
                     + "," + playerWinPercentage.ToString() + "%"
-                    + "," + fileText[1]
-                    + "," + compWinPercentage.ToString() + "%"
                     + "," + fileText[2]
+                    + "," + compWinPercentage.ToString() + "%"
+                    + "," + fileText[4]
                     + "," + totalGames.ToString());
             }
-            
-        }  
+        }
+        public void UpdateToFile() // public function to be used in the GameOver form
+        {                          // to update the text file with the new data from previous game
+                                   // very much a work in progess. Feel free to edit if you want/need to
+            //DataToTextBoxes();
+            ////int playerWins = 1;
+            ////int compWins = 1;
+            ////int tieGames = 1;
+            //////if(player1 wins)
+            //////{
+            //    int playerWins = int.Parse(fileText[0]) + 1;
+            //////}
+            //////else if(comp wins)
+            //////{
+            //    int compWins = int.Parse(fileText[2]) + 1;
+            //////}
+            //////else if(tie)
+            //////{
+            //    int tieGames = int.Parse(fileText[4]) + 1;
+            //////}
+            //txt_TotalPlayerWins.Text = playerWins.ToString();
+            //tempPlayerWin = playerWins / totalGames;
+            //playerWinPercentage = Math.Round(tempPlayerWin * 100, 2);
+            //txt_PlayerWinPercentage.Text = playerWinPercentage.ToString();
+            //tempCompWin = compWins / totalGames;
+            //compWinPercentage = Math.Round(tempCompWin * 100, 2);
+            //txt_TotalCompWins.Text = compWins.ToString();
+            //txt_CompWinPercentage.Text = compWinPercentage.ToString();
+            //txt_TotalTies.Text = tieGames.ToString();
+            //totalGames = playerWins + compWins + tieGames;
+            //txt_TotalNumOfGames.Text = totalGames.ToString();
+        }
     }
 }

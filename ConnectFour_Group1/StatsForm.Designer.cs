@@ -133,6 +133,7 @@
             this.txt_TotalPlayerWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TotalPlayerWins.Location = new System.Drawing.Point(238, 34);
             this.txt_TotalPlayerWins.Name = "txt_TotalPlayerWins";
+            this.txt_TotalPlayerWins.ReadOnly = true;
             this.txt_TotalPlayerWins.Size = new System.Drawing.Size(75, 26);
             this.txt_TotalPlayerWins.TabIndex = 8;
             this.txt_TotalPlayerWins.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -142,6 +143,7 @@
             this.txt_TotalCompWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TotalCompWins.Location = new System.Drawing.Point(238, 98);
             this.txt_TotalCompWins.Name = "txt_TotalCompWins";
+            this.txt_TotalCompWins.ReadOnly = true;
             this.txt_TotalCompWins.Size = new System.Drawing.Size(75, 26);
             this.txt_TotalCompWins.TabIndex = 9;
             this.txt_TotalCompWins.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -151,6 +153,7 @@
             this.txt_TotalTies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TotalTies.Location = new System.Drawing.Point(238, 162);
             this.txt_TotalTies.Name = "txt_TotalTies";
+            this.txt_TotalTies.ReadOnly = true;
             this.txt_TotalTies.Size = new System.Drawing.Size(75, 26);
             this.txt_TotalTies.TabIndex = 10;
             this.txt_TotalTies.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -160,6 +163,7 @@
             this.txt_TotalNumOfGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TotalNumOfGames.Location = new System.Drawing.Point(238, 194);
             this.txt_TotalNumOfGames.Name = "txt_TotalNumOfGames";
+            this.txt_TotalNumOfGames.ReadOnly = true;
             this.txt_TotalNumOfGames.Size = new System.Drawing.Size(75, 26);
             this.txt_TotalNumOfGames.TabIndex = 11;
             this.txt_TotalNumOfGames.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -169,6 +173,7 @@
             this.txt_PlayerWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PlayerWinPercentage.Location = new System.Drawing.Point(238, 66);
             this.txt_PlayerWinPercentage.Name = "txt_PlayerWinPercentage";
+            this.txt_PlayerWinPercentage.ReadOnly = true;
             this.txt_PlayerWinPercentage.Size = new System.Drawing.Size(75, 26);
             this.txt_PlayerWinPercentage.TabIndex = 12;
             this.txt_PlayerWinPercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -178,6 +183,7 @@
             this.txt_CompWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CompWinPercentage.Location = new System.Drawing.Point(238, 130);
             this.txt_CompWinPercentage.Name = "txt_CompWinPercentage";
+            this.txt_CompWinPercentage.ReadOnly = true;
             this.txt_CompWinPercentage.Size = new System.Drawing.Size(75, 26);
             this.txt_CompWinPercentage.TabIndex = 13;
             this.txt_CompWinPercentage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

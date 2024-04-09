@@ -82,6 +82,7 @@
             this.btn_FiveFive = new System.Windows.Forms.Button();
             this.btn_FiveSix = new System.Windows.Forms.Button();
             this.lbl_TurnDisplay = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.pnl_BoardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -833,12 +834,23 @@
             this.lbl_TurnDisplay.TabIndex = 80;
             this.lbl_TurnDisplay.Text = "Player One\'s Turn";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(617, 520);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 39);
+            this.button1.TabIndex = 81;
+            this.button1.Text = "testing GameOver";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SinglePlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(704, 596);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lbl_TurnDisplay);
             this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.btn_MainMenu);
@@ -916,5 +928,6 @@
         private System.Windows.Forms.Button btn_TwoThree;
         private System.Windows.Forms.Button btn_TwoFour;
         private System.Windows.Forms.Label lbl_TurnDisplay;
+        private System.Windows.Forms.Button button1;
     }
 }

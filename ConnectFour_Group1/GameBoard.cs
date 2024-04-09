@@ -13,12 +13,9 @@ namespace Connect4Testing
 {
     public class GameBoard
     {
-        // moved private static Button[,] boardArray = new Button[6, 7]; to each form
-        // used Overloaded Construct to pass the Array to passedBtnArray
         private  CellData[,] gameBoard = new CellData[6,7];
         private int playerTurn = 0;
         private Label turnDisplay;
-        // used to pass the Array
         public int GetPlayerTurn()
         {
             return playerTurn;

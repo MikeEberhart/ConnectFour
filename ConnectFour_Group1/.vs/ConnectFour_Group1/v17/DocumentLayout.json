@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\singleplayerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\gameoverform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:gameoverform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\statsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:statsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|d:\\.schoolstuff\\.github\\copyofmain2\\connectfour_group1\\singleplayerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:singleplayerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\celldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:celldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\statsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:statsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|d:\\.schoolstuff\\.github\\copyofmain2\\connectfour_group1\\statsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:statsform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|d:\\.schoolstuff\\.github\\copyofmain2\\connectfour_group1\\gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:gamelogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\twoplayerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:twoplayerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\resources\\statdata.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:resources\\statdata.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "SinglePlayerForm.cs",
               "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\SinglePlayerForm.cs",
               "RelativeDocumentMoniker": "SinglePlayerForm.cs",
               "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\SinglePlayerForm.cs",
               "RelativeToolTip": "SinglePlayerForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD8AAABiAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAuwD8AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-07T04:44:14.316Z",
               "IsPinned": true,
@@ -56,79 +48,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TwoPlayerForm.cs",
-              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\TwoPlayerForm.cs",
-              "RelativeDocumentMoniker": "TwoPlayerForm.cs",
-              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\TwoPlayerForm.cs",
-              "RelativeToolTip": "TwoPlayerForm.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-09T01:01:17.713Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "StatData.txt",
-              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\Resources\\StatData.txt",
-              "RelativeDocumentMoniker": "Resources\\StatData.txt",
-              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\Resources\\StatData.txt",
-              "RelativeToolTip": "Resources\\StatData.txt",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-04-09T00:14:19.787Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StatsForm.cs",
-              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\StatsForm.cs",
-              "RelativeDocumentMoniker": "StatsForm.cs",
-              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\StatsForm.cs",
-              "RelativeToolTip": "StatsForm.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T23:57:27.232Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "StatsForm.cs [Design]",
-              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\StatsForm.cs",
-              "RelativeDocumentMoniker": "StatsForm.cs",
-              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\StatsForm.cs [Design]",
-              "RelativeToolTip": "StatsForm.cs [Design]",
+              "Title": "GameLogic.cs",
+              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\GameLogic.cs",
+              "RelativeDocumentMoniker": "GameLogic.cs",
+              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\GameLogic.cs",
+              "RelativeToolTip": "GameLogic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T23:29:02.533Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-09T16:10:20.562Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameBoard.cs",
-              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\GameBoard.cs",
-              "RelativeDocumentMoniker": "GameBoard.cs",
-              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\GameBoard.cs",
-              "RelativeToolTip": "GameBoard.cs",
-              "ViewState": "AQIAADQAAAAAAAAAAAA0wBgAAAAJAAAA",
+              "DocumentIndex": 0,
+              "Title": "GameOverForm.cs",
+              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\GameOverForm.cs",
+              "RelativeDocumentMoniker": "GameOverForm.cs",
+              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\GameOverForm.cs",
+              "RelativeToolTip": "GameOverForm.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwBAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T22:00:57.999Z",
+              "WhenOpened": "2024-04-09T13:20:57.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CellData.cs",
-              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\CellData.cs",
-              "RelativeDocumentMoniker": "CellData.cs",
-              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\CellData.cs",
-              "RelativeToolTip": "CellData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAhAAAA",
+              "Title": "StatsForm.cs",
+              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\StatsForm.cs",
+              "RelativeDocumentMoniker": "StatsForm.cs",
+              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\StatsForm.cs",
+              "RelativeToolTip": "StatsForm.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwH0AAABYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-08T21:27:19.18Z",
+              "WhenOpened": "2024-04-09T14:54:36.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TwoPlayerForm.cs",
+              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\TwoPlayerForm.cs",
+              "RelativeDocumentMoniker": "TwoPlayerForm.cs",
+              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\CopyOfMain2\\ConnectFour_Group1\\TwoPlayerForm.cs",
+              "RelativeToolTip": "TwoPlayerForm.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T14:33:30.534Z",
               "EditorCaption": ""
             }
           ]

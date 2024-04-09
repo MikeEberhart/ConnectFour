@@ -13,9 +13,8 @@ namespace Connect4Testing
     public partial class TwoPlayerForm : Form
     {
         private WelcomeForm wForm;
-        private static Button[,] boardArray = new Button[6, 7];
-        private static GameBoard gameBoardHere = new GameBoard();
-        private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
+        private GameBoard gameBoardHere = new GameBoard();
+        //private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
         public TwoPlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
@@ -23,12 +22,12 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
-            int num = 0;
-            foreach (Button btn in boardArray)
-            {
-                num++;
-                btn.Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
-            }
+            //int num = 0;
+            //foreach (CellData cldta in cellDataArray)
+            //{
+            //    num++;
+            //    cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
+            //}
         }
 
         private void PlacingPieces(object sender, EventArgs e)
@@ -38,7 +37,7 @@ namespace Connect4Testing
 
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            wForm.ExitProgram();
+            Application.Exit();
         }
 
         private void btn_Quit_Click(object sender, EventArgs e)
