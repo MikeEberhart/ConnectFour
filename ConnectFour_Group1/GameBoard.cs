@@ -24,15 +24,15 @@ namespace Connect4Testing
         {
             return gameBoard;
         }
-        public void AddPieces(Panel pnl, CellData[,] board)
+        public void AddPieces(Panel pnl)
         {
             //clear out array to avoid repetition or breakage
-            Array.Clear(board, 0, board.Length);
+            Array.Clear(gameBoard, 0, gameBoard.Length);
             int rows = 0;
             int columns = 0;
             foreach (Button piece in pnl.Controls.OfType<Button>())
             {
-                board[rows, columns] = new CellData(rows, columns, piece) ;
+                gameBoard[rows, columns] = new CellData(rows, columns, piece) ;
                 columns++;
                 if (columns == 7)
                 {
@@ -51,33 +51,33 @@ namespace Connect4Testing
         {
             turnDisplay = lbl;
         }
-        public void DropPieces(int colindex, CellData[,] board)
+        public void DropPieces(int colindex)
         {
-            int rowindex = GetRow(colindex, board);
+            int rowindex = GetRow(colindex);
 
             if (rowindex != -1)
             {
                 if (playerTurn == 0)
                 {
                     turnDisplay.Text = "Player Two's Turn";
-                    board[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
+                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
                     playerTurn++;
                 }
                 else
                 {
                     turnDisplay.Text = "Player One's Turn";
-                    board[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
+                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
                     playerTurn--;
                 }
             }
         }
 
-        public int GetRow(int colindex, CellData[,] board)
+        public int GetRow(int colindex)
         {
             Button currentButton;
-            for (int row = 0; row <= board.GetLength(0) - 1; row++)
+            for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
             {
-                currentButton = board[row, colindex].GetButton();
+                currentButton = gameBoard[row, colindex].GetButton();
                 if (currentButton.BackgroundImage == null)
                 {
                     return row;
@@ -86,7 +86,7 @@ namespace Connect4Testing
             return -1;
         }
         // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
-        public void Piece_Placement(object sender, EventArgs e, CellData[,] board)
+        public void Piece_Placement(object sender, EventArgs e)
         {
             Button clickedButton = (Button)sender;
             int colIndex = -1;
@@ -100,7 +100,7 @@ namespace Connect4Testing
 
             if (colIndex != -1)
             {
-                DropPieces(colIndex, board);
+                DropPieces(colIndex);
             }
         }
 

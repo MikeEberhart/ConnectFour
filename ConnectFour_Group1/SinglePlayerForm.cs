@@ -15,7 +15,6 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
-        private CellData[,] singleBoard;
         private Timer winCheckTimer = new Timer();
         private GameOverForm loadedForm; //added this here since it was being used more than once
 
@@ -26,8 +25,7 @@ namespace Connect4Testing
             winCheckTimer.Interval = 1000;
             winCheckTimer.Tick += new EventHandler(TimerTick);
             winCheckTimer.Start();
-            singleBoard = gameBoardHere.GetGameBoard();
-            gameBoardHere.AddPieces(pnl_BoardPanel, singleBoard);
+            gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
             //int num = 0;
@@ -62,7 +60,7 @@ namespace Connect4Testing
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
-            gameBoardHere.Piece_Placement(sender, e, singleBoard);
+            gameBoardHere.Piece_Placement(sender, e);
         }
         private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -79,7 +77,7 @@ namespace Connect4Testing
         }
         public void ClearBoard() //used in GameOver to clear the board for a new game
         {
-            gameBoardHere.AddPieces(pnl_BoardPanel, singleBoard);
+            gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.ResetTurn();
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
