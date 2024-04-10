@@ -63,6 +63,7 @@ namespace Connect4Testing
                     turnDisplay.Text = "Player Two's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
+                    playerTurn++;
                 }
                 else
                 {
@@ -108,38 +109,47 @@ namespace Connect4Testing
 
         public bool WinChecker()
         {
-            int yellowCount = 0;
-            int redCount = 0;
-
             for (int row = 0; row <= gameBoard.GetLength(0) - 4; row++)
             {
                 for (int col = 0; col <= gameBoard.GetLength(1) - 4; col++)
                 {
-                    if (gameBoard[row, col].GetButton().Tag != null)
+                    if (gameBoard[row, col].GetButton().BackgroundImage != null)
                     {
-                        for (int i = 0; i < 4; i++)
+                        //DIAGONAL
+                        if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col + 3].GetButton().Tag)
                         {
-                            if (gameBoard[row + i, col + i].GetButton().Tag == "0")
+                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col + 2].GetButton().Tag)
                             {
-                                yellowCount++;
-                                Console.WriteLine($"Yellow: {yellowCount}");
+                                if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col + 1].GetButton().Tag)
+                                {
+                                    return true;
+                                }
                             }
                         }
-                        for (int i = 0; i < 4; i++)
+                        //ROW
+                        if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col].GetButton().Tag)
                         {
-                            if (gameBoard[row + i, col + i].GetButton().Tag == "1")
+                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col].GetButton().Tag)
                             {
-                                redCount++;
-                                Console.WriteLine($"Red: {redCount}");
+                                if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col].GetButton().Tag)
+                                {
+                                    return true;
+                                }
+                            }
+                        }
+                        //COLUMN
+                        if (gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 3].GetButton().Tag)
+                        {
+                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 2].GetButton().Tag)
+                            {
+                                if (gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 1].GetButton().Tag)
+                                {
+                                    return true;
+                                }
                             }
                         }
                     }
                 }
-            }
-
-            if (yellowCount == 4 || redCount == 4)
-            {
-                return true;
             }
             return false;
         }
