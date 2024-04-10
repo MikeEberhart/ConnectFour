@@ -38,7 +38,7 @@ namespace Connect4Testing
         {
             ClearBoard();
             ShowFormButtons();
-            loadedForm.Hide();
+            if(loadedForm != null) loadedForm.Hide();
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
@@ -54,6 +54,8 @@ namespace Connect4Testing
             gameBoardHere.Piece_Placement(sender, e);
             if (gameBoardHere.WinChecker())
             {
+                if (gameBoardHere.GetPlayerTurn() == 0) MessageBox.Show("Player 2(computer) wins.");
+                if (gameBoardHere.GetPlayerTurn() == 1) MessageBox.Show("Player 1 wins.");
                 gameOver();
             }    
         }

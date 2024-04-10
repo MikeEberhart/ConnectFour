@@ -61,14 +61,14 @@ namespace Connect4Testing
                 if (playerTurn == 0)
                 {
                     turnDisplay.Text = "Player Two's Turn";
-                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
+                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
                     playerTurn++;
                 }
                 else
                 {
                     turnDisplay.Text = "Player One's Turn";
-                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
+                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "1";
                     playerTurn--;
                 }
