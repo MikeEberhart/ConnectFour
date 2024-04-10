@@ -15,16 +15,14 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
-        private Timer winCheckTimer = new Timer();
+
         private GameOverForm loadedForm; //added this here since it was being used more than once
 
         public SinglePlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
             CenterToScreen();
-            winCheckTimer.Interval = 1000;
-            winCheckTimer.Tick += new EventHandler(TimerTick);
-            winCheckTimer.Start();
+
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
@@ -34,14 +32,6 @@ namespace Connect4Testing
                 
                 cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
                 num++;
-            }
-        }
-        private void TimerTick(object sender, EventArgs e)
-        {
-            if (gameBoardHere.WinChecker())
-            {
-                gameOver();
-                winCheckTimer.Stop();
             }
         }
         private void btn_PlayAgain_Click(object sender, EventArgs e)
@@ -62,6 +52,10 @@ namespace Connect4Testing
         private void PlacingPieces(object sender, EventArgs e)
         {
             gameBoardHere.Piece_Placement(sender, e);
+            if (gameBoardHere.WinChecker())
+            {
+                gameOver();
+            }    
         }
         private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
