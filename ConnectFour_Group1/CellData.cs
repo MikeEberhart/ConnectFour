@@ -23,5 +23,13 @@ namespace Connect4Testing
         {
             return btn;
         }
+        public int GetRow() 
+        {
+            return row;
+        }
+        public int GetColumn() 
+        {
+            return column;
+        }
     }
 }

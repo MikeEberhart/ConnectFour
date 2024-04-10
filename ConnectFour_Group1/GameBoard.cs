@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Connect4Testing.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -61,12 +62,13 @@ namespace Connect4Testing
                 {
                     turnDisplay.Text = "Player Two's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
-                    playerTurn++;
+                    gameBoard[rowindex, colindex].GetButton().Tag = "0";
                 }
                 else
                 {
                     turnDisplay.Text = "Player One's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
+                    gameBoard[rowindex, colindex].GetButton().Tag = "1";
                     playerTurn--;
                 }
             }
@@ -106,12 +108,38 @@ namespace Connect4Testing
 
         public bool WinChecker()
         {
-            for (int row = 0; row <= gameBoard.GetLength(0); row++) 
-            {
-               for (int col = 0;  col <= gameBoard.GetLength(1); col++)
-                {
+            int yellowCount = 0;
+            int redCount = 0;
 
+            for (int row = 0; row <= gameBoard.GetLength(0) - 4; row++)
+            {
+                for (int col = 0; col <= gameBoard.GetLength(1) - 4; col++)
+                {
+                    if (gameBoard[row, col].GetButton().Tag != null)
+                    {
+                        for (int i = 0; i < 4; i++)
+                        {
+                            if (gameBoard[row + i, col + i].GetButton().Tag == "0")
+                            {
+                                yellowCount++;
+                                Console.WriteLine($"Yellow: {yellowCount}");
+                            }
+                        }
+                        for (int i = 0; i < 4; i++)
+                        {
+                            if (gameBoard[row + i, col + i].GetButton().Tag == "1")
+                            {
+                                redCount++;
+                                Console.WriteLine($"Red: {redCount}");
+                            }
+                        }
+                    }
                 }
+            }
+
+            if (yellowCount == 4 || redCount == 4)
+            {
+                return true;
             }
             return false;
         }
