@@ -106,6 +106,13 @@ namespace Connect4Testing
 
         public bool WinChecker()
         {
+            for (int row = 0; row <= gameBoard.GetLength(0); row++) 
+            {
+               for (int col = 0;  col <= gameBoard.GetLength(1); col++)
+                {
+
+                }
+            }
             return false;
         }
     }
