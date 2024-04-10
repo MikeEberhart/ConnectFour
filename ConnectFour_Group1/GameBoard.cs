@@ -13,7 +13,7 @@ namespace Connect4Testing
 {
     public class GameBoard
     {
-        private  CellData[,] gameBoard = new CellData[6,7];
+        private CellData[,] gameBoard = new CellData[6,7];
         private int playerTurn = 0;
         private Label turnDisplay;
         public int GetPlayerTurn()

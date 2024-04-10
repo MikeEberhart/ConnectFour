@@ -14,9 +14,8 @@ namespace Connect4Testing
     public partial class SinglePlayerForm : Form
     {
         private WelcomeForm wForm;
-        private static GameBoard gameBoardHere = new GameBoard(); // any way to do this without being static? 
+        private GameBoard gameBoardHere = new GameBoard();
         private GameOverForm loadedForm; //added this here since it was being used more than once
-        private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
 
         public SinglePlayerForm(WelcomeForm wf)
         {
