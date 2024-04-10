@@ -15,13 +15,19 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
+        private CellData[,] singleBoard;
+        private Timer winCheckTimer = new Timer();
         private GameOverForm loadedForm; //added this here since it was being used more than once
 
         public SinglePlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
             CenterToScreen();
-            gameBoardHere.AddPieces(pnl_BoardPanel);
+            winCheckTimer.Interval = 1000;
+            winCheckTimer.Tick += new EventHandler(TimerTick);
+            winCheckTimer.Start();
+            singleBoard = gameBoardHere.GetGameBoard();
+            gameBoardHere.AddPieces(pnl_BoardPanel, singleBoard);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
             //int num = 0;
@@ -30,6 +36,14 @@ namespace Connect4Testing
             //    num++;
             //    cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
             //}
+        }
+        private void TimerTick(object sender, EventArgs e)
+        {
+            if (gameBoardHere.WinChecker())
+            {
+                gameOver();
+                winCheckTimer.Stop();
+            }
         }
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
@@ -48,7 +62,7 @@ namespace Connect4Testing
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
-            gameBoardHere.Piece_Placement(sender, e);
+            gameBoardHere.Piece_Placement(sender, e, singleBoard);
         }
         private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -65,7 +79,7 @@ namespace Connect4Testing
         }
         public void ClearBoard() //used in GameOver to clear the board for a new game
         {
-            gameBoardHere.AddPieces(pnl_BoardPanel);
+            gameBoardHere.AddPieces(pnl_BoardPanel, singleBoard);
             gameBoardHere.ResetTurn();
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {

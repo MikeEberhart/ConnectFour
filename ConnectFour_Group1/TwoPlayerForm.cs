@@ -13,13 +13,14 @@ namespace Connect4Testing
     public partial class TwoPlayerForm : Form
     {
         private WelcomeForm wForm;
-        private static GameBoard gameBoardHere = new GameBoard(); // any way to do this without being static? 
-        private CellData[,] cellDataArray = gameBoardHere.GetGameBoard();
+        private GameBoard gameBoardHere = new GameBoard(); // any way to do this without being static? 
+        private CellData[,] twoBoard;
         public TwoPlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
             CenterToScreen();
-            gameBoardHere.AddPieces(pnl_BoardPanel);
+            twoBoard = gameBoardHere.GetGameBoard();
+            gameBoardHere.AddPieces(pnl_BoardPanel, twoBoard);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
             //int num = 0;
@@ -32,7 +33,7 @@ namespace Connect4Testing
 
         private void PlacingPieces(object sender, EventArgs e)
         {
-            gameBoardHere.Piece_Placement(sender, e);
+            gameBoardHere.Piece_Placement(sender, e, twoBoard);
         }
 
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -47,7 +48,7 @@ namespace Connect4Testing
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            gameBoardHere.AddPieces(pnl_BoardPanel);
+            gameBoardHere.AddPieces(pnl_BoardPanel, twoBoard);
             gameBoardHere.ResetTurn();
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
