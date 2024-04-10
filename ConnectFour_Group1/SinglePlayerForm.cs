@@ -28,12 +28,13 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
-            //int num = 0;
-            //foreach (CellData cldta in cellDataArray)
-            //{
-            //    num++;
-            //    cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
-            //}
+            int num = 0;
+            foreach (CellData cldta in gameBoardHere.GetGameBoard())
+            {
+                
+                cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
+                num++;
+            }
         }
         private void TimerTick(object sender, EventArgs e)
         {

@@ -109,43 +109,55 @@ namespace Connect4Testing
 
         public bool WinChecker()
         {
-            for (int row = 0; row <= gameBoard.GetLength(0) - 4; row++)
+            for (int row = 0; row < gameBoard.GetLength(0); row++)
             {
-                for (int col = 0; col <= gameBoard.GetLength(1) - 4; col++)
+                for (int col = 0; col < gameBoard.GetLength(1); col++)
                 {
                     if (gameBoard[row, col].GetButton().BackgroundImage != null)
                     {
-                        //DIAGONAL
-                        if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col + 3].GetButton().Tag)
+                        //DIAGONAL - UP RIGHT
+                        if (row + 3 < gameBoard.GetLength(0) && col + 3 < gameBoard.GetLength(1))
                         {
-                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col + 2].GetButton().Tag)
+                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col + 3].GetButton().Tag
+                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col + 2].GetButton().Tag
+                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col + 1].GetButton().Tag)
                             {
-                                if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col + 1].GetButton().Tag)
-                                {
-                                    return true;
-                                }
+                                return true;
+
                             }
                         }
+
+                        //DIAGONAL - UP LEFT
+                        if (row + 3 < gameBoard.GetLength(0) && col - 3 >= 0)
+                        {
+                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col - 3].GetButton().Tag
+                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col - 2].GetButton().Tag
+                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col - 1].GetButton().Tag)
+                            {
+                                return true;
+
+                            }
+                        }
+
                         //ROW
-                        if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col].GetButton().Tag)
+                        if (row + 3 < gameBoard.GetLength(0))
                         {
-                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col].GetButton().Tag)
+                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col].GetButton().Tag
+                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col].GetButton().Tag
+                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col].GetButton().Tag)
                             {
-                                if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col].GetButton().Tag)
-                                {
-                                    return true;
-                                }
+                                return true;
                             }
                         }
+
                         //COLUMN
-                        if (gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 3].GetButton().Tag)
+                        if (col + 3 < gameBoard.GetLength(1))
                         {
-                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 2].GetButton().Tag)
+                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 3].GetButton().Tag
+                                && gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 2].GetButton().Tag
+                                && gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 1].GetButton().Tag)
                             {
-                                if (gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 1].GetButton().Tag)
-                                {
-                                    return true;
-                                }
+                                return true;
                             }
                         }
                     }
