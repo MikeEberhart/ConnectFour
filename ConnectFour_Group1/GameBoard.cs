@@ -42,10 +42,14 @@ namespace Connect4Testing
                 }
             }
         }
-        public void ResetTurn()
+        public void ResetTurn(Panel pnl)
         {
             playerTurn = 0;
             turnDisplay.Text = "Player One's Turn";
+            foreach (Button btn in pnl.Controls.OfType<Button>()) // used to reset the Tag properties
+            {
+                btn.Tag = null;
+            }
         }
 
         public void SetLabel(Label lbl)

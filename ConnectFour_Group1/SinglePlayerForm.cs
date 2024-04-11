@@ -54,8 +54,16 @@ namespace Connect4Testing
             gameBoardHere.Piece_Placement(sender, e);
             if (gameBoardHere.WinChecker())
             {
-                if (gameBoardHere.GetPlayerTurn() == 0) MessageBox.Show("Player 2(computer) wins.");
-                if (gameBoardHere.GetPlayerTurn() == 1) MessageBox.Show("Player 1 wins.");
+                if (gameBoardHere.GetPlayerTurn() == 0)
+                {
+                    lbl_TurnDisplay.Text = "   Player 2 Wins";
+                    MessageBox.Show("Player 2(computer) wins.");
+                }
+                if (gameBoardHere.GetPlayerTurn() == 1)
+                {
+                    lbl_TurnDisplay.Text = "   Player 1 Wins";
+                    MessageBox.Show("Player 1 wins.");
+                }
                 gameOver();
             }    
         }
@@ -75,7 +83,7 @@ namespace Connect4Testing
         public void ClearBoard() //used in GameOver to clear the board for a new game
         {
             gameBoardHere.AddPieces(pnl_BoardPanel);
-            gameBoardHere.ResetTurn();
+            gameBoardHere.ResetTurn(pnl_BoardPanel);
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
                 piece.BackgroundImage = null;

@@ -47,7 +47,7 @@ namespace Connect4Testing
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
             gameBoardHere.AddPieces(pnl_BoardPanel);
-            gameBoardHere.ResetTurn();
+            gameBoardHere.ResetTurn(pnl_BoardPanel);
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
             {
                 piece.BackgroundImage = null;
