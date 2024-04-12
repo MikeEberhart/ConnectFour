@@ -7,6 +7,7 @@ using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -62,13 +63,14 @@ namespace Connect4Testing
 
             if (rowindex != -1)
             {
-                if (playerTurn == 0)
+                if (GetPlayerTurn() == 0)
                 {
                     turnDisplay.Text = "Player Two's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
                     Console.WriteLine(playerTurn);
                     playerTurn++;
+                    ComputerTurn();
                 }
                 else
                 {
@@ -81,10 +83,11 @@ namespace Connect4Testing
             }
         }
 
-        public int EvaluateBoard(int colindex, CellData[,] compboard)
+        public int EvaluateBoard(CellData[,] compboard)
         {
-            int rowindex = GetRow(colindex);
             CellData[,] playerboard = new CellData[6, 7];
+            Random random = new Random();
+            Button button = new Button();
             //make copy to evaluate
             for (int i = 0; i < compboard.GetLength(0); i++)
             {
@@ -92,37 +95,16 @@ namespace Connect4Testing
                 {
                     if (compboard[i, j] != null)
                     {
+                        button.BackgroundImage = compboard[i, j].GetButton().BackgroundImage;
+                        button.Tag = compboard[i, j].GetButton().Tag;
                         playerboard[i, j] = new CellData(compboard[i, j].GetRow(),
                             compboard[i, j].GetColumn(),
-                            compboard[i, j].GetButton());
+                           button);
                     }
                 }
             }
+            return random.Next(0, 7);
 
-            if (rowindex != -1)
-            {
-                compboard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
-                compboard[rowindex, colindex].GetButton().Tag = "1";
-                if (WinChecker(compboard))
-                {
-                    return colindex;
-                }
-                else
-                {
-                    playerboard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
-                    playerboard[rowindex, colindex].GetButton().Tag = "0";
-                    if (WinChecker(playerboard))
-                    {
-                        return colindex;
-                    }
-                    else
-                    {
-                        Random random = new Random();
-                        return random.Next(7);
-                    }
-                }
-            }
-            return -1;
         }
 
         public int GetRow(int colindex)
@@ -220,6 +202,7 @@ namespace Connect4Testing
         public void ComputerTurn()
         {
             CellData[,] evalBoard = new CellData[6, 7];
+            Button button = new Button();
             //COPY ARRAY - DOES NOT AFFECT ORIGINAL, NEEDS TO BE DONE THIS WAY
             for (int i = 0; i < gameBoard.GetLength(0); i++)
             {
@@ -227,9 +210,9 @@ namespace Connect4Testing
                 {
                     if (gameBoard[i, j] != null)
                     {
-                        evalBoard[i, j] = new CellData(gameBoard[i, j].GetRow(),
-                            gameBoard[i, j].GetColumn(),
-                            gameBoard[i, j].GetButton());
+                        button.BackgroundImage = gameBoard[i, j].GetButton().BackgroundImage;
+                        button.Tag = gameBoard[i, j].GetButton().Tag;
+                        evalBoard[i, j] = new CellData(gameBoard[i, j].GetRow(), gameBoard[i, j].GetColumn(), button);
                     }
                 }
             }
@@ -239,10 +222,7 @@ namespace Connect4Testing
             }
             else
             {
-                for (int col = 0; col < gameBoard.GetLength(1); col++)
-                {
-                    DropPieces(EvaluateBoard(col, evalBoard));
-                }
+                DropPieces(EvaluateBoard(evalBoard));
             }
         }
     }

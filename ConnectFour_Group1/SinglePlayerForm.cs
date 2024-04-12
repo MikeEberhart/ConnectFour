@@ -52,7 +52,6 @@ namespace Connect4Testing
         private void PlacingPieces(object sender, EventArgs e)
         {
             gameBoardHere.Piece_Placement(sender, e);
-            gameBoardHere.ComputerTurn();
             if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
             {
                 if (gameBoardHere.GetPlayerTurn() == 0)
