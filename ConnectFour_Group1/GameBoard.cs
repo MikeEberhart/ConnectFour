@@ -81,25 +81,37 @@ namespace Connect4Testing
             }
         }
         
-        public bool EvaluateBoard(int colindex, int evalturn, CellData[,] evalboard)
+        public bool EvaluateBoard(int colindex, CellData[,] compboard)
         {
             int rowindex = GetRow(colindex);
+            CellData[,] playerboard = new CellData[6,7];
+            //make copy to evaluate
+            for (int i = 0; i < compboard.GetLength(0); i++)
+            {
+                for (int j = 0; j < compboard.GetLength(1); j++)
+                {
+                    if (compboard[i, j] != null)
+                    {
+                        playerboard[i, j] = new CellData(compboard[i, j].GetRow(),
+                            compboard[i, j].GetColumn(),
+                            compboard[i, j].GetButton());
+                    }
+                }
+            }
+
             if (rowindex != -1)
             {
-                if (evalturn == 0)
+                compboard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
+                compboard[rowindex, colindex].GetButton().Tag = "1";
+                if (WinChecker(compboard))
                 {
-                    evalboard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
-                    evalboard[rowindex, colindex].GetButton().Tag = "0";
-                    if (WinChecker(evalboard))
-                    {
-                        return true;
-                    }
+                    return true;
                 }
                 else
                 {
-                    evalboard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
-                    evalboard[rowindex, colindex].GetButton().Tag = "1";
-                    if (WinChecker(evalboard))
+                    playerboard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
+                    playerboard[rowindex, colindex].GetButton().Tag = "0";
+                    if (WinChecker(playerboard))
                     {
                         return true;
                     }
@@ -202,35 +214,13 @@ namespace Connect4Testing
 
         public void ComputerTurn()
         {
-            CellData[,] evalBoard = new CellData[6, 7];
-            //COPY ARRAY - DOES NOT AFFECT ORIGINAL, NEEDS TO BE DONE THIS WAY
-            for (int i = 0; i < gameBoard.GetLength(0); i++) 
-            {
-                for (int j = 0; j < gameBoard.GetLength(1); j++)
-                {
-                    if (gameBoard[i,j] != null)
-                    {
-                        evalBoard[i, j] = new CellData(gameBoard[i, j].GetRow(), 
-                            gameBoard[i, j].GetColumn(), 
-                            gameBoard[i, j].GetButton());
-                    }
-                }    
-            }
-            if ((string)evalBoard[0, 3].GetButton().Tag == null)
+
+            if ((string)gameBoard[0, 3].GetButton().Tag == null)
             {
                 DropPieces(3);
             }
             else
             {
-                //EVALUATE AI MOVES
-                for (int col = 0; col < evalBoard.GetLength(1); col++)
-                {
-                    if(EvaluateBoard(col, 1, evalBoard))
-                    {
-                        DropPieces(col);
-                        playerTurn--;
-                    }
-                }
             }
         }
     }
