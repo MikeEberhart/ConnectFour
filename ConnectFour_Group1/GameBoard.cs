@@ -14,7 +14,7 @@ namespace Connect4Testing
 {
     public class GameBoard
     {
-        private CellData[,] gameBoard = new CellData[6,7];
+        private CellData[,] gameBoard = new CellData[6, 7];
         private int playerTurn = 0;
         private Label turnDisplay;
         public int GetPlayerTurn()
@@ -37,7 +37,7 @@ namespace Connect4Testing
             int columns = 0;
             foreach (Button piece in pnl.Controls.OfType<Button>())
             {
-                gameBoard[rows, columns] = new CellData(rows, columns, piece) ;
+                gameBoard[rows, columns] = new CellData(rows, columns, piece);
                 columns++;
                 if (columns == 7)
                 {
@@ -80,11 +80,11 @@ namespace Connect4Testing
                 }
             }
         }
-        
-        public bool EvaluateBoard(int colindex, CellData[,] compboard)
+
+        public int EvaluateBoard(int colindex, CellData[,] compboard)
         {
             int rowindex = GetRow(colindex);
-            CellData[,] playerboard = new CellData[6,7];
+            CellData[,] playerboard = new CellData[6, 7];
             //make copy to evaluate
             for (int i = 0; i < compboard.GetLength(0); i++)
             {
@@ -105,7 +105,7 @@ namespace Connect4Testing
                 compboard[rowindex, colindex].GetButton().Tag = "1";
                 if (WinChecker(compboard))
                 {
-                    return true;
+                    return colindex;
                 }
                 else
                 {
@@ -113,11 +113,16 @@ namespace Connect4Testing
                     playerboard[rowindex, colindex].GetButton().Tag = "0";
                     if (WinChecker(playerboard))
                     {
-                        return true;
+                        return colindex;
+                    }
+                    else
+                    {
+                        Random random = new Random();
+                        return random.Next(7);
                     }
                 }
             }
-            return false;
+            return -1;
         }
 
         public int GetRow(int colindex)
@@ -149,7 +154,7 @@ namespace Connect4Testing
             if (colIndex != -1)
             {
                 DropPieces(colIndex);
-                Console.WriteLine(playerTurn); 
+                Console.WriteLine(playerTurn);
             }
         }
 
@@ -214,13 +219,30 @@ namespace Connect4Testing
 
         public void ComputerTurn()
         {
-
+            CellData[,] evalBoard = new CellData[6, 7];
+            //COPY ARRAY - DOES NOT AFFECT ORIGINAL, NEEDS TO BE DONE THIS WAY
+            for (int i = 0; i < gameBoard.GetLength(0); i++)
+            {
+                for (int j = 0; j < gameBoard.GetLength(1); j++)
+                {
+                    if (gameBoard[i, j] != null)
+                    {
+                        evalBoard[i, j] = new CellData(gameBoard[i, j].GetRow(),
+                            gameBoard[i, j].GetColumn(),
+                            gameBoard[i, j].GetButton());
+                    }
+                }
+            }
             if ((string)gameBoard[0, 3].GetButton().Tag == null)
             {
                 DropPieces(3);
             }
             else
             {
+                for (int col = 0; col < gameBoard.GetLength(1); col++)
+                {
+                    DropPieces(EvaluateBoard(col, evalBoard));
+                }
             }
         }
     }
