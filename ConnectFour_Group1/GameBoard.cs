@@ -103,6 +103,34 @@ namespace Connect4Testing
                     }
                 }
             }
+
+            //check AI moves
+            for (int colindex = 0; colindex < compboard.GetLength(1); colindex++)
+            {
+                Button tempTag = new Button();
+                int rowindex = GetRow(colindex);
+                if (rowindex != -1)
+                {
+                    tempTag.Tag = compboard[rowindex,colindex].GetButton().Tag.ToString();
+                    compboard[rowindex, colindex].GetButton().Tag = "1";
+                    if (WinChecker(compboard))
+                    {
+                        return colindex;
+                    }
+
+                    else
+                    {
+                        compboard[rowindex, colindex].GetButton().Tag = tempTag.Tag.ToString() ;
+                        tempTag.Tag = playerboard[rowindex, colindex].GetButton();
+                        playerboard[rowindex,colindex].GetButton().Tag = "0";
+                        if (WinChecker(playerboard))
+                        {
+                            return colindex;
+                        }
+                        playerboard[rowindex, colindex].GetButton().Tag = tempTag.Tag.ToString();
+                    }
+                }
+            }
             return random.Next(0, 7);
 
         }
