@@ -15,7 +15,6 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
-
         private GameOverForm loadedForm; //added this here since it was being used more than once
 
         public SinglePlayerForm(WelcomeForm wf)
@@ -34,6 +33,7 @@ namespace Connect4Testing
                 num++;
             }
         }
+
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
             ClearBoard();
@@ -52,7 +52,8 @@ namespace Connect4Testing
         private void PlacingPieces(object sender, EventArgs e)
         {
             gameBoardHere.Piece_Placement(sender, e);
-            if (gameBoardHere.WinChecker())
+            gameBoardHere.ComputerTurn();
+            if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
             {
                 if (gameBoardHere.GetPlayerTurn() == 0)
                 {

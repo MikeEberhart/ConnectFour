@@ -25,6 +25,10 @@ namespace Connect4Testing
         {
             return gameBoard;
         }
+        public void SetLabel(Label lbl)
+        {
+            turnDisplay = lbl;
+        }
         public void AddPieces(Panel pnl)
         {
             //clear out array to avoid repetition or breakage
@@ -52,10 +56,6 @@ namespace Connect4Testing
             }
         }
 
-        public void SetLabel(Label lbl)
-        {
-            turnDisplay = lbl;
-        }
         public void DropPieces(int colindex)
         {
             int rowindex = GetRow(colindex);
@@ -67,6 +67,7 @@ namespace Connect4Testing
                     turnDisplay.Text = "Player Two's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
+                    Console.WriteLine(playerTurn);
                     playerTurn++;
                 }
                 else
@@ -74,9 +75,37 @@ namespace Connect4Testing
                     turnDisplay.Text = "Player One's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "1";
+                    Console.WriteLine(playerTurn);
                     playerTurn--;
                 }
             }
+        }
+        
+        public bool EvaluateBoard(int colindex, int evalturn, CellData[,] evalboard)
+        {
+            int rowindex = GetRow(colindex);
+            if (rowindex != -1)
+            {
+                if (evalturn == 0)
+                {
+                    evalboard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
+                    evalboard[rowindex, colindex].GetButton().Tag = "0";
+                    if (WinChecker(evalboard))
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    evalboard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
+                    evalboard[rowindex, colindex].GetButton().Tag = "1";
+                    if (WinChecker(evalboard))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
         public int GetRow(int colindex)
@@ -108,35 +137,36 @@ namespace Connect4Testing
             if (colIndex != -1)
             {
                 DropPieces(colIndex);
+                Console.WriteLine(playerTurn); 
             }
         }
 
-        public bool WinChecker()
+        public bool WinChecker(CellData[,] board)
         {
-            for (int row = 0; row < gameBoard.GetLength(0); row++)
+            for (int row = 0; row < board.GetLength(0); row++)
             {
-                for (int col = 0; col < gameBoard.GetLength(1); col++)
+                for (int col = 0; col < board.GetLength(1); col++)
                 {
-                    if (gameBoard[row, col].GetButton().BackgroundImage != null)
+                    if (board[row, col].GetButton().BackgroundImage != null)
                     {
-                        //DIAGONAL - UP RIGHT
-                        if (row + 3 < gameBoard.GetLength(0) && col + 3 < gameBoard.GetLength(1))
+                        //DIAGONAL -> "/"
+                        if (row + 3 < board.GetLength(0) && col + 3 < board.GetLength(1))
                         {
-                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col + 3].GetButton().Tag
-                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col + 2].GetButton().Tag
-                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col + 1].GetButton().Tag)
+                            if (board[row, col].GetButton().Tag == board[row + 3, col + 3].GetButton().Tag
+                                && board[row, col].GetButton().Tag == board[row + 2, col + 2].GetButton().Tag
+                                && board[row, col].GetButton().Tag == board[row + 1, col + 1].GetButton().Tag)
                             {
                                 return true;
 
                             }
                         }
 
-                        //DIAGONAL - UP LEFT
-                        if (row + 3 < gameBoard.GetLength(0) && col - 3 >= 0)
+                        //DIAGONAL -> "\"
+                        if (row + 3 < board.GetLength(0) && col - 3 >= 0)
                         {
-                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col - 3].GetButton().Tag
-                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col - 2].GetButton().Tag
-                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col - 1].GetButton().Tag)
+                            if (board[row, col].GetButton().Tag == board[row + 3, col - 3].GetButton().Tag
+                                && board[row, col].GetButton().Tag == board[row + 2, col - 2].GetButton().Tag
+                                && board[row, col].GetButton().Tag == board[row + 1, col - 1].GetButton().Tag)
                             {
                                 return true;
 
@@ -144,22 +174,22 @@ namespace Connect4Testing
                         }
 
                         //ROW
-                        if (row + 3 < gameBoard.GetLength(0))
+                        if (row + 3 < board.GetLength(0))
                         {
-                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row + 3, col].GetButton().Tag
-                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 2, col].GetButton().Tag
-                                && gameBoard[row, col].GetButton().Tag == gameBoard[row + 1, col].GetButton().Tag)
+                            if (board[row, col].GetButton().Tag == board[row + 3, col].GetButton().Tag
+                                && board[row, col].GetButton().Tag == board[row + 2, col].GetButton().Tag
+                                && board[row, col].GetButton().Tag == board[row + 1, col].GetButton().Tag)
                             {
                                 return true;
                             }
                         }
 
                         //COLUMN
-                        if (col + 3 < gameBoard.GetLength(1))
+                        if (col + 3 < board.GetLength(1))
                         {
-                            if (gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 3].GetButton().Tag
-                                && gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 2].GetButton().Tag
-                                && gameBoard[row, col].GetButton().Tag == gameBoard[row, col + 1].GetButton().Tag)
+                            if (board[row, col].GetButton().Tag == board[row, col + 3].GetButton().Tag
+                                && board[row, col].GetButton().Tag == board[row, col + 2].GetButton().Tag
+                                && board[row, col].GetButton().Tag == board[row, col + 1].GetButton().Tag)
                             {
                                 return true;
                             }
@@ -168,6 +198,40 @@ namespace Connect4Testing
                 }
             }
             return false;
+        }
+
+        public void ComputerTurn()
+        {
+            CellData[,] evalBoard = new CellData[6, 7];
+            //COPY ARRAY - DOES NOT AFFECT ORIGINAL, NEEDS TO BE DONE THIS WAY
+            for (int i = 0; i < gameBoard.GetLength(0); i++) 
+            {
+                for (int j = 0; j < gameBoard.GetLength(1); j++)
+                {
+                    if (gameBoard[i,j] != null)
+                    {
+                        evalBoard[i, j] = new CellData(gameBoard[i, j].GetRow(), 
+                            gameBoard[i, j].GetColumn(), 
+                            gameBoard[i, j].GetButton());
+                    }
+                }    
+            }
+            if ((string)evalBoard[0, 3].GetButton().Tag == null)
+            {
+                DropPieces(3);
+            }
+            else
+            {
+                //EVALUATE AI MOVES
+                for (int col = 0; col < evalBoard.GetLength(1); col++)
+                {
+                    if(EvaluateBoard(col, 1, evalBoard))
+                    {
+                        DropPieces(col);
+                        playerTurn--;
+                    }
+                }
+            }
         }
     }
 }
