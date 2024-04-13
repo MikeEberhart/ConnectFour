@@ -18,6 +18,7 @@ namespace Connect4Testing
         private CellData[,] gameBoard = new CellData[6, 7];
         private int playerTurn = 0;
         private Label turnDisplay;
+        private bool btnHasBeenClicked = false;
         public int GetPlayerTurn()
         {
             return playerTurn;
@@ -69,6 +70,7 @@ namespace Connect4Testing
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
                     Console.WriteLine(playerTurn);
+                    btnHasBeenClicked = false; // is this the best place? 
                     playerTurn++;
                     ComputerTurn();
                 }
@@ -78,6 +80,7 @@ namespace Connect4Testing
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "1";
                     Console.WriteLine(playerTurn);
+                    btnHasBeenClicked = false; // is this the best place?
                     playerTurn--;
                 }
             }
@@ -111,7 +114,7 @@ namespace Connect4Testing
                 int rowindex = GetRow(colindex);
                 if (rowindex != -1)
                 {
-                    tempTag.Tag = compboard[rowindex,colindex].GetButton().Tag.ToString();
+                    tempTag.Tag = compboard[rowindex,colindex].GetButton().Tag;
                     compboard[rowindex, colindex].GetButton().Tag = "1";
                     if (WinChecker(compboard))
                     {
@@ -120,14 +123,14 @@ namespace Connect4Testing
 
                     else
                     {
-                        compboard[rowindex, colindex].GetButton().Tag = tempTag.Tag.ToString() ;
+                        compboard[rowindex, colindex].GetButton().Tag = tempTag.Tag;
                         tempTag.Tag = playerboard[rowindex, colindex].GetButton();
                         playerboard[rowindex,colindex].GetButton().Tag = "0";
                         if (WinChecker(playerboard))
                         {
                             return colindex;
                         }
-                        playerboard[rowindex, colindex].GetButton().Tag = tempTag.Tag.ToString();
+                        playerboard[rowindex, colindex].GetButton().Tag = tempTag.Tag;
                     }
                 }
             }
@@ -151,6 +154,7 @@ namespace Connect4Testing
         // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
         public void Piece_Placement(object sender, EventArgs e)
         {
+            btnHasBeenClicked = true; // is this the best spot for this i wonder? 
             Button clickedButton = (Button)sender;
             int colIndex = -1;
             if (clickedButton.Name == "btn_ColumnZero") colIndex = 0;
@@ -251,6 +255,59 @@ namespace Connect4Testing
             else
             {
                 DropPieces(EvaluateBoard(evalBoard));
+            }
+        }
+        public void ShowPossibleMoves(object sender)// MOUSE ENTER // used to see which button is being entered // not working just yet
+        {
+            Button hoverOnButton = (Button)sender;
+            if (hoverOnButton.Name == "btn_ColumnZero") TempImagePlacement(0);
+            else if (hoverOnButton.Name == "btn_ColumnOne") TempImagePlacement(1);
+            else if (hoverOnButton.Name == "btn_ColumnTwo") TempImagePlacement(2);
+            else if (hoverOnButton.Name == "btn_ColumnThree") TempImagePlacement(3);
+            else if (hoverOnButton.Name == "btn_ColumnFour") TempImagePlacement(4);
+            else if (hoverOnButton.Name == "btn_ColumnFive") TempImagePlacement(5);
+            else if (hoverOnButton.Name == "btn_ColumnSix") TempImagePlacement(6);
+        }
+        public void HidePossibleMove(object sender)// MOUSE LEAVE // used to see which button has be exited by the mouse // not working just yet
+        {
+            Button hoverOnButton = (Button)sender;
+            if (hoverOnButton.Name == "btn_ColumnZero" && btnHasBeenClicked == false) TempImageRemoved(0);
+            else if (hoverOnButton.Name == "btn_ColumnOne" && btnHasBeenClicked == false) TempImageRemoved(1);
+            else if (hoverOnButton.Name == "btn_ColumnTwo" && btnHasBeenClicked == false) TempImageRemoved(2);
+            else if (hoverOnButton.Name == "btn_ColumnThree" && btnHasBeenClicked == false) TempImageRemoved(3);
+            else if (hoverOnButton.Name == "btn_ColumnFour" && btnHasBeenClicked == false) TempImageRemoved(4);
+            else if (hoverOnButton.Name == "btn_ColumnFive" && btnHasBeenClicked == false) TempImageRemoved(5);
+            else if (hoverOnButton.Name == "btn_ColumnSix" && btnHasBeenClicked == false) TempImageRemoved(6);
+        }
+        public void TempImageRemoved(int col) // used to remove the temp image // not working just yet
+        {
+            Button otherButton;
+            for (int i = 0; i <= gameBoard.GetLength(0) - 1; i++)
+            {
+                otherButton = gameBoard[i, col].GetButton();
+                if (btnHasBeenClicked == false)
+                {
+                    otherButton.BackgroundImage = null;
+                    break;
+                }
+            }
+        }
+        public void TempImagePlacement(int col) // used to place the temp image // not working just yet
+        {
+            Button thisButton;
+            for (int i = 0; i <= gameBoard.GetLength(0) - 1; i++)
+            {
+                thisButton = gameBoard[i, col].GetButton();
+                if (thisButton.Image == null && btnHasBeenClicked == false && playerTurn == 0)
+                {
+                    thisButton.BackgroundImage = Resources.RedPiece2;
+                    break;
+                }
+                else if (thisButton.Image == null && btnHasBeenClicked == false && playerTurn == 1)
+                {
+                    thisButton.BackgroundImage = Resources.YellowPiece2;
+                    break;
+                }
             }
         }
     }

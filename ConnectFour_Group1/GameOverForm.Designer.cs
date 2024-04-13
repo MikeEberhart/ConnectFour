@@ -44,7 +44,7 @@
             this.lbl_TotalComputerWins = new System.Windows.Forms.Label();
             this.lbl_TotalPlayerWins = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_WinnerDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Quit
@@ -213,15 +213,15 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Game Over";
             // 
-            // label2
+            // lbl_WinnerDisplay
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(127, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(193, 25);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "SoAndSo has Won";
+            this.lbl_WinnerDisplay.AutoSize = true;
+            this.lbl_WinnerDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_WinnerDisplay.Location = new System.Drawing.Point(138, 34);
+            this.lbl_WinnerDisplay.Name = "lbl_WinnerDisplay";
+            this.lbl_WinnerDisplay.Size = new System.Drawing.Size(0, 25);
+            this.lbl_WinnerDisplay.TabIndex = 27;
+            this.lbl_WinnerDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GameOverForm
             // 
@@ -229,7 +229,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(485, 370);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_WinnerDisplay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_CompWinPercentage);
             this.Controls.Add(this.txt_PlayerWinPercentage);
@@ -272,6 +272,6 @@
         private System.Windows.Forms.Label lbl_TotalComputerWins;
         private System.Windows.Forms.Label lbl_TotalPlayerWins;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_WinnerDisplay;
     }
 }

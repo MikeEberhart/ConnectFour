@@ -35,6 +35,11 @@ namespace Connect4Testing
             WriteDataToFile();
             wForm = wf;
         }
+        public StatsForm()
+        {
+            InitializeComponent();
+            ReadTxtFile();
+        }
 
         private void StatsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -69,9 +74,6 @@ namespace Connect4Testing
                     tempCompWin = double.Parse(totalCompWins) / totalGames;
                     playerWinPercentage = Math.Round(tempPlayerWin * 100, 2);
                     compWinPercentage = Math.Round(tempCompWin * 100, 2);
-                    //delete later // used for testing //
-                    //Console.WriteLine(Math.Round(playerWinPercentage, 2));
-                    //Console.WriteLine(Math.Round(compWinPercentage,2 ));
                 }
 
             }
@@ -121,36 +123,15 @@ namespace Connect4Testing
                     + "," + totalGames.ToString());
             }
         }
-        public void UpdateToFile() // public function to be used in the GameOver form
-        {                          // to update the text file with the new data from previous game
-                                   // very much a work in progess. Feel free to edit if you want/need to
-            //DataToTextBoxes();
-            ////int playerWins = 1;
-            ////int compWins = 1;
-            ////int tieGames = 1;
-            //////if(player1 wins)
-            //////{
-            //    int playerWins = int.Parse(fileText[0]) + 1;
-            //////}
-            //////else if(comp wins)
-            //////{
-            //    int compWins = int.Parse(fileText[2]) + 1;
-            //////}
-            //////else if(tie)
-            //////{
-            //    int tieGames = int.Parse(fileText[4]) + 1;
-            //////}
-            //txt_TotalPlayerWins.Text = playerWins.ToString();
-            //tempPlayerWin = playerWins / totalGames;
-            //playerWinPercentage = Math.Round(tempPlayerWin * 100, 2);
-            //txt_PlayerWinPercentage.Text = playerWinPercentage.ToString();
-            //tempCompWin = compWins / totalGames;
-            //compWinPercentage = Math.Round(tempCompWin * 100, 2);
-            //txt_TotalCompWins.Text = compWins.ToString();
-            //txt_CompWinPercentage.Text = compWinPercentage.ToString();
-            //txt_TotalTies.Text = tieGames.ToString();
-            //totalGames = playerWins + compWins + tieGames;
-            //txt_TotalNumOfGames.Text = totalGames.ToString();
+        public string[] PassData() //passing array with the saved data to the GameOverForm
+        {
+            string[] passingText = { totalPlayerWins.ToString(),
+                                     playerWinPercentage.ToString(),
+                                     totalCompWins.ToString(),
+                                     compWinPercentage.ToString(),
+                                     totalTies.ToString(),
+                                     totalGames.ToString() };
+            return passingText;
         }
     }
 }

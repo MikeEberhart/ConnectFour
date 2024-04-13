@@ -15,13 +15,12 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
-        private GameOverForm loadedForm; //added this here since it was being used more than once
+        private GameOverForm gameOverStats; //added this here since it was being used more than once
 
         public SinglePlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
             CenterToScreen();
-
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
@@ -38,14 +37,19 @@ namespace Connect4Testing
         {
             ClearBoard();
             ShowFormButtons();
-            if(loadedForm != null) loadedForm.Hide();
+            if(gameOverStats != null) gameOverStats.Hide();
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
             wForm.Show();
+            if (gameOverStats != null) gameOverStats.Hide();
             this.Hide();
         }
         private void btn_Quit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
@@ -64,21 +68,22 @@ namespace Connect4Testing
                     lbl_TurnDisplay.Text = "   Player 1 Wins";
                     MessageBox.Show("Player 1 wins.");
                 }
-                gameOver();
+                //if(tie game)
+                //{
+                //    lbl_TurnDisplay.Text = "   Tie Game";
+                //    MessageBox.Show("The game is a tie");
+                //}
+                gameOver(gameBoardHere.GetPlayerTurn());
+                Console.WriteLine(gameBoardHere.GetPlayerTurn()); //used for testing
             }    
         }
-        private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Application.Exit();
-        }
-        private void gameOver()
+        private void gameOver(int turn)
         {
             //when the game is determined to be over can call this to send player to the game over form 
-            loadedForm = new GameOverForm(this); //renamed this outside of the function to be used again
-            loadedForm.Show();
+            gameOverStats = new GameOverForm(this); //renamed this outside of the function to be used again
+            gameOverStats.GetWinningPlayer(turn);
+            gameOverStats.Show();
             this.Hide();
-            //also need to add a way to pass the game board so the review button can work
-
         }
         public void ClearBoard() //used in GameOver to clear the board for a new game
         {
@@ -112,23 +117,15 @@ namespace Connect4Testing
 
         private void button1_Click(object sender, EventArgs e) //used for testing gameOver
         {
-            gameOver();
+            gameOver(gameBoardHere.GetPlayerTurn());
         }
-
-
-        // used when hovering over column selection to show next possible move...very rough draft/work in progress
-        //private void ShowPossibleMove(object sender, EventArgs e)
-        //{
-        //    Button selectedButton = (Button)sender;
-        //    if(gameBoard.GetPlayerTurn() == 0)
-        //    {
-        //        if (selectedButton.Name == "btn_ColumnZero" && btn_ZeroZero.BackgroundImage == null)
-        //        {
-        //            btn_ZeroZero.BackgroundImage = Properties.Resources.RedPiece2;
-        //        }
-        //    }
-        //}
-
-
+        private void ShowMove(object sender, EventArgs e) // MOUSE ENTER // not working
+        {
+            gameBoardHere.ShowPossibleMoves(sender);
+        }
+        private void HideMove(object sender, EventArgs e) // MOUSE LEAVE // not working
+        {
+            gameBoardHere.HidePossibleMove(sender);
+        }
     }
 }
