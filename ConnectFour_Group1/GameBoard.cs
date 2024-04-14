@@ -181,12 +181,14 @@ namespace Connect4Testing
             else if (clickedButton.Name == "btn_ColumnFour") colIndex = 4;
             else if (clickedButton.Name == "btn_ColumnFive") colIndex = 5;
             else if (clickedButton.Name == "btn_ColumnSix") colIndex = 6;
-
-            if (colIndex != -1)
+            if(colIndex != -1 && !ColumnIsFull(colIndex))
             {
                 DropPieces(colIndex);
                 ComputerTurn();
-                Console.WriteLine(playerTurn);
+            }
+            else
+            {
+                MessageBox.Show("Column is full. Please select a new column");
             }
         }
 
@@ -302,6 +304,19 @@ namespace Connect4Testing
                     break;
                 }
             }
+        }
+        private bool ColumnIsFull(int col)
+        {
+            Button currentButton;
+            for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
+            {
+                currentButton = gameBoard[row, col].GetButton();
+                if (currentButton.BackgroundImage == null)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
