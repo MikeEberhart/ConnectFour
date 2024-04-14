@@ -72,7 +72,6 @@ namespace Connect4Testing
                     Console.WriteLine(playerTurn);
                     btnHasBeenClicked = false; // is this the best place? 
                     playerTurn++;
-                    ComputerTurn();
                 }
                 else
                 {
@@ -85,24 +84,42 @@ namespace Connect4Testing
                 }
             }
         }
-
+        public void ComputerTurn()
+        {
+            CellData[,] evalBoard = new CellData[6, 7];
+            //COPY ARRAY - DOES NOT AFFECT ORIGINAL, NEEDS TO BE DONE THIS WAY
+            for (int i = 0; i < gameBoard.GetLength(0); i++)
+            {
+                for (int j = 0; j < gameBoard.GetLength(1); j++)
+                {
+                    if (gameBoard[i, j] != null)
+                    {
+                        evalBoard[i, j] = new CellData(gameBoard[i, j].GetRow(), gameBoard[i, j].GetColumn(), gameBoard[i,j].GetButton());
+                    }
+                }
+            }
+            if ((string)gameBoard[0, 3].GetButton().Tag == null)
+            {
+                DropPieces(3);
+            }
+            else
+            {
+                DropPieces(EvaluateBoard(evalBoard));
+            }
+        }
         public int EvaluateBoard(CellData[,] compboard)
         {
             CellData[,] playerboard = new CellData[6, 7];
             Random random = new Random();
-            Button button = new Button();
+            int generatedColumn = random.Next(0,gameBoard.GetLength(1));
             //make copy to evaluate
             for (int i = 0; i < compboard.GetLength(0); i++)
             {
                 for (int j = 0; j < compboard.GetLength(1); j++)
                 {
                     if (compboard[i, j] != null)
-                    {
-                        button.BackgroundImage = compboard[i, j].GetButton().BackgroundImage;
-                        button.Tag = compboard[i, j].GetButton().Tag;
-                        playerboard[i, j] = new CellData(compboard[i, j].GetRow(),
-                            compboard[i, j].GetColumn(),
-                           button);
+                    {;
+                        playerboard[i, j] = new CellData(compboard[i, j].GetRow(),compboard[i, j].GetColumn(),compboard[i,j].GetButton());
                     }
                 }
             }
@@ -134,7 +151,7 @@ namespace Connect4Testing
                     }
                 }
             }
-            return random.Next(0, 7);
+            return generatedColumn;
 
         }
 
@@ -168,6 +185,7 @@ namespace Connect4Testing
             if (colIndex != -1)
             {
                 DropPieces(colIndex);
+                ComputerTurn();
                 Console.WriteLine(playerTurn);
             }
         }
@@ -231,32 +249,7 @@ namespace Connect4Testing
             return false;
         }
 
-        public void ComputerTurn()
-        {
-            CellData[,] evalBoard = new CellData[6, 7];
-            Button button = new Button();
-            //COPY ARRAY - DOES NOT AFFECT ORIGINAL, NEEDS TO BE DONE THIS WAY
-            for (int i = 0; i < gameBoard.GetLength(0); i++)
-            {
-                for (int j = 0; j < gameBoard.GetLength(1); j++)
-                {
-                    if (gameBoard[i, j] != null)
-                    {
-                        button.BackgroundImage = gameBoard[i, j].GetButton().BackgroundImage;
-                        button.Tag = gameBoard[i, j].GetButton().Tag;
-                        evalBoard[i, j] = new CellData(gameBoard[i, j].GetRow(), gameBoard[i, j].GetColumn(), button);
-                    }
-                }
-            }
-            if ((string)gameBoard[0, 3].GetButton().Tag == null)
-            {
-                DropPieces(3);
-            }
-            else
-            {
-                DropPieces(EvaluateBoard(evalBoard));
-            }
-        }
+
         public void ShowPossibleMoves(object sender)// MOUSE ENTER // used to see which button is being entered // not working just yet
         {
             Button hoverOnButton = (Button)sender;
