@@ -27,7 +27,6 @@ namespace Connect4Testing
             int num = 0;
             foreach (CellData cldta in gameBoardHere.GetGameBoard())
             {
-                
                 cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
                 num++;
             }
@@ -58,31 +57,18 @@ namespace Connect4Testing
             gameBoardHere.Piece_Placement(sender, e);
             if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
             {
-                if (gameBoardHere.GetPlayerTurn() == 0)
-                {
-                    lbl_TurnDisplay.Text = "   Player 2 Wins";
-                    MessageBox.Show("Player 2(computer) wins.");
-                }
-                if (gameBoardHere.GetPlayerTurn() == 1)
-                {
-                    lbl_TurnDisplay.Text = "   Player 1 Wins";
-                    MessageBox.Show("Player 1 wins.");
-                }
-                //if(tie game)
-                //{
-                //    lbl_TurnDisplay.Text = "   Tie Game";
-                //    MessageBox.Show("The game is a tie");
-                //}
-                gameOver(gameBoardHere.GetPlayerTurn());
-                Console.WriteLine(gameBoardHere.GetPlayerTurn()); //used for testing
+                GameOver();
             }    
         }
-        private void gameOver(int turn)
+        private void GameOver()
         {
             //when the game is determined to be over can call this to send player to the game over form 
             gameOverStats = new GameOverForm(this); //renamed this outside of the function to be used again
-            gameOverStats.GetWinningPlayer(turn);
+            int turn = gameBoardHere.GetPlayerTurn();
+            gameOverStats.SetWinningPlayer(turn);
+            gameOverStats.WhoHasWon();
             gameOverStats.Show();
+            Console.WriteLine(turn + "<- GameOver"); //used for testing
             this.Hide();
         }
         public void ClearBoard() //used in GameOver to clear the board for a new game
@@ -115,9 +101,9 @@ namespace Connect4Testing
             btn_ColumnSix.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e) //used for testing gameOver
+        private void button1_Click(object sender, EventArgs e) //used for testing ameOver
         {
-            gameOver(gameBoardHere.GetPlayerTurn());
+            GameOver();
         }
         private void ShowMove(object sender, EventArgs e) // MOUSE ENTER // not working
         {

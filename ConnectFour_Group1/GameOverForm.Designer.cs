@@ -44,7 +44,8 @@
             this.lbl_TotalComputerWins = new System.Windows.Forms.Label();
             this.lbl_TotalPlayerWins = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbl_WinnerDisplay = new System.Windows.Forms.Label();
+            this.lbl_PlayWonDisplay = new System.Windows.Forms.Label();
+            this.lbl_CompWonDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Quit
@@ -213,15 +214,27 @@
             this.label1.TabIndex = 26;
             this.label1.Text = "Game Over";
             // 
-            // lbl_WinnerDisplay
+            // lbl_PlayWonDisplay
             // 
-            this.lbl_WinnerDisplay.AutoSize = true;
-            this.lbl_WinnerDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_WinnerDisplay.Location = new System.Drawing.Point(138, 34);
-            this.lbl_WinnerDisplay.Name = "lbl_WinnerDisplay";
-            this.lbl_WinnerDisplay.Size = new System.Drawing.Size(0, 25);
-            this.lbl_WinnerDisplay.TabIndex = 27;
-            this.lbl_WinnerDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_PlayWonDisplay.AutoSize = true;
+            this.lbl_PlayWonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PlayWonDisplay.Location = new System.Drawing.Point(138, 34);
+            this.lbl_PlayWonDisplay.Name = "lbl_PlayWonDisplay";
+            this.lbl_PlayWonDisplay.Size = new System.Drawing.Size(216, 50);
+            this.lbl_PlayWonDisplay.TabIndex = 27;
+            this.lbl_PlayWonDisplay.Text = "Congratulations\r\nPlayer 1 you\'ve won!!";
+            this.lbl_PlayWonDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_CompWonDisplay
+            // 
+            this.lbl_CompWonDisplay.AutoSize = true;
+            this.lbl_CompWonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CompWonDisplay.Location = new System.Drawing.Point(65, 34);
+            this.lbl_CompWonDisplay.Name = "lbl_CompWonDisplay";
+            this.lbl_CompWonDisplay.Size = new System.Drawing.Size(343, 50);
+            this.lbl_CompWonDisplay.TabIndex = 28;
+            this.lbl_CompWonDisplay.Text = "The Computer has outsmarted you\r\nThe AI has won!!";
+            this.lbl_CompWonDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // GameOverForm
             // 
@@ -229,7 +242,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(485, 370);
-            this.Controls.Add(this.lbl_WinnerDisplay);
+            this.Controls.Add(this.lbl_CompWonDisplay);
+            this.Controls.Add(this.lbl_PlayWonDisplay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_CompWinPercentage);
             this.Controls.Add(this.txt_PlayerWinPercentage);
@@ -272,6 +286,7 @@
         private System.Windows.Forms.Label lbl_TotalComputerWins;
         private System.Windows.Forms.Label lbl_TotalPlayerWins;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_WinnerDisplay;
+        private System.Windows.Forms.Label lbl_PlayWonDisplay;
+        private System.Windows.Forms.Label lbl_CompWonDisplay;
     }
 }

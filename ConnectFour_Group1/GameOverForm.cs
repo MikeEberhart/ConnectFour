@@ -41,7 +41,6 @@ namespace Connect4Testing
             tempCWins = int.Parse(textData[2]);
             tempTotalTies = int.Parse(textData[4]);
             tempNumOfGames = int.Parse(textData[5]);
-            WhoHasWon();
             sForm = sf;
         }
 
@@ -57,11 +56,11 @@ namespace Connect4Testing
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            playAgain();
+            PlayAgain();
             sForm.ShowFormButtons();
         }
 
-        private void playAgain()
+        private void PlayAgain()
         {
             sForm.ClearBoard();
             sForm.Show();
@@ -73,10 +72,14 @@ namespace Connect4Testing
             sForm.Show();
             sForm.HideFormButtons();
         }
-        public void GetWinningPlayer(int p)
+        public void SetWinningPlayer(int p)
         {
             winningPlayer = p;
             Console.WriteLine(winningPlayer);
+        }
+        public int GetWinningPlayer()
+        {
+            return winningPlayer;
         }
         private void UpdatingPlayerWinData()
         {
@@ -120,17 +123,21 @@ namespace Connect4Testing
             txt_PlayerWinPercentage.Text = Math.Round(tempPPercent * 100, 2).ToString() + "%";
             txt_CompWinPercentage.Text = Math.Round(tempCPercent * 100, 2).ToString() + "%";
         }
-        private void WhoHasWon() // this isn't working. player 1 always wins even with winningPlayer == 1
+        public void WhoHasWon() 
         {
-            if (winningPlayer == 0)
+            GetWinningPlayer();
+            Console.WriteLine(GetWinningPlayer() + " WhoHasWon"); // used for testing delete later
+            if (GetWinningPlayer() == 0)
             {
                 UpdatingPlayerWinData();
-                lbl_WinnerDisplay.Text = "Congratulations\nPlayer 1 you've won!!";
+                lbl_CompWonDisplay.Visible = false;
+                lbl_PlayWonDisplay.Visible = true;
             }
-            if (winningPlayer == 1)
+            if (GetWinningPlayer() == 1)
             {
                 UpdatingCompWinData();
-                lbl_WinnerDisplay.Text = "The Computer has outsmarted you\nThe AI has won!!";
+                lbl_PlayWonDisplay.Visible = false;
+                lbl_CompWonDisplay.Visible = true;
             }
             //if(tie game)
             //{

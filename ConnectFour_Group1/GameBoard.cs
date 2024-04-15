@@ -17,11 +17,16 @@ namespace Connect4Testing
     {
         private CellData[,] gameBoard = new CellData[6, 7];
         private int playerTurn = 0;
+        private int tempPlayerTurn;
         private Label turnDisplay;
         private bool btnHasBeenClicked = false;
         public int GetPlayerTurn()
         {
-            return playerTurn;
+            return tempPlayerTurn;
+        }
+        public void SetPlayerTurn(int p)
+        {
+            tempPlayerTurn = p;
         }
         public CellData[,] GetGameBoard()
         {
@@ -57,29 +62,33 @@ namespace Connect4Testing
                 btn.Tag = null;
             }
         }
-
         public void DropPieces(int colindex)
         {
             int rowindex = GetRow(colindex);
 
             if (rowindex != -1)
             {
-                if (GetPlayerTurn() == 0)
+                if (playerTurn == 0)
                 {
                     turnDisplay.Text = "Player Two's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
                     Console.WriteLine(playerTurn);
                     btnHasBeenClicked = false; // is this the best place? 
+                    if (WinChecker(GetGameBoard())) WinMessage();
+                    SetPlayerTurn(playerTurn); // used to set playerTurn before playerTurn++
                     playerTurn++;
+                    if (!WinChecker(GetGameBoard())) ComputerTurn();
                 }
-                else
+                else if (playerTurn == 1)
                 {
                     turnDisplay.Text = "Player One's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "1";
                     Console.WriteLine(playerTurn);
                     btnHasBeenClicked = false; // is this the best place?
+                    if (WinChecker(GetGameBoard())) WinMessage();
+                    SetPlayerTurn(playerTurn); // used to set playerTurn before playerTurn--
                     playerTurn--;
                 }
             }
@@ -184,7 +193,6 @@ namespace Connect4Testing
             if(colIndex != -1 && !ColumnIsFull(colIndex))
             {
                 DropPieces(colIndex);
-                ComputerTurn();
             }
             else
             {
@@ -250,8 +258,6 @@ namespace Connect4Testing
             }
             return false;
         }
-
-
         public void ShowPossibleMoves(object sender)// MOUSE ENTER // used to see which button is being entered // not working just yet
         {
             Button hoverOnButton = (Button)sender;
@@ -317,6 +323,19 @@ namespace Connect4Testing
                 }
             }
             return true;
+        }
+        private void WinMessage()
+        {
+            if (GetPlayerTurn() == 0)
+            {
+                turnDisplay.Text = "   Player 2 Wins";
+                MessageBox.Show("Player 2(computer) wins.");
+            }
+            else if (GetPlayerTurn() == 1)
+            {
+                turnDisplay.Text = "   Player 1 Wins";
+                MessageBox.Show("Player 1 wins.");
+            }
         }
     }
 }
