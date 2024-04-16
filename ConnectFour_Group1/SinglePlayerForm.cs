@@ -54,7 +54,7 @@ namespace Connect4Testing
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
-            gameBoardHere.Piece_Placement(sender, e);
+            gameBoardHere.Piece_Placement(sender, e, 1);
             if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
             {
                 GameOver();

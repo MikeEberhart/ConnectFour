@@ -62,7 +62,7 @@ namespace Connect4Testing
                 btn.Tag = null;
             }
         }
-        public void DropPieces(int colindex)
+        public void DropPieces(int colindex, int form)
         {
             int rowindex = GetRow(colindex);
 
@@ -78,7 +78,10 @@ namespace Connect4Testing
                     if (WinChecker(GetGameBoard())) WinMessage();
                     SetPlayerTurn(playerTurn); // used to set playerTurn before playerTurn++
                     playerTurn++;
-                    if (!WinChecker(GetGameBoard())) ComputerTurn();
+                    if (!WinChecker(GetGameBoard()) && form != 2)
+                    {
+                        ComputerTurn();
+                    }
                 }
                 else if (playerTurn == 1)
                 {
@@ -109,11 +112,11 @@ namespace Connect4Testing
             }
             if ((string)gameBoard[0, 3].GetButton().Tag == null)
             {
-                DropPieces(3);
+                DropPieces(3, 1);
             }
             else
             {
-                DropPieces(EvaluateBoard(evalBoard));
+                DropPieces(EvaluateBoard(evalBoard), 1);
             }
         }
         public int EvaluateBoard(CellData[,] compboard)
@@ -144,6 +147,7 @@ namespace Connect4Testing
                     compboard[rowindex, colindex].GetButton().Tag = "1";
                     if (WinChecker(compboard))
                     {
+                        Console.WriteLine($"comp winning move at {rowindex}, {colindex}.");
                         return colindex;
                     }
 
@@ -154,6 +158,7 @@ namespace Connect4Testing
                         playerboard[rowindex,colindex].GetButton().Tag = "0";
                         if (WinChecker(playerboard))
                         {
+                            Console.WriteLine($"player winning move at {rowindex}, {colindex}.");
                             return colindex;
                         }
                         playerboard[rowindex, colindex].GetButton().Tag = tempTag.Tag;
@@ -178,7 +183,7 @@ namespace Connect4Testing
             return -1;
         }
         // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
-        public void Piece_Placement(object sender, EventArgs e)
+        public void Piece_Placement(object sender, EventArgs e, int form)
         {
             btnHasBeenClicked = true; // is this the best spot for this i wonder? 
             Button clickedButton = (Button)sender;
@@ -192,7 +197,7 @@ namespace Connect4Testing
             else if (clickedButton.Name == "btn_ColumnSix") colIndex = 6;
             if(colIndex != -1 && !ColumnIsFull(colIndex))
             {
-                DropPieces(colIndex);
+                DropPieces(colIndex, form);
             }
             else
             {

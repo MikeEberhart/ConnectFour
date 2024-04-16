@@ -31,7 +31,7 @@ namespace Connect4Testing
 
         private void PlacingPieces(object sender, EventArgs e)
         {
-            gameBoardHere.Piece_Placement(sender, e);
+            gameBoardHere.Piece_Placement(sender, e, 2);
         }
 
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
