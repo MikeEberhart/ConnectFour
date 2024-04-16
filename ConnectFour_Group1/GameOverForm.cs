@@ -16,6 +16,7 @@ namespace Connect4Testing
         private SinglePlayerForm sForm; //could be used to pass the previous game board
         private StatsForm stats = new StatsForm();
         private string[] textData;
+        private string[] passingTextData = new string[6];
         private int winningPlayer;
         private int tempPWins;
         private int tempCWins;
@@ -123,7 +124,17 @@ namespace Connect4Testing
             txt_PlayerWinPercentage.Text = Math.Round(tempPPercent * 100, 2).ToString() + "%";
             txt_CompWinPercentage.Text = Math.Round(tempCPercent * 100, 2).ToString() + "%";
         }
-        public void WhoHasWon() 
+        private void GetTextBoxData()
+        {
+            passingTextData[0] = txt_TotalPlayerWins.Text;
+            passingTextData[1] = txt_PlayerWinPercentage.Text;
+            passingTextData[2] = txt_TotalCompWins.Text;
+            passingTextData[3] = txt_CompWinPercentage.Text;
+            passingTextData[4] = txt_TotalTies.Text;
+            passingTextData[5] = txt_TotalNumOfGames.Text;
+            stats.WriteToFile(passingTextData);
+        }
+        public void WhoHasWon()
         {
             GetWinningPlayer();
             Console.WriteLine(GetWinningPlayer() + " WhoHasWon"); // used for testing delete later
@@ -139,6 +150,7 @@ namespace Connect4Testing
                 lbl_PlayWonDisplay.Visible = false;
                 lbl_CompWonDisplay.Visible = true;
             }
+            GetTextBoxData();
             //if(tie game)
             //{
             //    UpdatingTieData();
