@@ -146,7 +146,7 @@ namespace Connect4Testing
                     //if this results in a win run this
                     if (WinChecker(compboard))
                     {
-                        Console.WriteLine($"Playing at: {colindex}");
+                        Console.WriteLine($"Playing comp at: {colindex}");
                         Console.WriteLine($"comp winning move at {rowindex}, {colindex}.");
                         return colindex;
                     }
@@ -161,7 +161,7 @@ namespace Connect4Testing
                         // if it wins run this
                         if (WinChecker(playerboard))
                         {
-                            Console.WriteLine($"Playing at: {colindex}");
+                            Console.WriteLine($"Playing player at: {colindex}");
                             Console.WriteLine($"player winning move at {rowindex}, {colindex}.");
                             return colindex;
                         }
