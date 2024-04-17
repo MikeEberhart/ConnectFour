@@ -73,7 +73,6 @@ namespace Connect4Testing
                     turnDisplay.Text = "Player Two's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
-                    Console.WriteLine(playerTurn);
                     btnHasBeenClicked = false; // is this the best place? 
                     if (WinChecker(GetGameBoard())) WinMessage();
                     SetPlayerTurn(playerTurn); // used to set playerTurn before playerTurn++
@@ -88,7 +87,6 @@ namespace Connect4Testing
                     turnDisplay.Text = "Player One's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "1";
-                    Console.WriteLine(playerTurn);
                     btnHasBeenClicked = false; // is this the best place?
                     if (WinChecker(GetGameBoard())) WinMessage();
                     SetPlayerTurn(playerTurn); // used to set playerTurn before playerTurn--
@@ -139,34 +137,40 @@ namespace Connect4Testing
             //check AI moves
             for (int colindex = 0; colindex < compboard.GetLength(1); colindex++)
             {
-                Button tempTag = new Button();
                 int rowindex = GetRow(colindex);
                 if (rowindex != -1)
                 {
-                    tempTag.Tag = compboard[rowindex,colindex].GetButton().Tag;
+                    //AI
+                    //"play" comp moves for selected column
                     compboard[rowindex, colindex].GetButton().Tag = "1";
+                    //if this results in a win run this
                     if (WinChecker(compboard))
                     {
+                        //PrintBoard(compboard);
                         Console.WriteLine($"comp winning move at {rowindex}, {colindex}.");
                         return colindex;
                     }
-
+                    // if it doesn't run this
                     else
                     {
-                        compboard[rowindex, colindex].GetButton().Tag = tempTag.Tag;
-                        tempTag.Tag = playerboard[rowindex, colindex].GetButton();
+                        //PLAYER
+                        //reset tag to initial state
+                        compboard[rowindex, colindex].GetButton().Tag = null;
+                        //play player moves
                         playerboard[rowindex,colindex].GetButton().Tag = "0";
+                        // if it wins run this
                         if (WinChecker(playerboard))
                         {
+
                             Console.WriteLine($"player winning move at {rowindex}, {colindex}.");
                             return colindex;
                         }
-                        playerboard[rowindex, colindex].GetButton().Tag = tempTag.Tag;
+                        //reset tag
+                        playerboard[rowindex, colindex].GetButton().Tag = null;
                     }
                 }
             }
             return generatedColumn;
-
         }
 
         public int GetRow(int colindex)
@@ -211,7 +215,7 @@ namespace Connect4Testing
             {
                 for (int col = 0; col < board.GetLength(1); col++)
                 {
-                    if (board[row, col].GetButton().BackgroundImage != null)
+                    if (board[row, col].GetButton().Tag != null)
                     {
                         //DIAGONAL -> "/"
                         if (row + 3 < board.GetLength(0) && col + 3 < board.GetLength(1))
@@ -220,6 +224,7 @@ namespace Connect4Testing
                                 && board[row, col].GetButton().Tag == board[row + 2, col + 2].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row + 1, col + 1].GetButton().Tag)
                             {
+                                Console.WriteLine("hgfjhgfcbbfvdbgchggf");
                                 return true;
 
                             }
@@ -232,29 +237,32 @@ namespace Connect4Testing
                                 && board[row, col].GetButton().Tag == board[row + 2, col - 2].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row + 1, col - 1].GetButton().Tag)
                             {
+                                Console.WriteLine("mmmmmmmmmmm");
                                 return true;
 
                             }
                         }
 
-                        //ROW
+                        //COLUMN
                         if (row + 3 < board.GetLength(0))
                         {
                             if (board[row, col].GetButton().Tag == board[row + 3, col].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row + 2, col].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row + 1, col].GetButton().Tag)
                             {
+                                Console.WriteLine("aaaaaaaaa");
                                 return true;
                             }
                         }
 
-                        //COLUMN
+                        //ROW
                         if (col + 3 < board.GetLength(1))
                         {
                             if (board[row, col].GetButton().Tag == board[row, col + 3].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row, col + 2].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row, col + 1].GetButton().Tag)
                             {
+                                Console.WriteLine("eeeeeeeee");
                                 return true;
                             }
                         }
