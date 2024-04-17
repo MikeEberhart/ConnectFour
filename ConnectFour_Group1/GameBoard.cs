@@ -146,7 +146,7 @@ namespace Connect4Testing
                     //if this results in a win run this
                     if (WinChecker(compboard))
                     {
-                        //PrintBoard(compboard);
+                        Console.WriteLine($"Playing at: {colindex}");
                         Console.WriteLine($"comp winning move at {rowindex}, {colindex}.");
                         return colindex;
                     }
@@ -161,7 +161,7 @@ namespace Connect4Testing
                         // if it wins run this
                         if (WinChecker(playerboard))
                         {
-
+                            Console.WriteLine($"Playing at: {colindex}");
                             Console.WriteLine($"player winning move at {rowindex}, {colindex}.");
                             return colindex;
                         }
@@ -170,6 +170,7 @@ namespace Connect4Testing
                     }
                 }
             }
+            Console.WriteLine($"Playing at: {generatedColumn}");
             return generatedColumn;
         }
 
@@ -224,7 +225,6 @@ namespace Connect4Testing
                                 && board[row, col].GetButton().Tag == board[row + 2, col + 2].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row + 1, col + 1].GetButton().Tag)
                             {
-                                Console.WriteLine("hgfjhgfcbbfvdbgchggf");
                                 return true;
 
                             }
@@ -237,7 +237,6 @@ namespace Connect4Testing
                                 && board[row, col].GetButton().Tag == board[row + 2, col - 2].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row + 1, col - 1].GetButton().Tag)
                             {
-                                Console.WriteLine("mmmmmmmmmmm");
                                 return true;
 
                             }
@@ -250,7 +249,6 @@ namespace Connect4Testing
                                 && board[row, col].GetButton().Tag == board[row + 2, col].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row + 1, col].GetButton().Tag)
                             {
-                                Console.WriteLine("aaaaaaaaa");
                                 return true;
                             }
                         }
@@ -262,7 +260,6 @@ namespace Connect4Testing
                                 && board[row, col].GetButton().Tag == board[row, col + 2].GetButton().Tag
                                 && board[row, col].GetButton().Tag == board[row, col + 1].GetButton().Tag)
                             {
-                                Console.WriteLine("eeeeeeeee");
                                 return true;
                             }
                         }
