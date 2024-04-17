@@ -133,7 +133,16 @@ namespace Connect4Testing
                     }
                 }
             }
-
+            //re-roll random number if column is full
+            while (compboard[5, generatedColumn].GetButton().Tag != null)
+            {
+                int skip = generatedColumn;
+                while (generatedColumn == skip)
+                {
+                    Console.WriteLine(generatedColumn.ToString());
+                    generatedColumn = random.Next(0, gameBoard.GetLength(1));
+                }
+            }
             //check AI moves
             for (int colindex = 0; colindex < compboard.GetLength(1); colindex++)
             {
@@ -146,7 +155,6 @@ namespace Connect4Testing
                     //if this results in a win run this
                     if (WinChecker(compboard))
                     {
-                        Console.WriteLine($"Playing comp at: {colindex}");
                         Console.WriteLine($"comp winning move at {rowindex}, {colindex}.");
                         return colindex;
                     }
@@ -157,11 +165,10 @@ namespace Connect4Testing
                         //reset tag to initial state
                         compboard[rowindex, colindex].GetButton().Tag = null;
                         //play player moves
-                        playerboard[rowindex,colindex].GetButton().Tag = "0";
+                        playerboard[rowindex, colindex].GetButton().Tag = "0";
                         // if it wins run this
                         if (WinChecker(playerboard))
                         {
-                            Console.WriteLine($"Playing player at: {colindex}");
                             Console.WriteLine($"player winning move at {rowindex}, {colindex}.");
                             return colindex;
                         }
