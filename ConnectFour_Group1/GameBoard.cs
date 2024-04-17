@@ -119,20 +119,8 @@ namespace Connect4Testing
         }
         public int EvaluateBoard(CellData[,] compboard)
         {
-            CellData[,] playerboard = new CellData[6, 7];
             Random random = new Random();
             int generatedColumn = random.Next(0,gameBoard.GetLength(1));
-            //make copy to evaluate
-            for (int i = 0; i < compboard.GetLength(0); i++)
-            {
-                for (int j = 0; j < compboard.GetLength(1); j++)
-                {
-                    if (compboard[i, j] != null)
-                    {;
-                        playerboard[i, j] = new CellData(compboard[i, j].GetRow(),compboard[i, j].GetColumn(),compboard[i,j].GetButton());
-                    }
-                }
-            }
             //re-roll random number if column is full
             while (compboard[5, generatedColumn].GetButton().Tag != null)
             {
@@ -165,15 +153,15 @@ namespace Connect4Testing
                         //reset tag to initial state
                         compboard[rowindex, colindex].GetButton().Tag = null;
                         //play player moves
-                        playerboard[rowindex, colindex].GetButton().Tag = "0";
+                        compboard[rowindex, colindex].GetButton().Tag = "0";
                         // if it wins run this
-                        if (WinChecker(playerboard))
+                        if (WinChecker(compboard))
                         {
                             Console.WriteLine($"player winning move at {rowindex}, {colindex}.");
                             return colindex;
                         }
                         //reset tag
-                        playerboard[rowindex, colindex].GetButton().Tag = null;
+                        compboard[rowindex, colindex].GetButton().Tag = null;
                     }
                 }
             }
