@@ -13,7 +13,7 @@ namespace Connect4Testing
     public partial class GameOverForm : Form
     {
         private WelcomeForm wForm; // not used probably delete later
-        private SinglePlayerForm sForm; //could be used to pass the previous game board
+        private SinglePlayerForm sForm;
         private StatsForm stats = new StatsForm();
         private string[] textData;
         private string[] passingTextData = new string[6];
@@ -27,7 +27,7 @@ namespace Connect4Testing
         private double tempPPercent;
         private double tempCPercent;
 
-        public GameOverForm(WelcomeForm wf)
+        public GameOverForm(WelcomeForm wf) // not needed might delete later
         {
             InitializeComponent();
             CenterToScreen();
@@ -76,7 +76,7 @@ namespace Connect4Testing
         public void SetWinningPlayer(int p)
         {
             winningPlayer = p;
-            Console.WriteLine(winningPlayer);
+            //Console.WriteLine(winningPlayer);
         }
         public int GetWinningPlayer()
         {
@@ -91,7 +91,7 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            Console.WriteLine("player");
+            //Console.WriteLine("player");
         }
         private void UpdatingCompWinData()
         {
@@ -102,7 +102,7 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            Console.WriteLine("comp");
+            //Console.WriteLine("comp");
         }
         private void UpdatingTieData()
         {
@@ -113,7 +113,7 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            Console.WriteLine("tie");
+            //Console.WriteLine("tie");
         }
         private void FillInTextBoxes()
         {
@@ -136,26 +136,30 @@ namespace Connect4Testing
         }
         public void WhoHasWon()
         {
-            GetWinningPlayer();
-            Console.WriteLine(GetWinningPlayer() + " WhoHasWon"); // used for testing delete later
-            if (GetWinningPlayer() == 0)
+            int results = GetWinningPlayer();
+            if (results == 0)
             {
                 UpdatingPlayerWinData();
+                lbl_TieGameDisplay.Visible = false;
                 lbl_CompWonDisplay.Visible = false;
                 lbl_PlayWonDisplay.Visible = true;
             }
-            if (GetWinningPlayer() == 1)
+            if (results == 1)
             {
                 UpdatingCompWinData();
+                lbl_TieGameDisplay.Visible = false;
                 lbl_PlayWonDisplay.Visible = false;
                 lbl_CompWonDisplay.Visible = true;
             }
+            if(results == -1)
+            {
+                UpdatingTieData();
+                lbl_CompWonDisplay.Visible = false;
+                lbl_PlayWonDisplay.Visible = false;
+                lbl_TieGameDisplay.Visible = true;
+
+            }
             GetTextBoxData();
-            //if(tie game)
-            //{
-            //    UpdatingTieData();
-            //    lbl_WinnerDisplay.Text = "The game has ended in a tie!!";
-            //}
         }
     }
 }

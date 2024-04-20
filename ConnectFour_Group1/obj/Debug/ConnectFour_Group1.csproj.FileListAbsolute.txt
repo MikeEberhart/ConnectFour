@@ -108,3 +108,17 @@ D:\.SchoolStuff\.GitHub\DPrePushStaging\ConnectFour_Group1\obj\Debug\ConnectFour
 D:\.SchoolStuff\.GitHub\DPrePushStaging\ConnectFour_Group1\obj\Debug\ConnectFour_Group1.csproj.CoreCompileInputs.cache
 D:\.SchoolStuff\.GitHub\DPrePushStaging\ConnectFour_Group1\obj\Debug\Connect4Testing.exe
 D:\.SchoolStuff\.GitHub\DPrePushStaging\ConnectFour_Group1\obj\Debug\Connect4Testing.pdb
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\bin\Debug\Connect4Testing.exe.config
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\bin\Debug\Connect4Testing.exe
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\bin\Debug\Connect4Testing.pdb
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\ConnectFour_Group1.csproj.AssemblyReference.cache
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\Connect4Testing.GameOverForm.resources
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\Connect4Testing.Properties.Resources.resources
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\Connect4Testing.SinglePlayerForm.resources
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\Connect4Testing.StatsForm.resources
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\Connect4Testing.TwoPlayerForm.resources
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\Connect4Testing.WelcomeForm.resources
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\ConnectFour_Group1.csproj.GenerateResource.cache
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\ConnectFour_Group1.csproj.CoreCompileInputs.cache
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\Connect4Testing.exe
+D:\.SchoolStuff\.GitHub\zTestBranch\ConnectFour_Group1\obj\Debug\Connect4Testing.pdb

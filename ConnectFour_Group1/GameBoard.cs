@@ -19,7 +19,6 @@ namespace Connect4Testing
         private int playerTurn = 0;
         private int tempPlayerTurn;
         private Label turnDisplay;
-        private bool btnHasBeenClicked = false;
         public int GetPlayerTurn()
         {
             return tempPlayerTurn;
@@ -71,10 +70,11 @@ namespace Connect4Testing
                 if (playerTurn == 0)
                 {
                     turnDisplay.Text = "Player Two's Turn";
-                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.RedPiece2;
+                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Resources.RedPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
-                    btnHasBeenClicked = false; // is this the best place? 
                     if (WinChecker(GetGameBoard())) WinMessage();
+                    if (TieGameCheck()) SetPlayerTurn(-1); // if tie game playerTurn = -1
+                    if (TieGameCheck()) WinMessage();
                     SetPlayerTurn(playerTurn); // used to set playerTurn before playerTurn++
                     playerTurn++;
                     if (!WinChecker(GetGameBoard()) && form != 2)
@@ -85,10 +85,11 @@ namespace Connect4Testing
                 else if (playerTurn == 1)
                 {
                     turnDisplay.Text = "Player One's Turn";
-                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Properties.Resources.YellowPiece2;
+                    gameBoard[rowindex, colindex].GetButton().BackgroundImage = Resources.YellowPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "1";
-                    btnHasBeenClicked = false; // is this the best place?
                     if (WinChecker(GetGameBoard())) WinMessage();
+                    if (TieGameCheck()) SetPlayerTurn(-1); // if tie game playerTurn = -1
+                    if (TieGameCheck()) WinMessage();
                     SetPlayerTurn(playerTurn); // used to set playerTurn before playerTurn--
                     playerTurn--;
                 }
@@ -127,7 +128,7 @@ namespace Connect4Testing
                 int skip = generatedColumn;
                 while (generatedColumn == skip)
                 {
-                    Console.WriteLine(generatedColumn.ToString());
+                    //Console.WriteLine(generatedColumn.ToString());
                     generatedColumn = random.Next(0, gameBoard.GetLength(1));
                 }
             }
@@ -144,6 +145,7 @@ namespace Connect4Testing
                     if (WinChecker(compboard))
                     {
                         Console.WriteLine($"comp winning move at {rowindex}, {colindex}.");
+                        compboard[rowindex, colindex].GetButton().Tag = null;
                         return colindex;
                     }
                     // if it doesn't run this
@@ -158,6 +160,7 @@ namespace Connect4Testing
                         if (WinChecker(compboard))
                         {
                             Console.WriteLine($"player winning move at {rowindex}, {colindex}.");
+                            compboard[rowindex, colindex].GetButton().Tag = null;
                             return colindex;
                         }
                         //reset tag
@@ -168,24 +171,21 @@ namespace Connect4Testing
             Console.WriteLine($"Playing at: {generatedColumn}");
             return generatedColumn;
         }
-
         public int GetRow(int colindex)
         {
             Button currentButton;
             for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
             {
                 currentButton = gameBoard[row, colindex].GetButton();
-                if (currentButton.BackgroundImage == null)
+                if (currentButton.Tag == null)
                 {
                     return row;
                 }
             }
             return -1;
-        }
-        // could use something like this to change the background pics and just use the buttons as display while they aren't enabled
-        public void Piece_Placement(object sender, EventArgs e, int form)
+        } // used to return the next open row in said column
+        public void Piece_Placement(object sender, int form) // removed 'EventArgs e' since it was unuse
         {
-            btnHasBeenClicked = true; // is this the best spot for this i wonder? 
             Button clickedButton = (Button)sender;
             int colIndex = -1;
             if (clickedButton.Name == "btn_ColumnZero") colIndex = 0;
@@ -204,7 +204,6 @@ namespace Connect4Testing
                 MessageBox.Show("Column is full. Please select a new column");
             }
         }
-
         public bool WinChecker(CellData[,] board)
         {
             for (int row = 0; row < board.GetLength(0); row++)
@@ -262,57 +261,55 @@ namespace Connect4Testing
                 }
             }
             return false;
-        }
+        } // Checking for Win
         public void ShowPossibleMoves(object sender)// MOUSE ENTER // used to see which button is being entered // not working just yet
         {
-            Button hoverOnButton = (Button)sender;
-            if (hoverOnButton.Name == "btn_ColumnZero") TempImagePlacement(0);
-            else if (hoverOnButton.Name == "btn_ColumnOne") TempImagePlacement(1);
-            else if (hoverOnButton.Name == "btn_ColumnTwo") TempImagePlacement(2);
-            else if (hoverOnButton.Name == "btn_ColumnThree") TempImagePlacement(3);
-            else if (hoverOnButton.Name == "btn_ColumnFour") TempImagePlacement(4);
-            else if (hoverOnButton.Name == "btn_ColumnFive") TempImagePlacement(5);
-            else if (hoverOnButton.Name == "btn_ColumnSix") TempImagePlacement(6);
+            Button enterButton = (Button)sender;
+            if (enterButton.Name == "btn_ColumnZero") TempImagePlacement(0);
+            else if (enterButton.Name == "btn_ColumnOne") TempImagePlacement(1);
+            else if (enterButton.Name == "btn_ColumnTwo") TempImagePlacement(2);
+            else if (enterButton.Name == "btn_ColumnThree") TempImagePlacement(3);
+            else if (enterButton.Name == "btn_ColumnFour") TempImagePlacement(4);
+            else if (enterButton.Name == "btn_ColumnFive") TempImagePlacement(5);
+            else if (enterButton.Name == "btn_ColumnSix") TempImagePlacement(6);
         }
         public void HidePossibleMove(object sender)// MOUSE LEAVE // used to see which button has be exited by the mouse // not working just yet
         {
-            Button hoverOnButton = (Button)sender;
-            if (hoverOnButton.Name == "btn_ColumnZero" && btnHasBeenClicked == false) TempImageRemoved(0);
-            else if (hoverOnButton.Name == "btn_ColumnOne" && btnHasBeenClicked == false) TempImageRemoved(1);
-            else if (hoverOnButton.Name == "btn_ColumnTwo" && btnHasBeenClicked == false) TempImageRemoved(2);
-            else if (hoverOnButton.Name == "btn_ColumnThree" && btnHasBeenClicked == false) TempImageRemoved(3);
-            else if (hoverOnButton.Name == "btn_ColumnFour" && btnHasBeenClicked == false) TempImageRemoved(4);
-            else if (hoverOnButton.Name == "btn_ColumnFive" && btnHasBeenClicked == false) TempImageRemoved(5);
-            else if (hoverOnButton.Name == "btn_ColumnSix" && btnHasBeenClicked == false) TempImageRemoved(6);
+            Button leaveButton = (Button)sender;
+            if (leaveButton.Name == "btn_ColumnZero") TempImageRemoved(0);
+            else if (leaveButton.Name == "btn_ColumnOne") TempImageRemoved(1);
+            else if (leaveButton.Name == "btn_ColumnTwo") TempImageRemoved(2);
+            else if (leaveButton.Name == "btn_ColumnThree") TempImageRemoved(3);
+            else if (leaveButton.Name == "btn_ColumnFour") TempImageRemoved(4);
+            else if (leaveButton.Name == "btn_ColumnFive") TempImageRemoved(5);
+            else if (leaveButton.Name == "btn_ColumnSix") TempImageRemoved(6);
         }
-        public void TempImageRemoved(int col) // used to remove the temp image // not working just yet
+        public void TempImageRemoved(int col) // used to remove the temp image
         {
-            Button otherButton;
-            for (int i = 0; i <= gameBoard.GetLength(0) - 1; i++)
+            if (!ColumnIsFull(col))
             {
-                otherButton = gameBoard[i, col].GetButton();
-                if (btnHasBeenClicked == false)
+                int row = GetRow(col);
+                Button otherButton;
+                otherButton = gameBoard[row, col].GetButton();
+                if (otherButton.Tag == null)
                 {
                     otherButton.BackgroundImage = null;
-                    break;
                 }
             }
-        }
-        public void TempImagePlacement(int col) // used to place the temp image // not working just yet
+        }      
+        public void TempImagePlacement(int col) // used to place the temp image
         {
-            Button thisButton;
-            for (int i = 0; i <= gameBoard.GetLength(0) - 1; i++)
+            if(!ColumnIsFull(col))
             {
-                thisButton = gameBoard[i, col].GetButton();
-                if (thisButton.Image == null && btnHasBeenClicked == false && playerTurn == 0)
+                int row = GetRow(col);
+                Button thisButton = gameBoard[row, col].GetButton();
+                if (thisButton.Tag == null && thisButton.BackgroundImage == null && playerTurn == 0)
                 {
                     thisButton.BackgroundImage = Resources.RedPiece2;
-                    break;
                 }
-                else if (thisButton.Image == null && btnHasBeenClicked == false && playerTurn == 1)
+                else if(thisButton.Tag == null && thisButton.BackgroundImage == null && playerTurn == 1)
                 {
                     thisButton.BackgroundImage = Resources.YellowPiece2;
-                    break;
                 }
             }
         }
@@ -322,25 +319,42 @@ namespace Connect4Testing
             for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
             {
                 currentButton = gameBoard[row, col].GetButton();
-                if (currentButton.BackgroundImage == null)
+                if (currentButton.Tag == null)
                 {
                     return false;
                 }
             }
             return true;
-        }
-        private void WinMessage()
+        } // used to check if the column is full
+        public bool TieGameCheck()
         {
-            if (GetPlayerTurn() == 0)
+            for (int col = 0; col < gameBoard.GetLength(1); col++)
             {
-                turnDisplay.Text = "   Player 2 Wins";
+                if (ColumnIsFull(col) != true)
+                {
+                    return false;
+                }
+            }
+            return true;
+        } // checking if the game is a tie game or not
+        public void WinMessage()
+        {
+            int results = GetPlayerTurn();
+            if (results == 0)
+            {
+                turnDisplay.Text = "   Player 2 Wins!";
                 MessageBox.Show("Player 2(computer) wins.");
             }
-            else if (GetPlayerTurn() == 1)
+            if (results == 1)
             {
-                turnDisplay.Text = "   Player 1 Wins";
+                turnDisplay.Text = "   Player 1 Wins!";
                 MessageBox.Show("Player 1 wins.");
             }
-        }
+            if (results == -1)
+            {
+                turnDisplay.Text = "     Tie Game!";
+                MessageBox.Show("The Game is a Tie");
+            }
+        } // used to display the winning/gameover message
     }
 }

@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_PlayWonDisplay = new System.Windows.Forms.Label();
             this.lbl_CompWonDisplay = new System.Windows.Forms.Label();
+            this.lbl_TieGameDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Quit
@@ -229,12 +230,24 @@
             // 
             this.lbl_CompWonDisplay.AutoSize = true;
             this.lbl_CompWonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CompWonDisplay.Location = new System.Drawing.Point(65, 34);
+            this.lbl_CompWonDisplay.Location = new System.Drawing.Point(75, 34);
             this.lbl_CompWonDisplay.Name = "lbl_CompWonDisplay";
-            this.lbl_CompWonDisplay.Size = new System.Drawing.Size(343, 50);
+            this.lbl_CompWonDisplay.Size = new System.Drawing.Size(339, 50);
             this.lbl_CompWonDisplay.TabIndex = 28;
-            this.lbl_CompWonDisplay.Text = "The Computer has outsmarted you\r\nThe AI has won!!";
+            this.lbl_CompWonDisplay.Text = "The computer has outsmarted you\r\nThe AI has won!!";
             this.lbl_CompWonDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_TieGameDisplay
+            // 
+            this.lbl_TieGameDisplay.AutoSize = true;
+            this.lbl_TieGameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TieGameDisplay.Location = new System.Drawing.Point(127, 34);
+            this.lbl_TieGameDisplay.Name = "lbl_TieGameDisplay";
+            this.lbl_TieGameDisplay.Size = new System.Drawing.Size(215, 50);
+            this.lbl_TieGameDisplay.TabIndex = 29;
+            this.lbl_TieGameDisplay.Text = "The game has ended\r\nin a tie!!";
+            this.lbl_TieGameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_TieGameDisplay.Visible = false;
             // 
             // GameOverForm
             // 
@@ -242,6 +255,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.ClientSize = new System.Drawing.Size(485, 370);
+            this.Controls.Add(this.lbl_TieGameDisplay);
             this.Controls.Add(this.lbl_CompWonDisplay);
             this.Controls.Add(this.lbl_PlayWonDisplay);
             this.Controls.Add(this.label1);
@@ -288,5 +302,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_PlayWonDisplay;
         private System.Windows.Forms.Label lbl_CompWonDisplay;
+        private System.Windows.Forms.Label lbl_TieGameDisplay;
     }
 }

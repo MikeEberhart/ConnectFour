@@ -91,7 +91,7 @@
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Quit.Location = new System.Drawing.Point(450, 531);
             this.btn_Quit.Name = "btn_Quit";
-            this.btn_Quit.Size = new System.Drawing.Size(145, 48);
+            this.btn_Quit.Size = new System.Drawing.Size(145, 52);
             this.btn_Quit.TabIndex = 90;
             this.btn_Quit.Text = "Quit";
             this.btn_Quit.UseVisualStyleBackColor = false;
@@ -103,7 +103,7 @@
             this.btn_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_MainMenu.Location = new System.Drawing.Point(271, 531);
             this.btn_MainMenu.Name = "btn_MainMenu";
-            this.btn_MainMenu.Size = new System.Drawing.Size(145, 48);
+            this.btn_MainMenu.Size = new System.Drawing.Size(145, 52);
             this.btn_MainMenu.TabIndex = 89;
             this.btn_MainMenu.Text = "Main Menu";
             this.btn_MainMenu.UseVisualStyleBackColor = false;
@@ -115,7 +115,7 @@
             this.btn_PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_PlayAgain.Location = new System.Drawing.Point(90, 531);
             this.btn_PlayAgain.Name = "btn_PlayAgain";
-            this.btn_PlayAgain.Size = new System.Drawing.Size(145, 48);
+            this.btn_PlayAgain.Size = new System.Drawing.Size(145, 52);
             this.btn_PlayAgain.TabIndex = 88;
             this.btn_PlayAgain.Text = "Play Again";
             this.btn_PlayAgain.UseVisualStyleBackColor = false;
@@ -132,6 +132,8 @@
             this.btn_ColumnSix.Text = "Select Column";
             this.btn_ColumnSix.UseVisualStyleBackColor = false;
             this.btn_ColumnSix.Click += new System.EventHandler(this.PlacingPieces);
+            this.btn_ColumnSix.MouseEnter += new System.EventHandler(this.ShowMove);
+            this.btn_ColumnSix.MouseLeave += new System.EventHandler(this.HideMove);
             // 
             // btn_ColumnFive
             // 
@@ -144,6 +146,8 @@
             this.btn_ColumnFive.Text = "Select Column";
             this.btn_ColumnFive.UseVisualStyleBackColor = false;
             this.btn_ColumnFive.Click += new System.EventHandler(this.PlacingPieces);
+            this.btn_ColumnFive.MouseEnter += new System.EventHandler(this.ShowMove);
+            this.btn_ColumnFive.MouseLeave += new System.EventHandler(this.HideMove);
             // 
             // btn_ColumnFour
             // 
@@ -156,6 +160,8 @@
             this.btn_ColumnFour.Text = "Select Column";
             this.btn_ColumnFour.UseVisualStyleBackColor = false;
             this.btn_ColumnFour.Click += new System.EventHandler(this.PlacingPieces);
+            this.btn_ColumnFour.MouseEnter += new System.EventHandler(this.ShowMove);
+            this.btn_ColumnFour.MouseLeave += new System.EventHandler(this.HideMove);
             // 
             // btn_ColumnThree
             // 
@@ -168,6 +174,8 @@
             this.btn_ColumnThree.Text = "Select Column";
             this.btn_ColumnThree.UseVisualStyleBackColor = false;
             this.btn_ColumnThree.Click += new System.EventHandler(this.PlacingPieces);
+            this.btn_ColumnThree.MouseEnter += new System.EventHandler(this.ShowMove);
+            this.btn_ColumnThree.MouseLeave += new System.EventHandler(this.HideMove);
             // 
             // btn_ColumnTwo
             // 
@@ -180,6 +188,8 @@
             this.btn_ColumnTwo.Text = "Select Column";
             this.btn_ColumnTwo.UseVisualStyleBackColor = false;
             this.btn_ColumnTwo.Click += new System.EventHandler(this.PlacingPieces);
+            this.btn_ColumnTwo.MouseEnter += new System.EventHandler(this.ShowMove);
+            this.btn_ColumnTwo.MouseLeave += new System.EventHandler(this.HideMove);
             // 
             // btn_ColumnOne
             // 
@@ -192,6 +202,8 @@
             this.btn_ColumnOne.Text = "Select Column";
             this.btn_ColumnOne.UseVisualStyleBackColor = false;
             this.btn_ColumnOne.Click += new System.EventHandler(this.PlacingPieces);
+            this.btn_ColumnOne.MouseEnter += new System.EventHandler(this.ShowMove);
+            this.btn_ColumnOne.MouseLeave += new System.EventHandler(this.HideMove);
             // 
             // btn_ColumnZero
             // 
@@ -204,6 +216,8 @@
             this.btn_ColumnZero.Text = "Select Column";
             this.btn_ColumnZero.UseVisualStyleBackColor = false;
             this.btn_ColumnZero.Click += new System.EventHandler(this.PlacingPieces);
+            this.btn_ColumnZero.MouseEnter += new System.EventHandler(this.ShowMove);
+            this.btn_ColumnZero.MouseLeave += new System.EventHandler(this.HideMove);
             // 
             // pnl_BoardPanel
             // 
@@ -817,7 +831,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(704, 591);
+            this.ClientSize = new System.Drawing.Size(685, 591);
             this.Controls.Add(this.lbl_TurnDisplay);
             this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.btn_MainMenu);

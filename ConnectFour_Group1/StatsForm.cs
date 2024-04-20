@@ -110,7 +110,7 @@ namespace Connect4Testing
             int num = 0;
             foreach (string line in data)
             {
-                Console.WriteLine(line + " Pos: " + num);
+                //Console.WriteLine(line + " Pos: " + num);
                 num++;
             }
             if (data[0] != null &&
