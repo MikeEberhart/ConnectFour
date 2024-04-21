@@ -54,6 +54,7 @@
     <Compile Include="GameOverForm.Designer.cs">
       <DependentUpon>GameOverForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sound.cs" />
     <Compile Include="WelcomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,7 +129,10 @@
     <None Include="Resources\YellowPiece2.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\background.wav" />
+    <Content Include="Resources\clickNoise.wav" />
     <Content Include="Resources\StatData.txt" />
+    <Content Include="Resources\warningNoise.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

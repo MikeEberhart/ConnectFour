@@ -1,38 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Connect4Testing
 {
-    public partial class Sound
+    public class Sound
     {
         Stream soundFile;
         SoundPlayer player;
-    }
+        SoundPlayer player2;
 
-    private void btn_applause_Click()
-    {
-        soundFile = Properties.Resources.click.wav; 
-        player = new SoundPlayer(soundFile); 
-        playSound();
-    }
-    private void btn_applause_warn()
-    {
-        soundFileWarn = Properties.Resources.warn.wav;
-        player = new SoundPlayer(soundFile);
-        playSound();
-    }
-    private void playSound()
-    {
-        if (checkBox_continuous.Checked)
+        private void buttonClick()
         {
-            player.PlayLooping();
+            //soundFile = Properties.Resources.
+
+            //player = new SoundPlayer(soundFile);
+
+            //player.Play();
+            
         }
-        else
+        private void warning()
         {
-            player.Play();
+            //soundFile = Properties.Resources.warningNoise;
+
+            //player = new SoundPlayer(soundFile);
+
+           // player.Play();
+        }
+        private void background()
+        {
+            //soundFile = Properties.Resources.background;
+
+            //player2 = new SoundPlayer(soundFile);
+
+            //player2.PlayLooping();
         }
     }
 }
