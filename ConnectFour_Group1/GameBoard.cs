@@ -313,7 +313,7 @@ namespace Connect4Testing
                 }
             }
         }
-        private bool ColumnIsFull(int col)
+        private bool ColumnIsFull(int col)// used to check if the column is full
         {
             Button currentButton;
             for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
@@ -325,8 +325,8 @@ namespace Connect4Testing
                 }
             }
             return true;
-        } // used to check if the column is full
-        public bool TieGameCheck()
+        } 
+        public bool TieGameCheck()// checking if the game is a tie game or not
         {
             for (int col = 0; col < gameBoard.GetLength(1); col++)
             {
@@ -336,8 +336,8 @@ namespace Connect4Testing
                 }
             }
             return true;
-        } // checking if the game is a tie game or not
-        public void WinMessage()
+        } 
+        public void WinMessage()// used to display the winning/gameover message
         {
             int results = GetPlayerTurn();
             if (results == 0)
@@ -355,6 +355,6 @@ namespace Connect4Testing
                 turnDisplay.Text = "     Tie Game!";
                 MessageBox.Show("The Game is a Tie");
             }
-        } // used to display the winning/gameover message
+        } 
     }
 }

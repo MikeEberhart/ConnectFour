@@ -128,8 +128,6 @@
     <None Include="Resources\YellowPiece2.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\click.wav" />
-    <Content Include="Resources\warn.wav" />
     <Content Include="Resources\StatData.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
