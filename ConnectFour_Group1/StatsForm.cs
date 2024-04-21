@@ -32,7 +32,7 @@ namespace Connect4Testing
             InitializeComponent();
             CenterToScreen();
             ReadTxtFile();
-            WriteDataToFile();
+            WriteToFile(PassData());
             wForm = wf;
         }
         public StatsForm()
@@ -92,7 +92,6 @@ namespace Connect4Testing
                     readFile.Dispose();
                 }
             }
-            //added this cause I think it wopuld cause problems with reading and writing at same time
             readFile.Close();
             DataToTextBoxes();
 
@@ -105,22 +104,28 @@ namespace Connect4Testing
             txt_CompWinPercentage.Text = compWinPercentage.ToString() + "%";
             txt_TotalTies.Text = fileText[4];
             txt_TotalNumOfGames.Text = totalGames.ToString();
-        }  
-        public void WriteDataToFile()
+        }
+        public void WriteToFile(string[] data)
         {
-            if (txt_TotalPlayerWins.Text != null &&
-                txt_PlayerWinPercentage.Text != null &&
-                txt_TotalCompWins.Text != null &&
-                txt_CompWinPercentage.Text != null &&
-                txt_TotalTies.Text != null &&
-                txt_TotalTies.Text != null)
+            int num = 0;
+            foreach (string line in data)
             {
-                File.WriteAllText(statFile, fileText[0]
-                    + "," + playerWinPercentage.ToString() + "%"
-                    + "," + fileText[2]
-                    + "," + compWinPercentage.ToString() + "%"
-                    + "," + fileText[4]
-                    + "," + totalGames.ToString());
+                //Console.WriteLine(line + " Pos: " + num);
+                num++;
+            }
+            if (data[0] != null &&
+                data[1] != null &&
+                data[2] != null &&
+                data[3] != null &&
+                data[4] != null &&
+                data[5] != null)
+            {
+                File.WriteAllText(statFile, data[0]
+                    + "," + data[1]
+                    + "," + data[2]
+                    + "," + data[3]
+                    + "," + data[4]
+                    + "," + data[5]);
             }
         }
         public string[] PassData() //passing array with the saved data to the GameOverForm

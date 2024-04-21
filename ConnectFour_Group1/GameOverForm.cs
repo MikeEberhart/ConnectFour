@@ -13,9 +13,10 @@ namespace Connect4Testing
     public partial class GameOverForm : Form
     {
         private WelcomeForm wForm; // not used probably delete later
-        private SinglePlayerForm sForm; //could be used to pass the previous game board
+        private SinglePlayerForm sForm;
         private StatsForm stats = new StatsForm();
         private string[] textData;
+        private string[] passingTextData = new string[6];
         private int winningPlayer;
         private int tempPWins;
         private int tempCWins;
@@ -26,7 +27,7 @@ namespace Connect4Testing
         private double tempPPercent;
         private double tempCPercent;
 
-        public GameOverForm(WelcomeForm wf)
+        public GameOverForm(WelcomeForm wf) // not needed might delete later
         {
             InitializeComponent();
             CenterToScreen();
@@ -41,7 +42,6 @@ namespace Connect4Testing
             tempCWins = int.Parse(textData[2]);
             tempTotalTies = int.Parse(textData[4]);
             tempNumOfGames = int.Parse(textData[5]);
-            WhoHasWon();
             sForm = sf;
         }
 
@@ -57,11 +57,11 @@ namespace Connect4Testing
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            playAgain();
+            PlayAgain();
             sForm.ShowFormButtons();
         }
 
-        private void playAgain()
+        private void PlayAgain()
         {
             sForm.ClearBoard();
             sForm.Show();
@@ -73,10 +73,14 @@ namespace Connect4Testing
             sForm.Show();
             sForm.HideFormButtons();
         }
-        public void GetWinningPlayer(int p)
+        public void SetWinningPlayer(int p)
         {
             winningPlayer = p;
-            Console.WriteLine(winningPlayer);
+            //Console.WriteLine(winningPlayer);
+        }
+        public int GetWinningPlayer()
+        {
+            return winningPlayer;
         }
         private void UpdatingPlayerWinData()
         {
@@ -87,7 +91,7 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            Console.WriteLine("player");
+            //Console.WriteLine("player");
         }
         private void UpdatingCompWinData()
         {
@@ -98,7 +102,7 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            Console.WriteLine("comp");
+            //Console.WriteLine("comp");
         }
         private void UpdatingTieData()
         {
@@ -109,7 +113,7 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            Console.WriteLine("tie");
+            //Console.WriteLine("tie");
         }
         private void FillInTextBoxes()
         {
@@ -120,23 +124,42 @@ namespace Connect4Testing
             txt_PlayerWinPercentage.Text = Math.Round(tempPPercent * 100, 2).ToString() + "%";
             txt_CompWinPercentage.Text = Math.Round(tempCPercent * 100, 2).ToString() + "%";
         }
-        private void WhoHasWon() // this isn't working. player 1 always wins even with winningPlayer == 1
+        private void GetTextBoxData()
         {
-            if (winningPlayer == 0)
+            passingTextData[0] = txt_TotalPlayerWins.Text;
+            passingTextData[1] = txt_PlayerWinPercentage.Text;
+            passingTextData[2] = txt_TotalCompWins.Text;
+            passingTextData[3] = txt_CompWinPercentage.Text;
+            passingTextData[4] = txt_TotalTies.Text;
+            passingTextData[5] = txt_TotalNumOfGames.Text;
+            stats.WriteToFile(passingTextData);
+        }
+        public void WhoHasWon()
+        {
+            int results = GetWinningPlayer();
+            if (results == 0)
             {
                 UpdatingPlayerWinData();
-                lbl_WinnerDisplay.Text = "Congratulations\nPlayer 1 you've won!!";
+                lbl_TieGameDisplay.Visible = false;
+                lbl_CompWonDisplay.Visible = false;
+                lbl_PlayWonDisplay.Visible = true;
             }
-            if (winningPlayer == 1)
+            if (results == 1)
             {
                 UpdatingCompWinData();
-                lbl_WinnerDisplay.Text = "The Computer has outsmarted you\nThe AI has won!!";
+                lbl_TieGameDisplay.Visible = false;
+                lbl_PlayWonDisplay.Visible = false;
+                lbl_CompWonDisplay.Visible = true;
             }
-            //if(tie game)
-            //{
-            //    UpdatingTieData();
-            //    lbl_WinnerDisplay.Text = "The game has ended in a tie!!";
-            //}
+            if(results == -1)
+            {
+                UpdatingTieData();
+                lbl_CompWonDisplay.Visible = false;
+                lbl_PlayWonDisplay.Visible = false;
+                lbl_TieGameDisplay.Visible = true;
+
+            }
+            GetTextBoxData();
         }
     }
 }
