@@ -13,32 +13,37 @@ namespace Connect4Testing
     {
         Stream soundFile;
         SoundPlayer player;
+        Stream soundFile2;
         SoundPlayer player2;
 
-        private void buttonClick()
+        public void buttonClick()
         {
-            //soundFile = Properties.Resources.
+            soundFile = Properties.Resources.newClick;
 
-            //player = new SoundPlayer(soundFile);
+            player = new SoundPlayer(soundFile);
 
-            //player.Play();
-            
+            player.Play();
+
+            //musicBack();
+
         }
-        private void warning()
+        public void warning()
         {
-            //soundFile = Properties.Resources.warningNoise;
+            soundFile = Properties.Resources.newWarn;
 
-            //player = new SoundPlayer(soundFile);
+            player = new SoundPlayer(soundFile);
 
-           // player.Play();
+            player.Play();
+
+            //musicBack();
         }
-        private void background()
+        public void musicBack()
         {
-            //soundFile = Properties.Resources.background;
+            soundFile2 = Properties.Resources.background;
 
-            //player2 = new SoundPlayer(soundFile);
+            player2 = new SoundPlayer(soundFile2);
 
-            //player2.PlayLooping();
+            player2.PlayLooping();
         }
     }
 }

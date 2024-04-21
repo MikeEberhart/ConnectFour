@@ -26,6 +26,7 @@ namespace Connect4Testing
         private double tempDoubleCWins;
         private double tempPPercent;
         private double tempCPercent;
+        private Sound Sound = new Sound();
 
         public GameOverForm(WelcomeForm wf) // not needed might delete later
         {
@@ -43,6 +44,7 @@ namespace Connect4Testing
             tempTotalTies = int.Parse(textData[4]);
             tempNumOfGames = int.Parse(textData[5]);
             sForm = sf;
+            Sound.musicBack();
         }
 
         private void btn_Quit_Click(object sender, EventArgs e)
@@ -160,6 +162,11 @@ namespace Connect4Testing
 
             }
             GetTextBoxData();
+        }
+
+        private void GameOverForm_Load(object sender, EventArgs e)
+        {
+            //Sound.background();
         }
     }
 }

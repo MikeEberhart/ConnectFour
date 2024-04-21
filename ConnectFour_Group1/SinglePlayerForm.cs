@@ -15,6 +15,9 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
+
+        private Sound Sound = new Sound();
+
         private GameOverForm gameOverStats; //added this here since it was being used more than once
 
         public SinglePlayerForm(WelcomeForm wf)
@@ -30,6 +33,7 @@ namespace Connect4Testing
                 cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
                 num++;
             }
+            Sound.musicBack();
         }
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
@@ -37,27 +41,36 @@ namespace Connect4Testing
             ClearBoard();
             ShowFormButtons();
             if(gameOverStats != null) gameOverStats.Hide();
+
+            Sound.buttonClick();
+            
+            
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
             wForm.Show();
             if (gameOverStats != null) gameOverStats.Hide();
             this.Hide();
+            Sound.buttonClick();
         }
         private void btn_Quit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            Sound.buttonClick();
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
             this.Hide();
+            Sound.buttonClick();
         }
         private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+            Sound.warning(); 
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
+            Sound.buttonClick();
             gameBoardHere.Piece_Placement(sender, 1); // removed 'e' since it was unused
             if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
             {
@@ -71,6 +84,7 @@ namespace Connect4Testing
         }
         private void GameOver()
         {
+            Sound.warning();
             //when the game is determined to be over can call this to send player to the game over form 
             gameOverStats = new GameOverForm(this);
             int turn = gameBoardHere.GetPlayerTurn();
@@ -82,6 +96,7 @@ namespace Connect4Testing
         }
         public void ClearBoard() //used in GameOver to clear the board for a new game
         {
+            Sound.warning();
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.ResetTurn(pnl_BoardPanel);
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
@@ -91,6 +106,7 @@ namespace Connect4Testing
         }
         public void HideFormButtons() //added this to hide the buttons when reviewing the board
         {
+
             btn_ColumnZero.Visible = false;
             btn_ColumnOne.Visible = false;
             btn_ColumnTwo.Visible = false;
@@ -127,6 +143,9 @@ namespace Connect4Testing
             gameBoardHere.HidePossibleMove(sender);
         }
 
+        private void SinglePlayerForm_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

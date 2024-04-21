@@ -15,6 +15,8 @@ namespace Connect4Testing
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
 
+        private Sound Sound = new Sound();
+
         public TwoPlayerForm(WelcomeForm wf)
         {
             InitializeComponent();
@@ -22,6 +24,7 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
+            Sound.musicBack();
             //int num = 0;
             //foreach (CellData cldta in cellDataArray)
             //{
@@ -31,18 +34,22 @@ namespace Connect4Testing
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
+            Sound.buttonClick();
             gameBoardHere.Piece_Placement(sender, 2);
         }
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+            Sound.buttonClick();
             Application.Exit();
         }
         private void btn_Quit_Click(object sender, EventArgs e)
         {
+            Sound.buttonClick();
             Application.Exit();
         }
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
+            Sound.buttonClick();
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.ResetTurn(pnl_BoardPanel);
             ShowFormButtons();
@@ -53,6 +60,7 @@ namespace Connect4Testing
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
+            Sound.buttonClick();
             wForm.Show();
             this.Hide();
         }

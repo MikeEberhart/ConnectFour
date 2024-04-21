@@ -131,6 +131,8 @@
   <ItemGroup>
     <Content Include="Resources\background.wav" />
     <Content Include="Resources\clickNoise.wav" />
+    <None Include="Resources\newClick.wav" />
+    <None Include="Resources\newWarn.wav" />
     <Content Include="Resources\StatData.txt" />
     <Content Include="Resources\warningNoise.wav" />
   </ItemGroup>

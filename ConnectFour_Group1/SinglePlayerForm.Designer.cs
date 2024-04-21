@@ -883,6 +883,7 @@
             this.Name = "SinglePlayerForm";
             this.Text = "SinglePlayer";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SinglePlayerForm_FormClosed);
+            this.Load += new System.EventHandler(this.SinglePlayerForm_Load);
             this.pnl_BoardPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
