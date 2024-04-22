@@ -12,7 +12,6 @@ namespace Connect4Testing
 {
     public partial class GameOverForm : Form
     {
-        private WelcomeForm wForm; // not used probably delete later
         private SinglePlayerForm sForm;
         private StatsForm stats = new StatsForm();
         private string[] textData;
@@ -28,12 +27,6 @@ namespace Connect4Testing
         private double tempCPercent;
         private Sound Sound = new Sound();
 
-        public GameOverForm(WelcomeForm wf) // not needed might delete later
-        {
-            InitializeComponent();
-            CenterToScreen();
-            wForm = wf;
-        }
         public GameOverForm(SinglePlayerForm sf) 
         {
             InitializeComponent();
@@ -44,34 +37,33 @@ namespace Connect4Testing
             tempTotalTies = int.Parse(textData[4]);
             tempNumOfGames = int.Parse(textData[5]);
             sForm = sf;
-            Sound.musicBack();
+            //Sound.MusicBack();
         }
-
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
             WelcomeForm wForm = new WelcomeForm();
             this.Hide();
             wForm.Show();
         }
-
+        private void btn_Quit_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
         private void GameOverForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Environment.Exit(0);
         }
-
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
             PlayAgain();
             sForm.ShowFormButtons();
         }
-
         private void PlayAgain()
         {
             sForm.ClearBoard();
             sForm.Show();
             this.Hide();
         }
-
         private void btn_Review_Click(object sender, EventArgs e)
         {
             sForm.Show();
@@ -85,7 +77,7 @@ namespace Connect4Testing
         {
             return winningPlayer;
         }
-        private void UpdatingPlayerWinData()
+        private void UpdatingPlayerWinData() // updating data with new player win
         {
             Sound.Applause();
             tempPWins++;
@@ -96,7 +88,7 @@ namespace Connect4Testing
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
         }
-        private void UpdatingCompWinData()
+        private void UpdatingCompWinData()// updating data with new computer win
         {
             Sound.CrowdGasp();
             tempCWins++;
@@ -107,7 +99,7 @@ namespace Connect4Testing
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
         }
-        private void UpdatingTieData()
+        private void UpdatingTieData()// updating data with new tie game
         {
             Sound.CrowdGasp();
             tempTotalTies++;
@@ -118,7 +110,7 @@ namespace Connect4Testing
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
         }
-        private void FillInTextBoxes()
+        private void FillInTextBoxes() // function used to populate the textboxes with data from saved file
         {
             txt_TotalPlayerWins.Text = tempPWins.ToString();
             txt_TotalCompWins.Text = tempCWins.ToString();
@@ -127,7 +119,7 @@ namespace Connect4Testing
             txt_PlayerWinPercentage.Text = Math.Round(tempPPercent * 100, 2).ToString() + "%";
             txt_CompWinPercentage.Text = Math.Round(tempCPercent * 100, 2).ToString() + "%";
         }
-        private void GetTextBoxData()
+        private void GetTextBoxData() // function used to pass textbox data to string array to be used writing to file
         {
             passingTextData[0] = txt_TotalPlayerWins.Text;
             passingTextData[1] = txt_PlayerWinPercentage.Text;
@@ -137,7 +129,7 @@ namespace Connect4Testing
             passingTextData[5] = txt_TotalNumOfGames.Text;
             stats.WriteToFile(passingTextData);
         }
-        public void WhoHasWon()
+        public void WhoHasWon() // function used to set the visiblity on the labels depending on who won
         {
             int results = GetWinningPlayer();
             if (results == 0)
@@ -160,11 +152,9 @@ namespace Connect4Testing
                 lbl_CompWonDisplay.Visible = false;
                 lbl_PlayWonDisplay.Visible = false;
                 lbl_TieGameDisplay.Visible = true;
-
             }
             GetTextBoxData();
         }
-
         private void GameOverForm_Load(object sender, EventArgs e)
         {
             //Sound.background();

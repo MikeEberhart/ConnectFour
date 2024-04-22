@@ -15,7 +15,6 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
-
         private Sound Sound = new Sound();
 
         public TwoPlayerForm(WelcomeForm wf)
@@ -25,11 +24,11 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
-            Sound.musicBack();
+            //Sound.MusicBack();
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
-            Sound.buttonClick();
+            Sound.ButtonClick();
             gameBoardHere.Piece_Placement(sender, 2);
             if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
             {
@@ -42,17 +41,17 @@ namespace Connect4Testing
         }
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Sound.buttonClick();
-            Application.Exit();
+            Sound.ButtonClick();
+            Environment.Exit(0);
         }
         private void btn_Quit_Click(object sender, EventArgs e)
         {
-            Sound.buttonClick();
-            Application.Exit();
+            Sound.ButtonClick();
+            Environment.Exit(0);
         }
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
-            Sound.buttonClick();
+            Sound.ButtonClick();
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.ResetTurn(pnl_BoardPanel);
             ShowFormButtons();
@@ -63,13 +62,13 @@ namespace Connect4Testing
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
-            Sound.buttonClick();
+            Sound.ButtonClick();
             wForm.Show();
             this.Hide();
         }
         private void GameOver()
         {
-            Sound.warning();
+            Sound.Warning();
             HideFormButtons();
         }
         public void HideFormButtons() // after a win hide the column buttons // used with gameover function

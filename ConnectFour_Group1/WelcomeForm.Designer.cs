@@ -39,6 +39,7 @@
             // btn_SinglePlayer
             // 
             this.btn_SinglePlayer.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_SinglePlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SinglePlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SinglePlayer.Location = new System.Drawing.Point(90, 71);
             this.btn_SinglePlayer.Name = "btn_SinglePlayer";
@@ -51,6 +52,7 @@
             // btn_TwoPlayer
             // 
             this.btn_TwoPlayer.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_TwoPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_TwoPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_TwoPlayer.Location = new System.Drawing.Point(90, 124);
             this.btn_TwoPlayer.Name = "btn_TwoPlayer";
@@ -63,6 +65,7 @@
             // btn_Statistics
             // 
             this.btn_Statistics.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Statistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Statistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Statistics.Location = new System.Drawing.Point(90, 176);
             this.btn_Statistics.Name = "btn_Statistics";
@@ -88,6 +91,7 @@
             // btn_Quit
             // 
             this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Quit.Location = new System.Drawing.Point(90, 228);
             this.btn_Quit.Name = "btn_Quit";

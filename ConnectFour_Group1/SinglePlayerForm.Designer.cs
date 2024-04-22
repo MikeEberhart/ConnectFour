@@ -91,7 +91,7 @@
             // 
             this.btn_ColumnSix.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnSix.FlatAppearance.BorderSize = 0;
+            this.btn_ColumnSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnSix.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnSix.ForeColor = System.Drawing.Color.Black;
             this.btn_ColumnSix.Location = new System.Drawing.Point(586, 438);
@@ -108,7 +108,7 @@
             // 
             this.btn_ColumnFive.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnFive.FlatAppearance.BorderSize = 0;
+            this.btn_ColumnFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnFive.ForeColor = System.Drawing.Color.Black;
             this.btn_ColumnFive.Location = new System.Drawing.Point(494, 438);
@@ -125,7 +125,7 @@
             // 
             this.btn_ColumnFour.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnFour.FlatAppearance.BorderSize = 0;
+            this.btn_ColumnFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnFour.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnFour.ForeColor = System.Drawing.Color.Black;
             this.btn_ColumnFour.Location = new System.Drawing.Point(405, 438);
@@ -142,7 +142,7 @@
             // 
             this.btn_ColumnThree.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnThree.FlatAppearance.BorderSize = 0;
+            this.btn_ColumnThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnThree.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnThree.ForeColor = System.Drawing.Color.Black;
             this.btn_ColumnThree.Location = new System.Drawing.Point(315, 438);
@@ -159,7 +159,7 @@
             // 
             this.btn_ColumnTwo.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnTwo.FlatAppearance.BorderSize = 0;
+            this.btn_ColumnTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnTwo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnTwo.ForeColor = System.Drawing.Color.Black;
             this.btn_ColumnTwo.Location = new System.Drawing.Point(224, 438);
@@ -176,7 +176,7 @@
             // 
             this.btn_ColumnOne.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnOne.FlatAppearance.BorderSize = 0;
+            this.btn_ColumnOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnOne.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnOne.ForeColor = System.Drawing.Color.Black;
             this.btn_ColumnOne.Location = new System.Drawing.Point(134, 438);
@@ -193,7 +193,7 @@
             // 
             this.btn_ColumnZero.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btn_ColumnZero.FlatAppearance.BorderSize = 0;
+            this.btn_ColumnZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnZero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_ColumnZero.ForeColor = System.Drawing.Color.Black;
             this.btn_ColumnZero.Location = new System.Drawing.Point(44, 438);
@@ -209,6 +209,7 @@
             // btn_Quit
             // 
             this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Quit.Location = new System.Drawing.Point(452, 533);
             this.btn_Quit.Name = "btn_Quit";
@@ -221,6 +222,7 @@
             // btn_MainMenu
             // 
             this.btn_MainMenu.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_MainMenu.Location = new System.Drawing.Point(273, 533);
             this.btn_MainMenu.Name = "btn_MainMenu";
@@ -233,6 +235,7 @@
             // btn_PlayAgain
             // 
             this.btn_PlayAgain.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_PlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_PlayAgain.Location = new System.Drawing.Point(92, 533);
             this.btn_PlayAgain.Name = "btn_PlayAgain";
@@ -255,6 +258,7 @@
             // btn_Back
             // 
             this.btn_Back.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Back.Location = new System.Drawing.Point(195, 438);
             this.btn_Back.Name = "btn_Back";

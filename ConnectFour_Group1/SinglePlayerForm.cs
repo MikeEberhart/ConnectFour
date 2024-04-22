@@ -15,10 +15,9 @@ namespace Connect4Testing
     {
         private WelcomeForm wForm;
         private GameBoard gameBoardHere = new GameBoard();
-
+        private bool quitBtnClick = false;
         private Sound Sound = new Sound();
-
-        private GameOverForm gameOverStats; //added this here since it was being used more than once
+        private GameOverForm gameOverStats;
 
         public SinglePlayerForm(WelcomeForm wf)
         {
@@ -27,50 +26,50 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
-            //Sound.musicBack();
+            //Sound.MusicBack();
         }
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
         {
             ClearBoard();
             ShowFormButtons();
-            if(gameOverStats != null) gameOverStats.Hide();
-            Sound.buttonClick();  
+            Sound.ButtonClick();
+            quitBtnClick = true;
+            if (gameOverStats != null) gameOverStats.Hide();   
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
-            wForm.Show();
+            Sound.ButtonClick();
+            quitBtnClick = true;
             if (gameOverStats != null) gameOverStats.Hide();
             this.Hide();
-            Sound.buttonClick();
+            wForm.Show();
+
         }
         private void btn_Quit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-            Sound.buttonClick();
+            quitBtnClick = true;
+            Sound.ButtonClick();
+            Environment.Exit(0);
         }
         private void btn_Back_Click(object sender, EventArgs e)
         {
+            Sound.ButtonClick();
             this.Hide();
-            Sound.buttonClick();
         }
         private void SinglePlayerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //if (GameOverForm.ActiveForm != null) // used so closing the review board doesn't close everything
-            //{                                    // but keeps causing the program to not close when GameOverForm closes
-            //    e.Cancel = true;
-            //    this.Hide();
-            //}
-            Application.Exit();
-            Sound.warning(); 
-        }
-        public void SinglePlayerFormClosed()
-        {
+            if (GameOverForm.ActiveForm != null && quitBtnClick == false) // used so closing the review board doesn't close everything
+            {                                                             // but keeps causing the program to not close when GameOverForm closes
+                e.Cancel = true;
+                this.Hide();
+            }
+            Sound.Warning();
             Application.Exit();
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
-            Sound.buttonClick();
+            Sound.ButtonClick();
             gameBoardHere.Piece_Placement(sender, 1); // removed 'e' since it was unused
             if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
             {
@@ -80,11 +79,10 @@ namespace Connect4Testing
             {
                 GameOver();
             }
-
         }
         private void GameOver()
         {
-            Sound.warning();
+            Sound.Warning();
             gameOverStats = new GameOverForm(this);
             int turn = gameBoardHere.GetPlayerTurn();
             gameOverStats.SetWinningPlayer(turn);
@@ -94,7 +92,7 @@ namespace Connect4Testing
         }
         public void ClearBoard() //used in GameOver to clear the board for a new game
         {
-            Sound.warning();
+            Sound.Warning();
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.ResetTurn(pnl_BoardPanel);
             foreach (Button piece in pnl_BoardPanel.Controls.OfType<Button>())
@@ -104,7 +102,6 @@ namespace Connect4Testing
         }
         public void HideFormButtons() //added this to hide the buttons when reviewing the board
         {
-
             btn_ColumnZero.Visible = false;
             btn_ColumnOne.Visible = false;
             btn_ColumnTwo.Visible = false;
@@ -115,8 +112,7 @@ namespace Connect4Testing
             btn_MainMenu.Visible = false;
             btn_PlayAgain.Visible = false;
             btn_Back.Visible = true;
-            btn_Quit.Location = new Point(346, 438);
-            
+            btn_Quit.Location = new Point(346, 438); 
         }
         public void ShowFormButtons() //added to show the buttons again when playing again
         {
@@ -140,10 +136,9 @@ namespace Connect4Testing
         {
             gameBoardHere.HidePossibleMove(sender);
         }
-
         private void SinglePlayerForm_Load(object sender, EventArgs e)
         {
-            //Sound.musicBack();
+            //Sound.MusicBack();
         }
     }
 }

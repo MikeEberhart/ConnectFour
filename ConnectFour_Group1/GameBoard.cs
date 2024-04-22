@@ -383,7 +383,7 @@ namespace Connect4Testing
                 //Console.WriteLine(tempButton.Location.Y);
                 await Task.Delay(1);
             }
-            await Task.Delay(500);
+            //await Task.Delay(500);
         }
     }
 }

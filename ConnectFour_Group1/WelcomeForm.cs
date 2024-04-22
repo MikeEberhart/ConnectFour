@@ -12,14 +12,18 @@ namespace Connect4Testing
 {
     public partial class WelcomeForm : Form
     {
+        private Sound Sound = new Sound();
+
         public WelcomeForm()
         {
             InitializeComponent();
             CenterToScreen();
+            Sound.MusicBack();
         }
 
         private void btn_SinglePlayer_Click(object sender, EventArgs e)
         {
+            Sound.ButtonClick();
             SinglePlayerForm singlePlayer = new SinglePlayerForm(this);
             singlePlayer.Show();
             this.Hide();
@@ -27,6 +31,7 @@ namespace Connect4Testing
 
         private void btn_TwoPlayer_Click(object sender, EventArgs e)
         {
+            Sound.ButtonClick();
             TwoPlayerForm twoPlayer = new TwoPlayerForm(this);
             twoPlayer.Show();
             this.Hide();
@@ -34,14 +39,15 @@ namespace Connect4Testing
 
         private void btn_Statistics_Click(object sender, EventArgs e)
         {
+            Sound.ButtonClick();
             StatsForm stats = new StatsForm(this);
             stats.Show();
             this.Hide();
         }
-
         private void btn_Quit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Sound.ButtonClick();
+            Environment.Exit(0);
         }
     }
 }

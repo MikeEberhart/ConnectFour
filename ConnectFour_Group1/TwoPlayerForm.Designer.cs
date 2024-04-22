@@ -89,6 +89,7 @@
             // btn_Quit
             // 
             this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Quit.Location = new System.Drawing.Point(449, 531);
             this.btn_Quit.Name = "btn_Quit";
@@ -101,6 +102,7 @@
             // btn_MainMenu
             // 
             this.btn_MainMenu.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_MainMenu.Location = new System.Drawing.Point(270, 531);
             this.btn_MainMenu.Name = "btn_MainMenu";
@@ -113,6 +115,7 @@
             // btn_PlayAgain
             // 
             this.btn_PlayAgain.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_PlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_PlayAgain.Location = new System.Drawing.Point(91, 531);
             this.btn_PlayAgain.Name = "btn_PlayAgain";
@@ -126,6 +129,7 @@
             // 
             this.btn_ColumnSix.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnSix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnSix.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnSix.Location = new System.Drawing.Point(586, 438);
             this.btn_ColumnSix.Name = "btn_ColumnSix";
             this.btn_ColumnSix.Size = new System.Drawing.Size(55, 52);
@@ -140,6 +144,7 @@
             // 
             this.btn_ColumnFive.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnFive.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnFive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnFive.Location = new System.Drawing.Point(494, 438);
             this.btn_ColumnFive.Name = "btn_ColumnFive";
             this.btn_ColumnFive.Size = new System.Drawing.Size(55, 52);
@@ -154,6 +159,7 @@
             // 
             this.btn_ColumnFour.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnFour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnFour.Location = new System.Drawing.Point(405, 438);
             this.btn_ColumnFour.Name = "btn_ColumnFour";
             this.btn_ColumnFour.Size = new System.Drawing.Size(55, 52);
@@ -168,6 +174,7 @@
             // 
             this.btn_ColumnThree.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnThree.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnThree.Location = new System.Drawing.Point(315, 438);
             this.btn_ColumnThree.Name = "btn_ColumnThree";
             this.btn_ColumnThree.Size = new System.Drawing.Size(55, 52);
@@ -182,6 +189,7 @@
             // 
             this.btn_ColumnTwo.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnTwo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnTwo.Location = new System.Drawing.Point(224, 438);
             this.btn_ColumnTwo.Name = "btn_ColumnTwo";
             this.btn_ColumnTwo.Size = new System.Drawing.Size(55, 52);
@@ -196,6 +204,7 @@
             // 
             this.btn_ColumnOne.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnOne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnOne.Location = new System.Drawing.Point(134, 438);
             this.btn_ColumnOne.Name = "btn_ColumnOne";
             this.btn_ColumnOne.Size = new System.Drawing.Size(55, 52);
@@ -210,6 +219,7 @@
             // 
             this.btn_ColumnZero.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_ColumnZero.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ColumnZero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ColumnZero.Location = new System.Drawing.Point(44, 438);
             this.btn_ColumnZero.Name = "btn_ColumnZero";
             this.btn_ColumnZero.Size = new System.Drawing.Size(55, 52);

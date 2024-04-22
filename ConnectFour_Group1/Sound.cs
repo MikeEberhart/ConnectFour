@@ -16,22 +16,21 @@ namespace Connect4Testing
         Stream soundFile2;
         SoundPlayer player2;
 
-        public void buttonClick()
+        public void ButtonClick()
         {
             soundFile = Properties.Resources.newClick;
             player = new SoundPlayer(soundFile);
             player.Play();
-            //musicBack();
-
+            //MusicBack();
         }
-        public void warning()
+        public void Warning()
         {
             soundFile = Properties.Resources.newWarn;
             player = new SoundPlayer(soundFile);
             player.Play();
-            //musicBack();
+            //MusicBack();
         }
-        public void musicBack()
+        public void MusicBack()
         {
             soundFile2 = Properties.Resources.background;
             player2 = new SoundPlayer(soundFile2);

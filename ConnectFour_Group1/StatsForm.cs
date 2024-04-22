@@ -27,6 +27,8 @@ namespace Connect4Testing
         private double tempCompWin;
         private double playerWinPercentage;
         private double compWinPercentage;
+        private Sound Sound = new Sound();
+
         public StatsForm(WelcomeForm wf)
         {
             InitializeComponent();
@@ -43,16 +45,19 @@ namespace Connect4Testing
 
         private void StatsForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            Application.Exit();
+            Sound.ButtonClick();
+            Environment.Exit(0);
         }
 
         private void btn_Quit_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Sound.ButtonClick();
+            Environment.Exit(0);
         }
 
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
+            Sound.ButtonClick();
             wForm.Show();
             this.Hide();
         }

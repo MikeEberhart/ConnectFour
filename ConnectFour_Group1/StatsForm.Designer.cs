@@ -49,10 +49,11 @@
             // btn_MainMenu
             // 
             this.btn_MainMenu.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_MainMenu.Location = new System.Drawing.Point(61, 259);
+            this.btn_MainMenu.Location = new System.Drawing.Point(68, 266);
             this.btn_MainMenu.Name = "btn_MainMenu";
-            this.btn_MainMenu.Size = new System.Drawing.Size(123, 48);
+            this.btn_MainMenu.Size = new System.Drawing.Size(115, 48);
             this.btn_MainMenu.TabIndex = 0;
             this.btn_MainMenu.Text = "Main Menu";
             this.btn_MainMenu.UseVisualStyleBackColor = false;
@@ -61,10 +62,11 @@
             // btn_Quit
             // 
             this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Quit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Quit.Location = new System.Drawing.Point(190, 259);
+            this.btn_Quit.Location = new System.Drawing.Point(189, 266);
             this.btn_Quit.Name = "btn_Quit";
-            this.btn_Quit.Size = new System.Drawing.Size(123, 48);
+            this.btn_Quit.Size = new System.Drawing.Size(115, 48);
             this.btn_Quit.TabIndex = 1;
             this.btn_Quit.Text = "Quit";
             this.btn_Quit.UseVisualStyleBackColor = false;
@@ -214,7 +216,7 @@
             this.BackColor = System.Drawing.Color.MistyRose;
             this.BackgroundImage = global::Connect4Testing.Properties.Resources.c4pic;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(372, 328);
+            this.ClientSize = new System.Drawing.Size(370, 344);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_CompWinPercentage);
             this.Controls.Add(this.txt_PlayerWinPercentage);
