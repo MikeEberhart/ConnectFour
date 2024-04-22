@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameOverForm));
             this.btn_MainMenu = new System.Windows.Forms.Button();
             this.btn_Review = new System.Windows.Forms.Button();
             this.btn_PlayAgain = new System.Windows.Forms.Button();
@@ -87,7 +88,9 @@
             // 
             // txt_CompWinPercentage
             // 
-            this.txt_CompWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_CompWinPercentage.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_CompWinPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_CompWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CompWinPercentage.Location = new System.Drawing.Point(302, 196);
             this.txt_CompWinPercentage.Name = "txt_CompWinPercentage";
             this.txt_CompWinPercentage.ReadOnly = true;
@@ -97,7 +100,9 @@
             // 
             // txt_PlayerWinPercentage
             // 
-            this.txt_PlayerWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_PlayerWinPercentage.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_PlayerWinPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_PlayerWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_PlayerWinPercentage.Location = new System.Drawing.Point(302, 132);
             this.txt_PlayerWinPercentage.Name = "txt_PlayerWinPercentage";
             this.txt_PlayerWinPercentage.ReadOnly = true;
@@ -107,7 +112,9 @@
             // 
             // txt_TotalNumOfGames
             // 
-            this.txt_TotalNumOfGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TotalNumOfGames.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_TotalNumOfGames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_TotalNumOfGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TotalNumOfGames.Location = new System.Drawing.Point(302, 260);
             this.txt_TotalNumOfGames.Name = "txt_TotalNumOfGames";
             this.txt_TotalNumOfGames.ReadOnly = true;
@@ -117,7 +124,9 @@
             // 
             // txt_TotalTies
             // 
-            this.txt_TotalTies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TotalTies.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_TotalTies.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_TotalTies.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TotalTies.Location = new System.Drawing.Point(302, 228);
             this.txt_TotalTies.Name = "txt_TotalTies";
             this.txt_TotalTies.ReadOnly = true;
@@ -127,7 +136,9 @@
             // 
             // txt_TotalCompWins
             // 
-            this.txt_TotalCompWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TotalCompWins.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_TotalCompWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_TotalCompWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TotalCompWins.Location = new System.Drawing.Point(302, 164);
             this.txt_TotalCompWins.Name = "txt_TotalCompWins";
             this.txt_TotalCompWins.ReadOnly = true;
@@ -137,7 +148,9 @@
             // 
             // txt_TotalPlayerWins
             // 
-            this.txt_TotalPlayerWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_TotalPlayerWins.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_TotalPlayerWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_TotalPlayerWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_TotalPlayerWins.Location = new System.Drawing.Point(302, 100);
             this.txt_TotalPlayerWins.Name = "txt_TotalPlayerWins";
             this.txt_TotalPlayerWins.ReadOnly = true;
@@ -224,10 +237,10 @@
             // lbl_PlayWonDisplay
             // 
             this.lbl_PlayWonDisplay.AutoSize = true;
-            this.lbl_PlayWonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PlayWonDisplay.Location = new System.Drawing.Point(138, 34);
+            this.lbl_PlayWonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_PlayWonDisplay.Location = new System.Drawing.Point(135, 34);
             this.lbl_PlayWonDisplay.Name = "lbl_PlayWonDisplay";
-            this.lbl_PlayWonDisplay.Size = new System.Drawing.Size(216, 50);
+            this.lbl_PlayWonDisplay.Size = new System.Drawing.Size(237, 50);
             this.lbl_PlayWonDisplay.TabIndex = 27;
             this.lbl_PlayWonDisplay.Text = "Congratulations\r\nPlayer 1 you\'ve won!!";
             this.lbl_PlayWonDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -235,10 +248,10 @@
             // lbl_CompWonDisplay
             // 
             this.lbl_CompWonDisplay.AutoSize = true;
-            this.lbl_CompWonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_CompWonDisplay.Location = new System.Drawing.Point(75, 34);
+            this.lbl_CompWonDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_CompWonDisplay.Location = new System.Drawing.Point(71, 34);
             this.lbl_CompWonDisplay.Name = "lbl_CompWonDisplay";
-            this.lbl_CompWonDisplay.Size = new System.Drawing.Size(339, 50);
+            this.lbl_CompWonDisplay.Size = new System.Drawing.Size(370, 50);
             this.lbl_CompWonDisplay.TabIndex = 28;
             this.lbl_CompWonDisplay.Text = "The computer has outsmarted you\r\nThe AI has won!!";
             this.lbl_CompWonDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -246,10 +259,10 @@
             // lbl_TieGameDisplay
             // 
             this.lbl_TieGameDisplay.AutoSize = true;
-            this.lbl_TieGameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TieGameDisplay.Location = new System.Drawing.Point(127, 34);
+            this.lbl_TieGameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TieGameDisplay.Location = new System.Drawing.Point(124, 34);
             this.lbl_TieGameDisplay.Name = "lbl_TieGameDisplay";
-            this.lbl_TieGameDisplay.Size = new System.Drawing.Size(215, 50);
+            this.lbl_TieGameDisplay.Size = new System.Drawing.Size(233, 50);
             this.lbl_TieGameDisplay.TabIndex = 29;
             this.lbl_TieGameDisplay.Text = "The game has ended\r\nin a tie!!";
             this.lbl_TieGameDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,6 +296,7 @@
             this.Controls.Add(this.btn_Review);
             this.Controls.Add(this.btn_PlayAgain);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "GameOverForm";
             this.Text = "GameOverForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameOverForm_FormClosing);

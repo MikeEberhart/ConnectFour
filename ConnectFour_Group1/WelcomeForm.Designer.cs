@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(WelcomeForm));
             this.btn_SinglePlayer = new System.Windows.Forms.Button();
             this.btn_TwoPlayer = new System.Windows.Forms.Button();
             this.btn_Statistics = new System.Windows.Forms.Button();
@@ -109,6 +110,7 @@
             this.Controls.Add(this.btn_Statistics);
             this.Controls.Add(this.btn_TwoPlayer);
             this.Controls.Add(this.btn_SinglePlayer);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "WelcomeForm";
             this.Text = "Welcome to Connect Four";
             this.ResumeLayout(false);

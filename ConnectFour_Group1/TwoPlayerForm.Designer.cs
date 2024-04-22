@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TwoPlayerForm));
             this.btn_Quit = new System.Windows.Forms.Button();
             this.btn_MainMenu = new System.Windows.Forms.Button();
             this.btn_PlayAgain = new System.Windows.Forms.Button();
@@ -844,8 +845,9 @@
             this.Controls.Add(this.btn_ColumnOne);
             this.Controls.Add(this.btn_ColumnZero);
             this.Controls.Add(this.pnl_BoardPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TwoPlayerForm";
-            this.Text = "Two Player";
+            this.Text = "TwoPlayer";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TwoPlayerForm_FormClosed);
             this.pnl_BoardPanel.ResumeLayout(false);
             this.ResumeLayout(false);

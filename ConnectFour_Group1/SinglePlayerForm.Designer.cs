@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SinglePlayerForm));
             this.btn_ColumnSix = new System.Windows.Forms.Button();
             this.btn_ColumnFive = new System.Windows.Forms.Button();
             this.btn_ColumnFour = new System.Windows.Forms.Button();
@@ -38,6 +39,8 @@
             this.btn_Quit = new System.Windows.Forms.Button();
             this.btn_MainMenu = new System.Windows.Forms.Button();
             this.btn_PlayAgain = new System.Windows.Forms.Button();
+            this.lbl_TurnDisplay = new System.Windows.Forms.Label();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.pnl_BoardPanel = new System.Windows.Forms.Panel();
             this.btn_ZeroZero = new System.Windows.Forms.Button();
             this.btn_ZeroOne = new System.Windows.Forms.Button();
@@ -81,8 +84,6 @@
             this.btn_FiveFour = new System.Windows.Forms.Button();
             this.btn_FiveFive = new System.Windows.Forms.Button();
             this.btn_FiveSix = new System.Windows.Forms.Button();
-            this.lbl_TurnDisplay = new System.Windows.Forms.Label();
-            this.btn_Back = new System.Windows.Forms.Button();
             this.pnl_BoardPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -240,6 +241,29 @@
             this.btn_PlayAgain.Text = "Play Again";
             this.btn_PlayAgain.UseVisualStyleBackColor = false;
             this.btn_PlayAgain.Click += new System.EventHandler(this.btn_PlayAgain_Click);
+            // 
+            // lbl_TurnDisplay
+            // 
+            this.lbl_TurnDisplay.AutoSize = true;
+            this.lbl_TurnDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TurnDisplay.Location = new System.Drawing.Point(252, 497);
+            this.lbl_TurnDisplay.Name = "lbl_TurnDisplay";
+            this.lbl_TurnDisplay.Size = new System.Drawing.Size(184, 25);
+            this.lbl_TurnDisplay.TabIndex = 80;
+            this.lbl_TurnDisplay.Text = "Player One\'s Turn";
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Back.Location = new System.Drawing.Point(195, 438);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(145, 52);
+            this.btn_Back.TabIndex = 81;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = false;
+            this.btn_Back.Visible = false;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // pnl_BoardPanel
             // 
@@ -838,29 +862,6 @@
             this.btn_FiveSix.TabIndex = 79;
             this.btn_FiveSix.UseVisualStyleBackColor = false;
             // 
-            // lbl_TurnDisplay
-            // 
-            this.lbl_TurnDisplay.AutoSize = true;
-            this.lbl_TurnDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TurnDisplay.Location = new System.Drawing.Point(252, 497);
-            this.lbl_TurnDisplay.Name = "lbl_TurnDisplay";
-            this.lbl_TurnDisplay.Size = new System.Drawing.Size(184, 25);
-            this.lbl_TurnDisplay.TabIndex = 80;
-            this.lbl_TurnDisplay.Text = "Player One\'s Turn";
-            // 
-            // btn_Back
-            // 
-            this.btn_Back.BackColor = System.Drawing.Color.LightSalmon;
-            this.btn_Back.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Back.Location = new System.Drawing.Point(195, 438);
-            this.btn_Back.Name = "btn_Back";
-            this.btn_Back.Size = new System.Drawing.Size(145, 52);
-            this.btn_Back.TabIndex = 81;
-            this.btn_Back.Text = "Back";
-            this.btn_Back.UseVisualStyleBackColor = false;
-            this.btn_Back.Visible = false;
-            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
-            // 
             // SinglePlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -880,6 +881,7 @@
             this.Controls.Add(this.btn_ColumnOne);
             this.Controls.Add(this.btn_ColumnZero);
             this.Controls.Add(this.pnl_BoardPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SinglePlayerForm";
             this.Text = "SinglePlayer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SinglePlayerForm_FormClosing);
