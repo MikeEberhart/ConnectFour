@@ -47,12 +47,14 @@ namespace Connect4Testing
             Sound.musicBack();
         }
 
-        private void btn_Quit_Click(object sender, EventArgs e)
+        private void btn_MainMenu_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            WelcomeForm wForm = new WelcomeForm();
+            this.Hide();
+            wForm.Show();
         }
 
-        private void GameOverForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void GameOverForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
@@ -78,7 +80,6 @@ namespace Connect4Testing
         public void SetWinningPlayer(int p)
         {
             winningPlayer = p;
-            //Console.WriteLine(winningPlayer);
         }
         public int GetWinningPlayer()
         {
@@ -86,6 +87,7 @@ namespace Connect4Testing
         }
         private void UpdatingPlayerWinData()
         {
+            Sound.Applause();
             tempPWins++;
             tempNumOfGames++;
             tempDoublePWins = tempPWins;
@@ -93,10 +95,10 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            //Console.WriteLine("player");
         }
         private void UpdatingCompWinData()
         {
+            Sound.CrowdGasp();
             tempCWins++;
             tempNumOfGames++;
             tempDoublePWins = tempPWins;
@@ -104,10 +106,10 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            //Console.WriteLine("comp");
         }
         private void UpdatingTieData()
         {
+            Sound.CrowdGasp();
             tempTotalTies++;
             tempNumOfGames++;
             tempDoublePWins = tempPWins;
@@ -115,7 +117,6 @@ namespace Connect4Testing
             tempDoubleCWins = tempCWins;
             tempCPercent = tempDoubleCWins / tempNumOfGames;
             FillInTextBoxes();
-            //Console.WriteLine("tie");
         }
         private void FillInTextBoxes()
         {

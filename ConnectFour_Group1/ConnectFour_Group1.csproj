@@ -129,10 +129,14 @@
     <None Include="Resources\YellowPiece2.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\applause.wav" />
     <Content Include="Resources\background.wav" />
+    <None Include="Resources\background1.jpg" />
+    <None Include="Resources\c4pic.png" />
     <Content Include="Resources\clickNoise.wav" />
     <None Include="Resources\newClick.wav" />
     <None Include="Resources\newWarn.wav" />
+    <None Include="Resources\gasp_x.wav" />
     <Content Include="Resources\StatData.txt" />
     <Content Include="Resources\warningNoise.wav" />
   </ItemGroup>

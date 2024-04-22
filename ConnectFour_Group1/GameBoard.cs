@@ -72,6 +72,7 @@ namespace Connect4Testing
                     turnDisplay.Text = "Player Two's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Resources.RedPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "0";
+                    AnimationStart(rowindex, colindex);
                     if (WinChecker(GetGameBoard())) WinMessage();
                     if (TieGameCheck()) SetPlayerTurn(-1); // if tie game playerTurn = -1
                     if (TieGameCheck()) WinMessage();
@@ -87,6 +88,7 @@ namespace Connect4Testing
                     turnDisplay.Text = "Player One's Turn";
                     gameBoard[rowindex, colindex].GetButton().BackgroundImage = Resources.YellowPiece2;
                     gameBoard[rowindex, colindex].GetButton().Tag = "1";
+                    AnimationStart(rowindex, colindex);
                     if (WinChecker(GetGameBoard())) WinMessage();
                     if (TieGameCheck()) SetPlayerTurn(-1); // if tie game playerTurn = -1
                     if (TieGameCheck()) WinMessage();
@@ -128,7 +130,6 @@ namespace Connect4Testing
                 int skip = generatedColumn;
                 while (generatedColumn == skip)
                 {
-                    //Console.WriteLine(generatedColumn.ToString());
                     generatedColumn = random.Next(0, gameBoard.GetLength(1));
                 }
             }
@@ -144,7 +145,6 @@ namespace Connect4Testing
                     //if this results in a win run this
                     if (WinChecker(compboard))
                     {
-                        Console.WriteLine($"comp winning move at {rowindex}, {colindex}.");
                         compboard[rowindex, colindex].GetButton().Tag = null;
                         return colindex;
                     }
@@ -159,7 +159,6 @@ namespace Connect4Testing
                         // if it wins run this
                         if (WinChecker(compboard))
                         {
-                            Console.WriteLine($"player winning move at {rowindex}, {colindex}.");
                             compboard[rowindex, colindex].GetButton().Tag = null;
                             return colindex;
                         }
@@ -168,10 +167,9 @@ namespace Connect4Testing
                     }
                 }
             }
-            Console.WriteLine($"Playing at: {generatedColumn}");
             return generatedColumn;
         }
-        public int GetRow(int colindex)
+        public int GetRow(int colindex)// used to return the next open row in said column
         {
             Button currentButton;
             for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
@@ -183,7 +181,7 @@ namespace Connect4Testing
                 }
             }
             return -1;
-        } // used to return the next open row in said column
+        } 
         public void Piece_Placement(object sender, int form) // removed 'EventArgs e' since it was unuse
         {
             Button clickedButton = (Button)sender;
@@ -204,7 +202,7 @@ namespace Connect4Testing
                 MessageBox.Show("Column is full. Please select a new column");
             }
         }
-        public bool WinChecker(CellData[,] board)
+        public bool WinChecker(CellData[,] board) // Checking for the win
         {
             for (int row = 0; row < board.GetLength(0); row++)
             {
@@ -261,7 +259,7 @@ namespace Connect4Testing
                 }
             }
             return false;
-        } // Checking for Win
+        }
         public void ShowPossibleMoves(object sender)// MOUSE ENTER // used to see which button is being entered // not working just yet
         {
             Button enterButton = (Button)sender;
@@ -337,7 +335,7 @@ namespace Connect4Testing
             }
             return true;
         } 
-        public void WinMessage()// used to display the winning/gameover message
+        private void WinMessage()// used to display the winning/gameover message
         {
             int results = GetPlayerTurn();
             if (results == 0)
@@ -355,6 +353,37 @@ namespace Connect4Testing
                 turnDisplay.Text = "     Tie Game!";
                 MessageBox.Show("The Game is a Tie");
             }
-        } 
+        }
+        private async void AnimationStart(int row, int col) //fuction to await the Task FallingGamePieces
+        {
+            await FallingGamePieces(row, col);
+        }
+        //private async void AnimationEnd(int row, int col) // trying to make a function to stop code from proceeding until AnimationStart is finished
+        //{
+        //    await WaitingOnPiece(row, col);
+        //}
+        private async Task FallingGamePieces(int row, int col) // function performing the animations for the pieces dropping
+        {
+            //animationIsFinished = false;
+            Button tempButton = new Button();
+            tempButton = gameBoard[row, col].GetButton();
+            int endYAxis = tempButton.Location.Y;
+            //endingLocation = endYAxis;
+            int startYAxis = -30;
+            int tempYAxis = endYAxis - 10;
+            tempButton.Location = new Point(tempButton.Location.X, startYAxis);
+            while (tempButton.Location.Y != endYAxis)
+            {
+                tempButton.Location = new Point(tempButton.Location.X, tempButton.Location.Y + 5);
+                if (tempButton.Location.Y >= tempYAxis)
+                {
+                    tempButton.Location = new Point(tempButton.Location.X, endYAxis);
+                }
+                //if (tempButton.Location.Y == endYAxis) animationIsFinished = true;
+                //Console.WriteLine(tempButton.Location.Y);
+                await Task.Delay(1);
+            }
+            await Task.Delay(500);
+        }
     }
 }

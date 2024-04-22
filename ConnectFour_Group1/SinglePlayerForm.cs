@@ -27,13 +27,7 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
-            int num = 0;
-            foreach (CellData cldta in gameBoardHere.GetGameBoard())
-            {
-                cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
-                num++;
-            }
-            Sound.musicBack();
+            //Sound.musicBack();
         }
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
@@ -41,10 +35,7 @@ namespace Connect4Testing
             ClearBoard();
             ShowFormButtons();
             if(gameOverStats != null) gameOverStats.Hide();
-
-            Sound.buttonClick();
-            
-            
+            Sound.buttonClick();  
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
@@ -63,10 +54,19 @@ namespace Connect4Testing
             this.Hide();
             Sound.buttonClick();
         }
-        private void SinglePlayerForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void SinglePlayerForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //if (GameOverForm.ActiveForm != null) // used so closing the review board doesn't close everything
+            //{                                    // but keeps causing the program to not close when GameOverForm closes
+            //    e.Cancel = true;
+            //    this.Hide();
+            //}
             Application.Exit();
             Sound.warning(); 
+        }
+        public void SinglePlayerFormClosed()
+        {
+            Application.Exit();
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
@@ -85,13 +85,11 @@ namespace Connect4Testing
         private void GameOver()
         {
             Sound.warning();
-            //when the game is determined to be over can call this to send player to the game over form 
             gameOverStats = new GameOverForm(this);
             int turn = gameBoardHere.GetPlayerTurn();
             gameOverStats.SetWinningPlayer(turn);
             gameOverStats.WhoHasWon();
             gameOverStats.Show();
-            //Console.WriteLine(turn + "<- GameOver"); //used for testing
             this.Hide();
         }
         public void ClearBoard() //used in GameOver to clear the board for a new game
@@ -145,7 +143,7 @@ namespace Connect4Testing
 
         private void SinglePlayerForm_Load(object sender, EventArgs e)
         {
-
+            //Sound.musicBack();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Deployment.Application;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,17 +26,19 @@ namespace Connect4Testing
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
             Sound.musicBack();
-            //int num = 0;
-            //foreach (CellData cldta in cellDataArray)
-            //{
-            //    num++;
-            //    cldta.GetButton().Text = num.ToString(); // used to see the order of the buttons in the panel - delete later
-            //}
         }
         private void PlacingPieces(object sender, EventArgs e)
         {
             Sound.buttonClick();
             gameBoardHere.Piece_Placement(sender, 2);
+            if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
+            {
+                GameOver();
+            }
+            else if (gameBoardHere.TieGameCheck())
+            {
+                GameOver();
+            }
         }
         private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -64,6 +67,11 @@ namespace Connect4Testing
             wForm.Show();
             this.Hide();
         }
+        private void GameOver()
+        {
+            Sound.warning();
+            HideFormButtons();
+        }
         public void HideFormButtons() // after a win hide the column buttons // used with gameover function
         {
             btn_ColumnZero.Visible = false;
@@ -73,9 +81,9 @@ namespace Connect4Testing
             btn_ColumnFour.Visible = false;
             btn_ColumnFive.Visible = false;
             btn_ColumnSix.Visible = false;
-            btn_MainMenu.Visible = false;
-            btn_PlayAgain.Location = new Point(195, 438);
-            btn_Quit.Location = new Point(346, 438);
+            btn_MainMenu.Location = new Point(270, 438);
+            btn_PlayAgain.Location = new Point(91, 438);
+            btn_Quit.Location = new Point(449, 438);
         }
         public void ShowFormButtons() // used to show buttons again // used with playagain button
         {
@@ -86,9 +94,9 @@ namespace Connect4Testing
             btn_ColumnFour.Visible = true;
             btn_ColumnFive.Visible = true;
             btn_ColumnSix.Visible = true;
-            btn_MainMenu.Visible = true;
-            btn_PlayAgain.Location = new Point(90, 531);
-            btn_Quit.Location = new Point(452, 533);
+            btn_MainMenu.Location = new Point(270, 531);
+            btn_PlayAgain.Location = new Point(91, 531);
+            btn_Quit.Location = new Point(449, 531);
         }
         private void ShowMove(object sender, EventArgs e) // MOUSE ENTER // not working
         {

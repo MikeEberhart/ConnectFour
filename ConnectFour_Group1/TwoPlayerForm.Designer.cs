@@ -89,7 +89,7 @@
             // 
             this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Quit.Location = new System.Drawing.Point(450, 531);
+            this.btn_Quit.Location = new System.Drawing.Point(449, 531);
             this.btn_Quit.Name = "btn_Quit";
             this.btn_Quit.Size = new System.Drawing.Size(145, 52);
             this.btn_Quit.TabIndex = 90;
@@ -101,7 +101,7 @@
             // 
             this.btn_MainMenu.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_MainMenu.Location = new System.Drawing.Point(271, 531);
+            this.btn_MainMenu.Location = new System.Drawing.Point(270, 531);
             this.btn_MainMenu.Name = "btn_MainMenu";
             this.btn_MainMenu.Size = new System.Drawing.Size(145, 52);
             this.btn_MainMenu.TabIndex = 89;
@@ -113,7 +113,7 @@
             // 
             this.btn_PlayAgain.BackColor = System.Drawing.Color.LightSalmon;
             this.btn_PlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PlayAgain.Location = new System.Drawing.Point(90, 531);
+            this.btn_PlayAgain.Location = new System.Drawing.Point(91, 531);
             this.btn_PlayAgain.Name = "btn_PlayAgain";
             this.btn_PlayAgain.Size = new System.Drawing.Size(145, 52);
             this.btn_PlayAgain.TabIndex = 88;

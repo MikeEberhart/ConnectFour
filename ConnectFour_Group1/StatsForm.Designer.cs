@@ -71,60 +71,66 @@
             // lbl_TotalPlayerWins
             // 
             this.lbl_TotalPlayerWins.AutoSize = true;
+            this.lbl_TotalPlayerWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalPlayerWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalPlayerWins.Location = new System.Drawing.Point(64, 37);
             this.lbl_TotalPlayerWins.Name = "lbl_TotalPlayerWins";
-            this.lbl_TotalPlayerWins.Size = new System.Drawing.Size(168, 20);
+            this.lbl_TotalPlayerWins.Size = new System.Drawing.Size(170, 22);
             this.lbl_TotalPlayerWins.TabIndex = 2;
             this.lbl_TotalPlayerWins.Text = "Total Player Wins ->";
             // 
             // lbl_TotalComputerWins
             // 
             this.lbl_TotalComputerWins.AutoSize = true;
+            this.lbl_TotalComputerWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalComputerWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalComputerWins.Location = new System.Drawing.Point(45, 101);
             this.lbl_TotalComputerWins.Name = "lbl_TotalComputerWins";
-            this.lbl_TotalComputerWins.Size = new System.Drawing.Size(187, 20);
+            this.lbl_TotalComputerWins.Size = new System.Drawing.Size(189, 22);
             this.lbl_TotalComputerWins.TabIndex = 3;
             this.lbl_TotalComputerWins.Text = "Total Comuter Wins ->";
             // 
             // lbl_TotalWins
             // 
             this.lbl_TotalWins.AutoSize = true;
+            this.lbl_TotalWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalWins.Location = new System.Drawing.Point(124, 165);
             this.lbl_TotalWins.Name = "lbl_TotalWins";
-            this.lbl_TotalWins.Size = new System.Drawing.Size(108, 20);
+            this.lbl_TotalWins.Size = new System.Drawing.Size(110, 22);
             this.lbl_TotalWins.TabIndex = 4;
             this.lbl_TotalWins.Text = "Total Ties ->";
             // 
             // lbl_TotalNumOfGames
             // 
             this.lbl_TotalNumOfGames.AutoSize = true;
+            this.lbl_TotalNumOfGames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalNumOfGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalNumOfGames.Location = new System.Drawing.Point(12, 197);
             this.lbl_TotalNumOfGames.Name = "lbl_TotalNumOfGames";
-            this.lbl_TotalNumOfGames.Size = new System.Drawing.Size(220, 20);
+            this.lbl_TotalNumOfGames.Size = new System.Drawing.Size(222, 22);
             this.lbl_TotalNumOfGames.TabIndex = 5;
             this.lbl_TotalNumOfGames.Text = "Total Number of Games ->";
             // 
             // lbl_PlayerWinPercentage
             // 
             this.lbl_PlayerWinPercentage.AutoSize = true;
+            this.lbl_PlayerWinPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_PlayerWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_PlayerWinPercentage.Location = new System.Drawing.Point(131, 69);
             this.lbl_PlayerWinPercentage.Name = "lbl_PlayerWinPercentage";
-            this.lbl_PlayerWinPercentage.Size = new System.Drawing.Size(101, 20);
+            this.lbl_PlayerWinPercentage.Size = new System.Drawing.Size(103, 22);
             this.lbl_PlayerWinPercentage.TabIndex = 6;
             this.lbl_PlayerWinPercentage.Text = "<- Win % ->";
             // 
             // lbl_ComputerWinPercentage
             // 
             this.lbl_ComputerWinPercentage.AutoSize = true;
+            this.lbl_ComputerWinPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_ComputerWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_ComputerWinPercentage.Location = new System.Drawing.Point(131, 133);
             this.lbl_ComputerWinPercentage.Name = "lbl_ComputerWinPercentage";
-            this.lbl_ComputerWinPercentage.Size = new System.Drawing.Size(101, 20);
+            this.lbl_ComputerWinPercentage.Size = new System.Drawing.Size(103, 22);
             this.lbl_ComputerWinPercentage.TabIndex = 7;
             this.lbl_ComputerWinPercentage.Text = "<- Win % ->";
             // 
@@ -193,7 +199,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(353, 328);
+            this.BackgroundImage = global::Connect4Testing.Properties.Resources.c4pic;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(370, 328);
             this.Controls.Add(this.txt_CompWinPercentage);
             this.Controls.Add(this.txt_PlayerWinPercentage);
             this.Controls.Add(this.txt_TotalNumOfGames);
@@ -208,6 +216,7 @@
             this.Controls.Add(this.lbl_TotalPlayerWins);
             this.Controls.Add(this.btn_Quit);
             this.Controls.Add(this.btn_MainMenu);
+            this.DoubleBuffered = true;
             this.Name = "StatsForm";
             this.Text = "Statistics";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StatsForm_FormClosed);

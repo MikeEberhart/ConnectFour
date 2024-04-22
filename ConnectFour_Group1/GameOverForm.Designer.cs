@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_Quit = new System.Windows.Forms.Button();
+            this.btn_MainMenu = new System.Windows.Forms.Button();
             this.btn_Review = new System.Windows.Forms.Button();
             this.btn_PlayAgain = new System.Windows.Forms.Button();
             this.txt_CompWinPercentage = new System.Windows.Forms.TextBox();
@@ -49,17 +49,17 @@
             this.lbl_TieGameDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_Quit
+            // btn_MainMenu
             // 
-            this.btn_Quit.BackColor = System.Drawing.Color.LightSalmon;
-            this.btn_Quit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Quit.Location = new System.Drawing.Point(302, 295);
-            this.btn_Quit.Name = "btn_Quit";
-            this.btn_Quit.Size = new System.Drawing.Size(139, 48);
-            this.btn_Quit.TabIndex = 5;
-            this.btn_Quit.Text = "Quit";
-            this.btn_Quit.UseVisualStyleBackColor = false;
-            this.btn_Quit.Click += new System.EventHandler(this.btn_Quit_Click);
+            this.btn_MainMenu.BackColor = System.Drawing.Color.LightSalmon;
+            this.btn_MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_MainMenu.Location = new System.Drawing.Point(302, 295);
+            this.btn_MainMenu.Name = "btn_MainMenu";
+            this.btn_MainMenu.Size = new System.Drawing.Size(139, 48);
+            this.btn_MainMenu.TabIndex = 5;
+            this.btn_MainMenu.Text = "Main Menu";
+            this.btn_MainMenu.UseVisualStyleBackColor = false;
+            this.btn_MainMenu.Click += new System.EventHandler(this.btn_MainMenu_Click);
             // 
             // btn_Review
             // 
@@ -148,60 +148,66 @@
             // lbl_ComputerWinPercentage
             // 
             this.lbl_ComputerWinPercentage.AutoSize = true;
+            this.lbl_ComputerWinPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_ComputerWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_ComputerWinPercentage.Location = new System.Drawing.Point(195, 199);
+            this.lbl_ComputerWinPercentage.Location = new System.Drawing.Point(133, 199);
             this.lbl_ComputerWinPercentage.Name = "lbl_ComputerWinPercentage";
-            this.lbl_ComputerWinPercentage.Size = new System.Drawing.Size(101, 20);
+            this.lbl_ComputerWinPercentage.Size = new System.Drawing.Size(165, 22);
             this.lbl_ComputerWinPercentage.TabIndex = 19;
-            this.lbl_ComputerWinPercentage.Text = "<- Win % ->";
+            this.lbl_ComputerWinPercentage.Text = "Computer Win % ->";
             // 
             // lbl_PlayerWinPercentage
             // 
             this.lbl_PlayerWinPercentage.AutoSize = true;
+            this.lbl_PlayerWinPercentage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_PlayerWinPercentage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PlayerWinPercentage.Location = new System.Drawing.Point(195, 135);
+            this.lbl_PlayerWinPercentage.Location = new System.Drawing.Point(162, 135);
             this.lbl_PlayerWinPercentage.Name = "lbl_PlayerWinPercentage";
-            this.lbl_PlayerWinPercentage.Size = new System.Drawing.Size(101, 20);
+            this.lbl_PlayerWinPercentage.Size = new System.Drawing.Size(136, 22);
             this.lbl_PlayerWinPercentage.TabIndex = 18;
-            this.lbl_PlayerWinPercentage.Text = "<- Win % ->";
+            this.lbl_PlayerWinPercentage.Text = "Player Win % ->";
             // 
             // lbl_TotalNumOfGames
             // 
             this.lbl_TotalNumOfGames.AutoSize = true;
+            this.lbl_TotalNumOfGames.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalNumOfGames.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalNumOfGames.Location = new System.Drawing.Point(76, 263);
             this.lbl_TotalNumOfGames.Name = "lbl_TotalNumOfGames";
-            this.lbl_TotalNumOfGames.Size = new System.Drawing.Size(220, 20);
+            this.lbl_TotalNumOfGames.Size = new System.Drawing.Size(222, 22);
             this.lbl_TotalNumOfGames.TabIndex = 17;
             this.lbl_TotalNumOfGames.Text = "Total Number of Games ->";
             // 
             // lbl_TotalWins
             // 
             this.lbl_TotalWins.AutoSize = true;
+            this.lbl_TotalWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalWins.Location = new System.Drawing.Point(188, 231);
             this.lbl_TotalWins.Name = "lbl_TotalWins";
-            this.lbl_TotalWins.Size = new System.Drawing.Size(108, 20);
+            this.lbl_TotalWins.Size = new System.Drawing.Size(110, 22);
             this.lbl_TotalWins.TabIndex = 16;
             this.lbl_TotalWins.Text = "Total Ties ->";
             // 
             // lbl_TotalComputerWins
             // 
             this.lbl_TotalComputerWins.AutoSize = true;
+            this.lbl_TotalComputerWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalComputerWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalComputerWins.Location = new System.Drawing.Point(109, 167);
             this.lbl_TotalComputerWins.Name = "lbl_TotalComputerWins";
-            this.lbl_TotalComputerWins.Size = new System.Drawing.Size(187, 20);
+            this.lbl_TotalComputerWins.Size = new System.Drawing.Size(189, 22);
             this.lbl_TotalComputerWins.TabIndex = 15;
             this.lbl_TotalComputerWins.Text = "Total Comuter Wins ->";
             // 
             // lbl_TotalPlayerWins
             // 
             this.lbl_TotalPlayerWins.AutoSize = true;
+            this.lbl_TotalPlayerWins.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbl_TotalPlayerWins.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_TotalPlayerWins.Location = new System.Drawing.Point(128, 103);
             this.lbl_TotalPlayerWins.Name = "lbl_TotalPlayerWins";
-            this.lbl_TotalPlayerWins.Size = new System.Drawing.Size(168, 20);
+            this.lbl_TotalPlayerWins.Size = new System.Drawing.Size(170, 22);
             this.lbl_TotalPlayerWins.TabIndex = 14;
             this.lbl_TotalPlayerWins.Text = "Total Player Wins ->";
             // 
@@ -254,7 +260,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
-            this.ClientSize = new System.Drawing.Size(485, 370);
+            this.BackgroundImage = global::Connect4Testing.Properties.Resources.c4pic;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(458, 370);
             this.Controls.Add(this.lbl_TieGameDisplay);
             this.Controls.Add(this.lbl_CompWonDisplay);
             this.Controls.Add(this.lbl_PlayWonDisplay);
@@ -271,12 +279,13 @@
             this.Controls.Add(this.lbl_TotalWins);
             this.Controls.Add(this.lbl_TotalComputerWins);
             this.Controls.Add(this.lbl_TotalPlayerWins);
-            this.Controls.Add(this.btn_Quit);
+            this.Controls.Add(this.btn_MainMenu);
             this.Controls.Add(this.btn_Review);
             this.Controls.Add(this.btn_PlayAgain);
+            this.DoubleBuffered = true;
             this.Name = "GameOverForm";
             this.Text = "GameOverForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.GameOverForm_FormClosed);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameOverForm_FormClosing);
             this.Load += new System.EventHandler(this.GameOverForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -285,7 +294,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btn_Quit;
+        private System.Windows.Forms.Button btn_MainMenu;
         private System.Windows.Forms.Button btn_Review;
         private System.Windows.Forms.Button btn_PlayAgain;
         private System.Windows.Forms.TextBox txt_CompWinPercentage;
