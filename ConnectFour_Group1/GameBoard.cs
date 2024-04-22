@@ -19,6 +19,7 @@ namespace Connect4Testing
         private int playerTurn = 0;
         private int tempPlayerTurn;
         private Label turnDisplay;
+
         public int GetPlayerTurn()
         {
             return tempPlayerTurn;
@@ -59,6 +60,26 @@ namespace Connect4Testing
             foreach (Button btn in pnl.Controls.OfType<Button>()) // used to reset the Tag properties
             {
                 btn.Tag = null;
+            }
+        }
+        public void Piece_Placement(object sender, int form) // main function used to start the process of placing game pieces
+        {
+            Button clickedButton = (Button)sender;
+            int colIndex = -1;
+            if (clickedButton.Name == "btn_ColumnZero") colIndex = 0;
+            else if (clickedButton.Name == "btn_ColumnOne") colIndex = 1;
+            else if (clickedButton.Name == "btn_ColumnTwo") colIndex = 2;
+            else if (clickedButton.Name == "btn_ColumnThree") colIndex = 3;
+            else if (clickedButton.Name == "btn_ColumnFour") colIndex = 4;
+            else if (clickedButton.Name == "btn_ColumnFive") colIndex = 5;
+            else if (clickedButton.Name == "btn_ColumnSix") colIndex = 6;
+            if (colIndex != -1 && !ColumnIsFull(colIndex))
+            {
+                DropPieces(colIndex, form);
+            }
+            else
+            {
+                MessageBox.Show("Column is full. Please select a new column");
             }
         }
         public void DropPieces(int colindex, int form)
@@ -125,7 +146,8 @@ namespace Connect4Testing
             Random random = new Random();
             int generatedColumn = random.Next(0,gameBoard.GetLength(1));
             //re-roll random number if column is full
-            while (compboard[5, generatedColumn].GetButton().Tag != null)
+                                                  //while (compboard[5, generatedColumn].GetButton().Tag != null)
+            while (ColumnIsFull(generatedColumn)) // same functionality as above, just easier to read
             {
                 int skip = generatedColumn;
                 while (generatedColumn == skip)
@@ -168,39 +190,6 @@ namespace Connect4Testing
                 }
             }
             return generatedColumn;
-        }
-        public int GetRow(int colindex)// used to return the next open row in said column
-        {
-            Button currentButton;
-            for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
-            {
-                currentButton = gameBoard[row, colindex].GetButton();
-                if (currentButton.Tag == null)
-                {
-                    return row;
-                }
-            }
-            return -1;
-        } 
-        public void Piece_Placement(object sender, int form) // removed 'EventArgs e' since it was unuse
-        {
-            Button clickedButton = (Button)sender;
-            int colIndex = -1;
-            if (clickedButton.Name == "btn_ColumnZero") colIndex = 0;
-            else if (clickedButton.Name == "btn_ColumnOne") colIndex = 1;
-            else if (clickedButton.Name == "btn_ColumnTwo") colIndex = 2;
-            else if (clickedButton.Name == "btn_ColumnThree") colIndex = 3;
-            else if (clickedButton.Name == "btn_ColumnFour") colIndex = 4;
-            else if (clickedButton.Name == "btn_ColumnFive") colIndex = 5;
-            else if (clickedButton.Name == "btn_ColumnSix") colIndex = 6;
-            if(colIndex != -1 && !ColumnIsFull(colIndex))
-            {
-                DropPieces(colIndex, form);
-            }
-            else
-            {
-                MessageBox.Show("Column is full. Please select a new column");
-            }
         }
         public bool WinChecker(CellData[,] board) // Checking for the win
         {
@@ -260,6 +249,36 @@ namespace Connect4Testing
             }
             return false;
         }
+        public bool TieGameCheck()// checking if the game is a tie game or not 
+        {
+            for (int col = 0; col < gameBoard.GetLength(1); col++)
+            {
+                if (ColumnIsFull(col) != true)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public int GetRow(int colindex)// used to return the next open row in said column
+        {
+            Button currentButton;
+            for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
+            {
+                currentButton = gameBoard[row, colindex].GetButton();
+                if (currentButton.Tag == null)
+                {
+                    return row;
+                }
+            }
+            return -1;
+        }
+        private bool ColumnIsFull(int col)// used to check if the column is full - if column is full - return true;
+        {
+            Button currentButton = gameBoard[5, col].GetButton();
+            if (currentButton.Tag != null) return true;
+            else return false;
+        }
         public void ShowPossibleMoves(object sender)// MOUSE ENTER // used to see which button is being entered // not working just yet
         {
             Button enterButton = (Button)sender;
@@ -282,6 +301,22 @@ namespace Connect4Testing
             else if (leaveButton.Name == "btn_ColumnFive") TempImageRemoved(5);
             else if (leaveButton.Name == "btn_ColumnSix") TempImageRemoved(6);
         }
+        public void TempImagePlacement(int col) // used to place the temp image
+        {
+            if (!ColumnIsFull(col))
+            {
+                int row = GetRow(col);
+                Button thisButton = gameBoard[row, col].GetButton();
+                if (thisButton.Tag == null && thisButton.BackgroundImage == null && playerTurn == 0)
+                {
+                    thisButton.BackgroundImage = Resources.RedPiece2;
+                }
+                else if (thisButton.Tag == null && thisButton.BackgroundImage == null && playerTurn == 1)
+                {
+                    thisButton.BackgroundImage = Resources.YellowPiece2;
+                }
+            }
+        }
         public void TempImageRemoved(int col) // used to remove the temp image
         {
             if (!ColumnIsFull(col))
@@ -294,47 +329,7 @@ namespace Connect4Testing
                     otherButton.BackgroundImage = null;
                 }
             }
-        }      
-        public void TempImagePlacement(int col) // used to place the temp image
-        {
-            if(!ColumnIsFull(col))
-            {
-                int row = GetRow(col);
-                Button thisButton = gameBoard[row, col].GetButton();
-                if (thisButton.Tag == null && thisButton.BackgroundImage == null && playerTurn == 0)
-                {
-                    thisButton.BackgroundImage = Resources.RedPiece2;
-                }
-                else if(thisButton.Tag == null && thisButton.BackgroundImage == null && playerTurn == 1)
-                {
-                    thisButton.BackgroundImage = Resources.YellowPiece2;
-                }
-            }
         }
-        private bool ColumnIsFull(int col)// used to check if the column is full
-        {
-            Button currentButton;
-            for (int row = 0; row <= gameBoard.GetLength(0) - 1; row++)
-            {
-                currentButton = gameBoard[row, col].GetButton();
-                if (currentButton.Tag == null)
-                {
-                    return false;
-                }
-            }
-            return true;
-        } 
-        public bool TieGameCheck()// checking if the game is a tie game or not
-        {
-            for (int col = 0; col < gameBoard.GetLength(1); col++)
-            {
-                if (ColumnIsFull(col) != true)
-                {
-                    return false;
-                }
-            }
-            return true;
-        } 
         private void WinMessage()// used to display the winning/gameover message
         {
             int results = GetPlayerTurn();

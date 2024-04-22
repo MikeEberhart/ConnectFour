@@ -12,7 +12,6 @@ namespace Connect4Testing
         private int row {  get; set; }
         private int column {  get; set; }
         private Button btn  {  get; set; }
-
         public CellData(int r, int c, Button b)
         {
             row = r;
