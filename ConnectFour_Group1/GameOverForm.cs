@@ -37,7 +37,6 @@ namespace Connect4Testing
             tempTotalTies = int.Parse(textData[4]);
             tempNumOfGames = int.Parse(textData[5]);
             sForm = sf;
-            //Sound.MusicBack();
         }
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
@@ -154,10 +153,6 @@ namespace Connect4Testing
                 lbl_TieGameDisplay.Visible = true;
             }
             GetTextBoxData();
-        }
-        private void GameOverForm_Load(object sender, EventArgs e)
-        {
-            //Sound.background();
         }
     }
 }

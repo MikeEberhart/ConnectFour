@@ -42,26 +42,23 @@ namespace Connect4Testing
             InitializeComponent();
             ReadTxtFile();
         }
-
-        private void StatsForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Sound.ButtonClick();
-            Environment.Exit(0);
-        }
-
         private void btn_Quit_Click(object sender, EventArgs e)
         {
             Sound.ButtonClick();
             Environment.Exit(0);
         }
-
         private void btn_MainMenu_Click(object sender, EventArgs e)
         {
             Sound.ButtonClick();
             wForm.Show();
             this.Hide();
         }
-        public void ReadTxtFile()
+        private void StatsForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Sound.ButtonClick();
+            Environment.Exit(0);
+        }
+        public void ReadTxtFile() // function reading the textfile
         {
             StreamReader readFile = null;
             try
@@ -101,7 +98,7 @@ namespace Connect4Testing
             DataToTextBoxes();
 
         }
-        public void DataToTextBoxes()
+        public void DataToTextBoxes() // filling the textboxes with data
         {
             txt_TotalPlayerWins.Text = fileText[0];
             txt_PlayerWinPercentage.Text = playerWinPercentage.ToString() + "%";
@@ -110,12 +107,11 @@ namespace Connect4Testing
             txt_TotalTies.Text = fileText[4];
             txt_TotalNumOfGames.Text = totalGames.ToString();
         }
-        public void WriteToFile(string[] data)
+        public void WriteToFile(string[] data) // function writing the data to the file
         {
             int num = 0;
             foreach (string line in data)
             {
-                //Console.WriteLine(line + " Pos: " + num);
                 num++;
             }
             if (data[0] != null &&
@@ -132,7 +128,7 @@ namespace Connect4Testing
                     + "," + data[4]
                     + "," + data[5]);
             }
-        }
+        } 
         public string[] PassData() //passing array with the saved data to the GameOverForm
         {
             string[] passingText = { totalPlayerWins.ToString(),

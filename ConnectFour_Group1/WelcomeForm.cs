@@ -20,7 +20,6 @@ namespace Connect4Testing
             CenterToScreen();
             Sound.MusicBack();
         }
-
         private void btn_SinglePlayer_Click(object sender, EventArgs e)
         {
             Sound.ButtonClick();
@@ -28,7 +27,6 @@ namespace Connect4Testing
             singlePlayer.Show();
             this.Hide();
         }
-
         private void btn_TwoPlayer_Click(object sender, EventArgs e)
         {
             Sound.ButtonClick();
@@ -36,7 +34,6 @@ namespace Connect4Testing
             twoPlayer.Show();
             this.Hide();
         }
-
         private void btn_Statistics_Click(object sender, EventArgs e)
         {
             Sound.ButtonClick();

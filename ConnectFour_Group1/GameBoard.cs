@@ -353,17 +353,11 @@ namespace Connect4Testing
         {
             await FallingGamePieces(row, col);
         }
-        //private async void AnimationEnd(int row, int col) // trying to make a function to stop code from proceeding until AnimationStart is finished
-        //{
-        //    await WaitingOnPiece(row, col);
-        //}
         private async Task FallingGamePieces(int row, int col) // function performing the animations for the pieces dropping
         {
-            //animationIsFinished = false;
             Button tempButton = new Button();
             tempButton = gameBoard[row, col].GetButton();
             int endYAxis = tempButton.Location.Y;
-            //endingLocation = endYAxis;
             int startYAxis = -30;
             int tempYAxis = endYAxis - 10;
             tempButton.Location = new Point(tempButton.Location.X, startYAxis);
@@ -373,12 +367,9 @@ namespace Connect4Testing
                 if (tempButton.Location.Y >= tempYAxis)
                 {
                     tempButton.Location = new Point(tempButton.Location.X, endYAxis);
-                }
-                //if (tempButton.Location.Y == endYAxis) animationIsFinished = true;
-                //Console.WriteLine(tempButton.Location.Y);
+                };
                 await Task.Delay(1);
             }
-            //await Task.Delay(500);
         }
     }
 }

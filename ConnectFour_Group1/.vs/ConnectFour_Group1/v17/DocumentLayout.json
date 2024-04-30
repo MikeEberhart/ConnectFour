@@ -3,12 +3,8 @@
   "WorkspaceRootPath": "D:\\.SchoolStuff\\.GitHub\\ConnectFour\\ConnectFour_Group1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|d:\\.schoolstuff\\.github\\connectfour\\connectfour_group1\\gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:gameboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|d:\\.schoolstuff\\.github\\connectfour\\connectfour_group1\\celldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:celldata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|d:\\.schoolstuff\\.github\\connectfour\\connectfour_group1\\welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3948D5ED-DF07-49B1-BDDD-984E4BC256D6}|ConnectFour_Group1.csproj|solutionrelative:welcomeform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +14,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CellData.cs",
-              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\ConnectFour\\ConnectFour_Group1\\CellData.cs",
-              "RelativeDocumentMoniker": "CellData.cs",
-              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\ConnectFour\\ConnectFour_Group1\\CellData.cs",
-              "RelativeToolTip": "CellData.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:14:59.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GameBoard.cs",
-              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\ConnectFour\\ConnectFour_Group1\\GameBoard.cs",
-              "RelativeDocumentMoniker": "GameBoard.cs",
-              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\ConnectFour\\ConnectFour_Group1\\GameBoard.cs",
-              "RelativeToolTip": "GameBoard.cs",
-              "ViewState": "AQIAAMEAAAAAAAAAAAA7wPsAAABPAAAA",
+              "Title": "WelcomeForm.cs",
+              "DocumentMoniker": "D:\\.SchoolStuff\\.GitHub\\ConnectFour\\ConnectFour_Group1\\WelcomeForm.cs",
+              "RelativeDocumentMoniker": "WelcomeForm.cs",
+              "ToolTip": "D:\\.SchoolStuff\\.GitHub\\ConnectFour\\ConnectFour_Group1\\WelcomeForm.cs",
+              "RelativeToolTip": "WelcomeForm.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACMAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:07:44.412Z",
+              "WhenOpened": "2024-04-30T23:03:07.039Z",
               "EditorCaption": ""
             }
           ]

@@ -24,25 +24,6 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
-            //Sound.MusicBack();
-        }
-        private void PlacingPieces(object sender, EventArgs e)
-        {
-            Sound.ButtonClick();
-            gameBoardHere.Piece_Placement(sender, 2);
-            if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
-            {
-                GameOver();
-            }
-            else if (gameBoardHere.TieGameCheck())
-            {
-                GameOver();
-            }
-        }
-        private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Sound.ButtonClick();
-            Environment.Exit(0);
         }
         private void btn_Quit_Click(object sender, EventArgs e)
         {
@@ -65,6 +46,24 @@ namespace Connect4Testing
             Sound.ButtonClick();
             wForm.Show();
             this.Hide();
+        }
+        private void TwoPlayerForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Sound.ButtonClick();
+            Environment.Exit(0);
+        }
+        private void PlacingPieces(object sender, EventArgs e) // function used to place pieces
+        {
+            Sound.ButtonClick();
+            gameBoardHere.Piece_Placement(sender, 2);
+            if (gameBoardHere.WinChecker(gameBoardHere.GetGameBoard()))
+            {
+                GameOver();
+            }
+            else if (gameBoardHere.TieGameCheck())
+            {
+                GameOver();
+            }
         }
         private void GameOver()
         {
@@ -97,11 +96,11 @@ namespace Connect4Testing
             btn_PlayAgain.Location = new Point(91, 531);
             btn_Quit.Location = new Point(449, 531);
         }
-        private void ShowMove(object sender, EventArgs e) // MOUSE ENTER // not working
+        private void ShowMove(object sender, EventArgs e) // MOUSE ENTER // showing image if mouse enters button
         {
             gameBoardHere.ShowPossibleMoves(sender);
         }
-        private void HideMove(object sender, EventArgs e) // MOUSE LEAVE // not working
+        private void HideMove(object sender, EventArgs e) // MOUSE LEAVE // hiding image if mouse leaves button
         {
             gameBoardHere.HidePossibleMove(sender);
         }

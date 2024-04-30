@@ -26,7 +26,6 @@ namespace Connect4Testing
             gameBoardHere.AddPieces(pnl_BoardPanel);
             gameBoardHere.SetLabel(lbl_TurnDisplay);
             wForm = wf;
-            //Sound.MusicBack();
         }
 
         private void btn_PlayAgain_Click(object sender, EventArgs e)
@@ -135,10 +134,6 @@ namespace Connect4Testing
         private void HideMove(object sender, EventArgs e) // MOUSE LEAVE // not working
         {
             gameBoardHere.HidePossibleMove(sender);
-        }
-        private void SinglePlayerForm_Load(object sender, EventArgs e)
-        {
-            //Sound.MusicBack();
         }
     }
 }

@@ -21,14 +21,14 @@ namespace Connect4Testing
             soundFile = Properties.Resources.newClick;
             player = new SoundPlayer(soundFile);
             player.Play();
-            //MusicBack();
+
         }
         public void Warning()
         {
             soundFile = Properties.Resources.newWarn;
             player = new SoundPlayer(soundFile);
             player.Play();
-            //MusicBack();
+
         }
         public void MusicBack()
         {

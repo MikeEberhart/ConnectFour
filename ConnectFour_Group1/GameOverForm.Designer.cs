@@ -318,7 +318,6 @@
             this.Name = "GameOverForm";
             this.Text = "GameOverForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameOverForm_FormClosing);
-            this.Load += new System.EventHandler(this.GameOverForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
