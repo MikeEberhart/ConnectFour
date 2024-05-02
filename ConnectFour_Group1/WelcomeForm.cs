@@ -1,4 +1,11 @@
-﻿using System;
+﻿// =====================================================================================
+// Authors: Mike Eberhart
+//          Donovan Gilliam
+//          Chase Miracle
+// Date:    01-May-2024
+// Desc:    This program is a Connect 4 game with both single and two player game modes.
+// ======================================================================================
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
